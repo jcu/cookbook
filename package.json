@@ -1,0 +1,20 @@
+{
+  "name": "@jcu/web-framework",
+  "version": "2.0.0",
+  "description": "The web UI framework for building responsive, mobile-first web projects with University styling",
+  "main": "index.js",
+  "repository": "https://github.com/jcu/web-framework.git",
+  "author": "JCU eResearch Centre",
+  "license": "UNLICENSED",
+  "private": false,
+  "dependencies": {
+    "@mdi/font": "^3.8.95",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0",
+    "typeface-open-sans": "^0.0.54"
+  },
+  "devDependencies": {
+    "@khanacademy/tota11y": "^0.2.0"
+  }
+}

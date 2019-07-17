@@ -1,0 +1,55 @@
+@mixin mdi-spacing-right($distance) {
+  margin-right: ($distance * .5);
+}
+
+@mixin mdi-spacing($distance) {
+  margin-left: ($distance * -.25);
+  @include mdi-spacing-right($distance);
+}
+
+.alert.mdi::before {
+  @include mdi-spacing($alert-padding-x);
+}
+
+.btn.mdi:not(:empty)::before {
+  @include mdi-spacing($btn-padding-x);
+}
+
+.btn-lg.mdi:not(:empty)::before {
+  @include mdi-spacing($btn-padding-x-lg);
+}
+
+.btn-sm.mdi:not(:empty)::before {
+  @include mdi-spacing($btn-padding-x-sm);
+}
+
+.breadcrumb-item {
+  a.mdi, span.mdi {
+    &::before {
+      @include mdi-spacing($breadcrumb-item-padding);
+    }
+  }
+}
+
+.dropdown-item.mdi::before {
+  @include mdi-spacing($dropdown-item-padding-x);
+}
+
+.list-group-item.mdi::before {
+  @include mdi-spacing($list-group-item-padding-x);
+}
+
+.modal-title.mdi::before {
+  @include mdi-spacing-right($spacer);
+}
+
+.nav-link.mdi::before {
+  @include mdi-spacing($nav-link-padding-x);
+}
+.navbar-brand.mdi::before {
+  @include mdi-spacing-right($navbar-brand-padding-y);
+}
+
+.popover-title.mdi::before {
+  @include mdi-spacing($spacer);
+}

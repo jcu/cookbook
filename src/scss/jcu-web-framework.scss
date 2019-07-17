@@ -1,0 +1,157 @@
+/*!
+ * JCU Web Framework v2.0.0 (https://web.jcu.io)
+ * Copyright 2017-2019 James Cook University
+ */
+
+// Source material
+// Brand DNA v2.3 (https://www.jcu.edu.au/marketing-toolkit/brand-dna/Brand-DNA-2018-v2.3.pdf)
+// JCU Website as at 2019-07-16
+
+// Colour palette
+// Various colours in Brand DNA are inconsistent (eg CMYK vs RGB vs Web vs
+// Pantone vs displayed colour), and also inconsistent between implementations
+// such as the Mid Blue and Gold within the logo.  These are the best
+// approximations we can ascertain and use the RGB colour point except where
+// otherwise indicated.
+$turquoise:       rgb(0,152,167)   !default;
+$bright-blue:     rgb(0,174,239)   !default;
+$mid-blue:        rgb(0,102,179)   !default;  // Ref: RGB + Website logo
+$dark-blue:       rgb(46,49,146)   !default;
+$midnight-blue:   rgb(32,36,78)    !default;
+
+$emerald:         rgb(0,150,129)   !default;
+$light-emerald:   rgb(113,204,152) !default;
+$bright-green:    rgb(163,214,94)  !default;
+$mid-green:       rgb(108,194,74)  !default;
+$dark-green:      rgb(0,150,57)    !default;
+
+$peach:           rgb(248,72,94)   !default;
+$light-peach:     rgb(254,173,119) !default;
+$bright-orange:   rgb(255,199,44)  !default;
+$mid-orange:      rgb(255,130,0)   !default;
+$dark-orange:     rgb(233,79,53)   !default;
+
+$grape:           rgb(153,30,102)  !default;
+$magenta:         rgb(218,24,132)  !default;
+$bright-red:      rgb(224,0,77)    !default;
+$mid-red:         rgb(218,41,28)   !default;
+$dark-red:        rgb(167,43,42)   !default;
+
+$stone:           rgb(222,219,195) !default;
+$gold:            rgb(231,178,15)  !default;  // Ref: Website logo
+
+// Default Bootstrap colours for monochrome colours
+// Rationale: inconsistent greys in Brand DNA, insufficent variation
+$white:           #fff             !default;
+$gray-100:        #f8f9fa          !default;
+$gray-200:        #e9ecef          !default;
+$gray-300:        #dee2e6          !default;
+$gray-400:        #ced4da          !default;
+$gray-500:        #adb5bd          !default;
+$gray-600:        #6c757d          !default;
+$gray-700:        #495057          !default;
+$gray-800:        #343a40          !default;
+$gray-900:        #212529          !default;
+$black:           #000             !default;
+
+// Colour mapping for Bootstrap
+$primary:         $mid-blue       !default;
+$secondary:       $gray-800       !default;
+$success:         $dark-green     !default;
+$info:            $bright-blue    !default;
+$warning:         $bright-orange  !default;
+$danger:          $mid-red        !default;
+$light:           $gray-200       !default;
+$dark:            $gray-800       !default;
+
+// Options
+$enable-rounded:                              false !default;
+$enable-transitions:                          true !default; // Optional, maybe turn off
+
+$body-bg:                   $white !default;
+
+// Brand DNA calls for Chronicle SSM or Bliss, website uses Open Sans
+$font-family-sans-serif:      "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+// Replicate the whole Bootstrap import list so we can remove the core colours
+// as per https://getbootstrap.com/docs/4.3/getting-started/theming/
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+$colors: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "turquoise":       $turquoise,
+    "bright-blue":     $bright-blue,
+    "mid-blue":        $mid-blue,
+    "dark-blue":       $dark-blue,
+    "midnight-blue":   $midnight-blue,
+
+    "emerald":         $emerald,
+    "light-emerald":   $light-emerald,
+    "bright-green":    $bright-green,
+    "mid-green":       $mid-green,
+    "dark-green":      $dark-green,
+
+    "peach":           $peach,
+    "light-peach":     $light-peach,
+    "bright-orange":   $bright-orange,
+    "mid-orange":      $mid-orange,
+    "dark-orange":     $dark-orange,
+
+    "grape":           $grape,
+    "magenta":         $magenta,
+    "bright-red":      $bright-red,
+    "mid-red":         $mid-red,
+    "dark-red":        $dark-red,
+
+    "stone":           $stone,
+    "gold":            $gold,
+
+    "white":           $white,
+    "gray":            $gray-600,
+    "gray-dark":       $gray-800,
+    "black":           $black
+  ),
+  $colors
+);
+
+@import "../../node_modules/bootstrap/scss/root";
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/code";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/button-group";
+@import "../../node_modules/bootstrap/scss/input-group";
+@import "../../node_modules/bootstrap/scss/custom-forms";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/card";
+@import "../../node_modules/bootstrap/scss/breadcrumb";
+@import "../../node_modules/bootstrap/scss/pagination";
+@import "../../node_modules/bootstrap/scss/badge";
+@import "../../node_modules/bootstrap/scss/jumbotron";
+@import "../../node_modules/bootstrap/scss/alert";
+@import "../../node_modules/bootstrap/scss/progress";
+@import "../../node_modules/bootstrap/scss/media";
+@import "../../node_modules/bootstrap/scss/list-group";
+@import "../../node_modules/bootstrap/scss/close";
+@import "../../node_modules/bootstrap/scss/toasts";
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/tooltip";
+@import "../../node_modules/bootstrap/scss/popover";
+@import "../../node_modules/bootstrap/scss/carousel";
+@import "../../node_modules/bootstrap/scss/spinners";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/print";
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "iconography"
