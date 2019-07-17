@@ -18,16 +18,11 @@
 
 ## Sources
 
-* JCU Brand DNA v2.3
-  (https://www.jcu.edu.au/marketing-toolkit/brand-dna/Brand-DNA-2018-v2.3.pdf;
-  retrieved 2019-07-16)
-* JCU Website as at 2019-07-16
-
-### Institutional Logos
-
-Retrieved in ZIP archive form from
-https://www.jcu.edu.au/marketing-toolkit/logos as at 2019-07-17 and converted
-into web-compatible SVG format.
+* [JCU Brand DNA v2.3](https://www.jcu.edu.au/marketing-toolkit/brand-dna/Brand-DNA-2018-v2.3.pdf
+  (retrieved 2019-07-16)
+* JCU website (accessed 2019-07-16)
+* Institutional logos (retrieved in `.zip` archive form, converted into
+  web-compatible SVG format and colours set to match the JCU website logo)
 
 ### Flags
 
