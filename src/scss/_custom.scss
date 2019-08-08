@@ -1,8 +1,25 @@
-// a11y fix
+// Buttons - increased colour contrast for a11y
 .btn-outline-secondary {
   $btn-color: $gray-600;
   color: $btn-color;
   border-color: $btn-color;
+}
+
+.btn-outline-warning {
+  $btn-color: $dark-yellow;
+  color: $btn-color;
+  border-color: $btn-color;
+}
+
+// Close icon - increased colour contrast for a11y
+.close {
+  opacity: .75;
+
+  &:not(:disabled):not(.disabled) {
+    @include hover-focus {
+      opacity: 1;
+    }
+  }
 }
 
 // Workaround https://github.com/twbs/bootstrap/issues/27879

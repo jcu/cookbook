@@ -23,6 +23,7 @@ $light-peach:     rgb(254, 173, 119) !default;
 $bright-orange:   rgb(255, 199, 44) !default;
 $mid-orange:      rgb(255, 130, 0) !default;
 $dark-orange:     rgb(233, 79, 53) !default;
+$dark-yellow:     #957001 !default;  //Ref: a11y
 
 $grape:           rgb(153, 30, 102) !default;
 $magenta:         rgb(218, 24, 132) !default;
@@ -90,6 +91,8 @@ $colors-override: (
   "black":           $black
 );
 
+$theme-color-interval:      10% !default;
+
 //
 // Options
 //
@@ -113,6 +116,13 @@ $breadcrumb-active-color: $body-color !default;
 
 $navbar-dark-color:                 rgba($white, .85) !default;
 $navbar-light-color:                rgba($black, .85) !default;
+
+$alert-bg-level:                    -8 !default;
+$alert-border-level:                -5 !default;
+$alert-color-level:                 7 !default;
+
+$table-bg-level:              -8 !default;
+$table-border-level:          -3 !default;
 
 $close-color: $body-color !default;
 
