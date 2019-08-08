@@ -15,7 +15,11 @@
   https://github.com/XhmikosR/find-unused-sass-variables/issues/23.
   Linting CSS in this way is disabled for now.
 
-* Bootstrap's colours fail WCAG AA https://github.com/twbs/bootstrap/issues/25126
-
 * `imagemin` loses directory structure on output of minified images
   https://github.com/imagemin/imagemin/issues/191
+
+* Bootstrap:
+
+  * Bootstrap's colours fail WCAG AA https://github.com/twbs/bootstrap/issues/25126
+  * `.table-dark` has conflicting styles: <https://github.com/twbs/bootstrap/issues/27879>.
+    We are currently working around this issue in `_fixes.scss`
