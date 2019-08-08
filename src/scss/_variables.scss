@@ -49,10 +49,10 @@ $black:           #000 !default;
 
 // Colour mapping for Bootstrap
 $primary:         $mid-blue !default;
-$secondary:       $gray-800 !default;
+$secondary:       $gray-400 !default;
 $success:         $green !default;
 $info:            $blue !default;
-$warning:         $dark-orange !default;
+$warning:         $gold !default;
 $danger:          $mid-red !default;
 $light:           $gray-200 !default;
 $dark:            $gray-800 !default;
@@ -119,3 +119,4 @@ $close-color: $body-color !default;
 // Custom Web Framework options
 $enable-iconography:           true !default;
 $OpenSansPath:                 "../fonts/open-sans" !default;
+$mdi-font-path:                "../fonts/mdi" !default;

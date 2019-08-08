@@ -1,0 +1,15 @@
+// a11y fix
+.btn-outline-secondary {
+  $btn-color: $gray-600;
+  color: $btn-color;
+  border-color: $btn-color;
+}
+
+// Workaround https://github.com/twbs/bootstrap/issues/27879
+// This ensures that the `.table-dark` context class produces a dark row
+@include table-row-variant("dark", $dark, $gray-600);
+
+.table-hover tbody .table-dark:hover {
+  color: $light;
+}
+
