@@ -67,7 +67,7 @@
     "replace": "^1.1.0",
     "shx": "^0.3.2",
     "stylelint": "^10.1.0",
-    "stylelint-config-twbs-bootstrap": "^0.3.1",
+    "stylelint-config-twbs-bootstrap": "^0.4.0",
     "typeface-open-sans": "^0.0.75",
     "typeface-playfair-display": "^0.0.72"
   }
