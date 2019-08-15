@@ -1,5 +1,10 @@
 # JCU Web Framework
 
+## Documentation
+
+* Bootstrap: https://getbootstrap.com/docs/4.3/
+* Icon reference: https://materialdesignicons.com/
+
 ## Features
 
 * Fully-featured web front-end component library, styled with JCU colours and
