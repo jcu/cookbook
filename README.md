@@ -74,6 +74,10 @@ and the core components it provides.
 
 * [JCU Brand DNA v2.3](https://www.jcu.edu.au/marketing-toolkit/brand-dna/Brand-DNA-2018-v2.3.pdf
   (retrieved 2019-07-16), adapted for accessibility
+
+  * Open Sans is the primary and sans-serif font, and Playfair Display is the
+    secondary and serif font
+
 * JCU website (accessed 2019-07-16)
 * Institutional logos (retrieved in `.zip` archive form, converted into
   web-compatible SVG format and colours set to match the JCU website logo)

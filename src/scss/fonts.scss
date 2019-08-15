@@ -1,2 +1,5 @@
 @import "variables";
-@import "../../node_modules/open-sans-fontface/open-sans.scss";
+// Use standard CSS and find-and-replace the paths later
+// See https://github.com/KyleAMathews/typefaces/issues/79
+@import "../../node_modules/typeface-open-sans/index";
+@import "../../node_modules/typeface-playfair-display/index";
