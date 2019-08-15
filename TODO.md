@@ -18,6 +18,9 @@
 * `imagemin` loses directory structure on output of minified images
   https://github.com/imagemin/imagemin/issues/191
 
+* Fonts require `sed` to rework their directory paths:
+  https://github.com/KyleAMathews/typefaces/issues/79
+
 * Bootstrap:
 
   * Bootstrap's colours fail WCAG AA https://github.com/twbs/bootstrap/issues/25126
