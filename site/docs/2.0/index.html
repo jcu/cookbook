@@ -1463,7 +1463,7 @@
         <button type="button" class="btn btn-outline-danger mdi mdi-skull">Danger</button>
       </div>
       <div class="mt-2">
-        <button class="btn btn-primary btn-sm mdi mdi-star"><span class="sr-only">Star this item</span</button>
+        <button class="btn btn-primary btn-sm mdi mdi-star" aria-label="Star this item"></button>
         <button class="btn btn-primary btn-sm mdi mdi-star">Small</button>
         <button class="btn btn-primary mdi mdi-star"></button>
         <button class="btn btn-primary mdi mdi-star">Regular</button>
@@ -1485,6 +1485,36 @@
         <h3>Spin</h3>
         mdi-spin: <span class="mdi mdi-loading mdi-spin"></span>
         or <span class="mdi mdi-star mdi-spin"></span>
+      </div>
+      <div>
+        <h3>Dropdown</h3>
+        <div class="dropdown">
+          <button class="btn btn-secondary mdi mdi-button dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item mdi mdi-star" href="#">Action</a>
+            <a class="dropdown-item mdi mdi-star" href="#">Another action</a>
+            <a class="dropdown-item mdi mdi-star" href="#">Something else here</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h3>Nav</h3>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link mdi mdi-home active" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mdi mdi-star" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mdi mdi-star-outline" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mdi mdi-cancel disabled" href="#">Disabled</a>
+          </li>
+        </ul>
       </div>
     </div>
 

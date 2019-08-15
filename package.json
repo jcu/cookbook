@@ -51,7 +51,7 @@
   "dependencies": {},
   "devDependencies": {
     "@khanacademy/tota11y": "^0.2.0",
-    "@mdi/font": "^3.8.95",
+    "@mdi/font": "^4.0.96",
     "bootstrap": "^4.3.1",
     "clean-css-cli": "^4.3.0",
     "cross-env": "^5.2.0",

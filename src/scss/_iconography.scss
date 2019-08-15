@@ -13,28 +13,32 @@
   }
 
   .btn.mdi:not(:empty)::before {
-    @include mdi-spacing($btn-padding-x);
+    @include mdi-spacing-right($btn-padding-x);
   }
 
   .btn-lg.mdi:not(:empty)::before {
-    @include mdi-spacing($btn-padding-x-lg);
+    @include mdi-spacing-right($btn-padding-x-lg);
   }
 
   .btn-sm.mdi:not(:empty)::before {
-    @include mdi-spacing($btn-padding-x-sm);
+    @include mdi-spacing-right($btn-padding-x-sm);
   }
 
-  .breadcrumb-item .mdi {
-    &::before {
-      @include mdi-spacing($breadcrumb-item-padding);
-    }
+  .breadcrumb-item .mdi:not(:empty)::before {
+    @include mdi-spacing-right($breadcrumb-item-padding);
   }
 
-  .dropdown-item.mdi::before {
+  .card-title.mdi:not(:empty)::before,
+  .card-subtitle.mdi:not(:empty)::before,
+  .card-link.mdi:not(:empty)::before {
+    @include mdi-spacing-right($card-spacer-x);
+  }
+
+  .dropdown-item.mdi:not(:empty)::before {
     @include mdi-spacing($dropdown-item-padding-x);
   }
 
-  .list-group-item.mdi::before {
+  .list-group-item.mdi:not(:empty)::before {
     @include mdi-spacing($list-group-item-padding-x);
   }
 
@@ -42,14 +46,10 @@
     @include mdi-spacing-right($spacer);
   }
 
-  .nav-link.mdi::before {
-    @include mdi-spacing($nav-link-padding-x);
+  .nav-link.mdi:not(:empty)::before {
+    @include mdi-spacing-right($nav-link-padding-x);
   }
-  .navbar-brand.mdi::before {
+  .navbar-brand.mdi:not(:empty)::before {
     @include mdi-spacing-right($navbar-brand-padding-y);
-  }
-
-  .popover-title.mdi::before {
-    @include mdi-spacing($spacer);
   }
 }
