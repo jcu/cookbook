@@ -109,10 +109,14 @@ $body-color:                $gray-900 !default;
 // Use the default Bootstrap fallback font family, but use Open Sans first
 $font-family-sans-serif:      "Open Sans", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 
+$list-inline-padding:         $spacer !default;
+
 $btn-disabled-opacity:        .7 !default;
 
 $breadcrumb-bg: $gray-200 !default;
 $breadcrumb-active-color: $body-color !default;
+
+$navbar-nav-link-padding-x:         1rem !default;
 
 $navbar-dark-color:                 rgba($white, .85) !default;
 $navbar-light-color:                rgba($black, .85) !default;
@@ -123,6 +127,8 @@ $alert-color-level:                 7 !default;
 
 $table-bg-level:              -8 !default;
 $table-border-level:          -3 !default;
+
+$custom-control-indicator-size:         1.5rem !default;
 
 $close-color: $body-color !default;
 
