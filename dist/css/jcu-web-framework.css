@@ -18662,31 +18662,33 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .btn.mdi:not(:empty)::before {
-  margin-left: -0.1875rem;
   margin-right: 0.375rem;
 }
 
 .btn-lg.mdi:not(:empty)::before, .btn-group-lg > .mdi.btn:not(:empty)::before {
-  margin-left: -0.25rem;
   margin-right: 0.5rem;
 }
 
 .btn-sm.mdi:not(:empty)::before, .btn-group-sm > .mdi.btn:not(:empty)::before {
-  margin-left: -0.125rem;
   margin-right: 0.25rem;
 }
 
-.breadcrumb-item .mdi::before {
-  margin-left: -0.125rem;
+.breadcrumb-item .mdi:not(:empty)::before {
   margin-right: 0.25rem;
 }
 
-.dropdown-item.mdi::before {
+.card-title.mdi:not(:empty)::before,
+.card-subtitle.mdi:not(:empty)::before,
+.card-link.mdi:not(:empty)::before {
+  margin-right: 0.625rem;
+}
+
+.dropdown-item.mdi:not(:empty)::before {
   margin-left: -0.375rem;
   margin-right: 0.75rem;
 }
 
-.list-group-item.mdi::before {
+.list-group-item.mdi:not(:empty)::before {
   margin-left: -0.3125rem;
   margin-right: 0.625rem;
 }
@@ -18695,17 +18697,11 @@ a.text-dark:hover, a.text-dark:focus {
   margin-right: 0.75rem;
 }
 
-.nav-link.mdi::before {
-  margin-left: -0.25rem;
+.nav-link.mdi:not(:empty)::before {
   margin-right: 0.5rem;
 }
 
-.navbar-brand.mdi::before {
+.navbar-brand.mdi:not(:empty)::before {
   margin-right: 0.15625rem;
-}
-
-.popover-title.mdi::before {
-  margin-left: -0.375rem;
-  margin-right: 0.75rem;
 }
 /*# sourceMappingURL=jcu-web-framework.css.map */
