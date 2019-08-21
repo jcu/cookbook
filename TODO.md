@@ -1,3 +1,7 @@
+## Inclusions
+
+* Favicon.ico - further sizes, transparent background and so on
+
 ## Project management
 
 * Permission for use and distribution of flags should be checked
