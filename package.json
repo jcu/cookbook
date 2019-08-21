@@ -8,6 +8,9 @@
   "author": "JCU eResearch Centre",
   "license": "UNLICENSED",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "npm-run-all --parallel watch serve",
     "serve": "live-server --quiet --port=3000 --open=docs/$npm_package_version_short/ site/",
