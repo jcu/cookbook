@@ -1,9 +1,9 @@
 {
   "name": "@jcu/web-framework",
-  "version": "2.0.0",
+  "version": "2.0.0-alpha.1",
   "version_short": "2.0",
   "description": "The web UI framework for building responsive, mobile-first web projects with University styling",
-  "main": "index.js",
+  "main": "dist/js/bootstrap.js",
   "repository": "https://github.com/jcu/web-framework.git",
   "author": "JCU eResearch Centre",
   "license": "UNLICENSED",
@@ -37,7 +37,7 @@
     "img-favicon": "cross-env-shell convert dist/img/favicon-*.png dist/img/favicon.ico",
     "img-copy": "cross-env-shell shx mkdir -p site/docs/$npm_package_version_short/dist/ && cross-env-shell shx cp -r dist/img/ site/docs/$npm_package_version_short/dist/",
     "js": "npm-run-all js-deps js-copy",
-    "js-deps": "cross-env-shell shx cp node_modules/jquery/dist/jquery.min.* node_modules/popper.js/dist/umd/popper.min* node_modules/bootstrap/dist/js/*.min.* dist/js/",
+    "js-deps": "cross-env-shell shx cp node_modules/jquery/dist/jquery.min.* node_modules/popper.js/dist/umd/popper.min* node_modules/bootstrap/dist/js/* dist/js/",
     "js-copy": "cross-env-shell shx mkdir -p site/docs/$npm_package_version_short/dist/ && cross-env-shell shx cp -r dist/js/ site/docs/$npm_package_version_short/dist/",
     "lint": "npm-run-all --parallel css-lint",
     "dist": "npm-run-all --parallel css js img",
@@ -71,5 +71,10 @@
     "stylelint-config-twbs-bootstrap": "^0.4.0",
     "typeface-open-sans": "^0.0.75",
     "typeface-playfair-display": "^0.0.72"
-  }
+  },
+  "files": [
+    "dist/**",
+    "!dist/**/.gitkeep",
+    "src/scss/**/*.scss"
+  ]
 }
