@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Switch licence file to .md
 * Include Bootstrap's licence and reformat for clarity
 * Remove old font path SCSS variable
+* Update dependencies, particuarly `@mdi/font`
 
 
 ## [2.0.0-alpha.1] - 2019-08-22
