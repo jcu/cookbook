@@ -79,6 +79,29 @@ published accordingly online (coming shortly).
    yarn release
    ```
 
+1. Update `CHANGELOG.md` with the current date and released version
+
+1. Commit the build to Git and tag accordingly:
+
+   ```sh
+   git commit CHANGELOG.md dist/ -m "Release v9.9.9"
+   git tag v9.9.9
+   ```
+
+1. Update the working version number in the source code:
+
+   ```sh
+   yarn release-version [old-version] [new-version]
+   git commit -a -m "Back to development"
+   ```
+
+1. Push the results:
+
+   ```sh
+   git push
+   git push --tags
+   ```
+
 ## Accessibility
 
 The JCU Web Framework aims to allow websites and applications that that use it
