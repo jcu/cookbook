@@ -55,6 +55,30 @@ in this package.  At a high level, however, the process looks like so:
 The resulting distribution is then published to the CDN and documentation
 published accordingly online (coming shortly).
 
+### Build process
+
+1. Install this package and its dependenies with:
+
+   ```sh
+   yarn
+   ```
+
+1. Set up a local environment (eg `.env` if using `autoenv`) with the
+   following information:
+
+   ```sh
+   CDN_URL=username@cdnhost.example.com:path/to/upload
+   ```
+
+   Replace each variable with appropriate details; ask a maintainer if you're
+   unsure what these should be.
+
+1. Build a release and copy the distribution to CDN via:
+
+   ```sh
+   yarn release
+   ```
+
 ## Accessibility
 
 The JCU Web Framework aims to allow websites and applications that that use it
