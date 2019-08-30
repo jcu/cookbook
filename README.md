@@ -41,7 +41,7 @@ essence a themed version of Bootstrap and can be used as such, like so:
   * As a custom theme or as a base for creating customised Sass within Create React App
     ([documentation](https://facebook.github.io/create-react-app/docs/adding-bootstrap#using-a-custom-theme))
 
-## Building
+## Development
 
 Builds utilise the same style of package scripts defined in `package.json`
 that Bootstrap does, with some additional steps and changes for the inclusions
@@ -88,6 +88,12 @@ published accordingly online (coming shortly).
    git tag v9.9.9
    ```
 
+1. Publish to NPM via:
+
+   ```sh
+   yarn publish
+   ```
+
 1. Update the working version number in the source code:
 
    ```sh
@@ -101,6 +107,18 @@ published accordingly online (coming shortly).
    git push
    git push --tags
    ```
+
+### Upgrades
+
+Upgrading dependencies takes place via:
+
+```sh
+yarn upgrade-interactive --latest
+```
+
+where you can inspect the recent changes and assess the impact of the
+dependency changes on the project.  In general, minor version changes should
+be fine to apply, provided everyone is following SemVer.
 
 ## Accessibility
 
