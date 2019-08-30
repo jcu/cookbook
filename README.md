@@ -1,6 +1,6 @@
 # JCU Web Framework
 
-## Documentation
+## User documentation
 
 * Bootstrap: https://getbootstrap.com/docs/4.3/
 * Icon reference: https://materialdesignicons.com/
