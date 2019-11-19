@@ -63,15 +63,9 @@ published accordingly online (coming shortly).
    yarn
    ```
 
-1. Set up a local environment (eg `.env` if using `autoenv`) with the
-   following information:
-
-   ```sh
-   CDN_URL=username@cdnhost.example.com:path/to/upload
-   ```
-
-   Replace each variable with appropriate details; ask a maintainer if you're
-   unsure what these should be.
+1. Set up a local environment with `rclone config` and create a remote called
+   `jcu-cdn`. Ask a maintainer if you're unsure what the configuration should
+   contain.
 
 1. Build a release and copy the distribution to CDN via:
 
