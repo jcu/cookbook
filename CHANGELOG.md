@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Re-add this changelog, using the Keep a Changelog format
 * Added CDN release script
 * Add build instructions and version change script
+* Add minified fonts CSS (`fonts.min.css`)
 
 ### Changed
 
