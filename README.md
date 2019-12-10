@@ -73,6 +73,12 @@ published accordingly online (coming shortly).
    yarn dist
    ```
 
+1. Test the resulting build.
+
+   At present during the alpha and beta process, this involves manual testing
+   with the HTML documentation and checking against in-development
+   applications.
+
 1. Build a release and copy the distribution to CDN via:
 
    ```sh
