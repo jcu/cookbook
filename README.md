@@ -110,15 +110,25 @@ published accordingly online (coming shortly).
 
 ### Upgrades
 
-Upgrading dependencies takes place via:
+Upgrading dependencies – including Bootstrap – takes place via:
 
 ```sh
 yarn upgrade-interactive --latest
 ```
 
 where you can inspect the recent changes and assess the impact of the
-dependency changes on the project.  In general, minor version changes should
-be fine to apply, provided everyone is following SemVer.
+dependency changes on the project.  In general, minor or patch version changes
+should be fine to apply, provided everyone is following SemVer.
+
+When it comes to Bootstrap itself, pay close attention to the [release
+notes](https://github.com/twbs/bootstrap/releases) and the [official
+blog](https://blog.getbootstrap.com/) for details of changes.  As with other
+dependencies, the same SemVer rules apply but carefully check the resulting
+theme when built as regressions are always possible.
+
+Once you've upgraded, inspect the documentation site to ensure styles and
+functionality is working as expected.  We'll have more automated processes for
+this in the near future.
 
 ## Accessibility
 
