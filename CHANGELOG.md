@@ -13,13 +13,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Added CDN release script
 * Add build instructions and version change script
 * Add minified fonts CSS (`fonts.min.css`)
+* Upgrade Bootstrap to 4.4, bringing [various
+  features and improvements](https://blog.getbootstrap.com/2019/11/26/bootstrap-4-4-0/)
 
 ### Changed
 
 * Switch licence file to .md
 * Include Bootstrap's licence and reformat for clarity
 * Remove old font path SCSS variable
-* Update dependencies, particuarly `@mdi/font`
+* Update dependencies, particuarly `@mdi/font` and `bootstrap`
 * Switch CDN systems; use `rclone` uploading
 
 
