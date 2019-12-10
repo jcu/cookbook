@@ -67,6 +67,12 @@ published accordingly online (coming shortly).
    `jcu-cdn`. Ask a maintainer if you're unsure what the configuration should
    contain.
 
+1. Execute a build with:
+
+   ```sh
+   yarn dist
+   ```
+
 1. Build a release and copy the distribution to CDN via:
 
    ```sh
