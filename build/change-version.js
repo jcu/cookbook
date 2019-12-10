@@ -101,7 +101,7 @@ function main(args) {
     '.html',
     '.js',
     '.json',
-    '.md',
+    //'.md',
     '.scss',
     '.txt',
     '.yml'
