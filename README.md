@@ -103,9 +103,12 @@ published accordingly online (coming shortly).
 1. Update the working version number in the source code:
 
    ```sh
-   yarn release-version [old-version] [new-version]
+   yarn release-version [old-version eg 2.0.0] [new-version eg 2.0.1]
    git commit -a -m "Back to development"
    ```
+
+   When using `yarn release-version`, ensure you omit any `v` prefix for
+   version numbers.
 
 1. Push the results:
 
