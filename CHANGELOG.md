@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0-alpha.3] - 2019-12-16
+
 ### Fixed
 
 * Halve build size by not importing Bootstrap twice
@@ -72,6 +74,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   lists
 * Use theme colours from microsite layout (fixes #10).
 
+[2.0.0-alpha.3]: https://github.com/jcu/web-framework/releases/tag/v2.0.0-alpha.3
 [2.0.0-alpha.2]: https://github.com/jcu/web-framework/releases/tag/v2.0.0-alpha.2
 [2.0.0-alpha.1]: https://github.com/jcu/web-framework/releases/tag/v2.0.0-alpha.1
 [1.0.0-beta.1]: https://github.com/jcu/web-framework/releases/tag/v1.0.0-beta.1
