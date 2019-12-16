@@ -56,8 +56,6 @@ $colors: map-merge($colors-override, $colors);
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/print";
 
-@import "../../node_modules/bootstrap/scss/bootstrap";
-
 //
 // Web Framework additions
 //
