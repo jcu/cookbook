@@ -94,11 +94,14 @@ published accordingly online (coming shortly).
    git tag v9.9.9
    ```
 
-1. Publish to NPM via:
+1. Publish to NPM via the following:
 
    ```sh
    yarn publish
    ```
+
+   Don't set a `New version` at this time.  We'll update it ourselves in a
+   moment.
 
 1. Update the working version number in the source code:
 
