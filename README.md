@@ -2,7 +2,7 @@
 
 ## User documentation
 
-* Bootstrap: https://getbootstrap.com/docs/4.3/
+* Bootstrap: https://getbootstrap.com/docs/4.4/
 * Icon reference: https://materialdesignicons.com/
 
 ## Features
