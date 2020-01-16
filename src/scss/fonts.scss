@@ -1,5 +1,3 @@
 @import "variables";
-// Use standard CSS and find-and-replace the paths later
-// See https://github.com/KyleAMathews/typefaces/issues/79
-@import "../../node_modules/typeface-open-sans/index";
-@import "../../node_modules/typeface-playfair-display/index";
+@import "typeface-open-sans/typeface";
+@import "typeface-playfair-display/typeface";

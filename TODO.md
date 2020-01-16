@@ -6,6 +6,18 @@
 
 * Permission for use and distribution of flags should be checked
 
+* Fonts:
+
+  * Clarify which fonts to be used on pages and where:
+
+    * Homepage body font is now Bliss (as "Bliss 2") or Open Sans, `<h1>` tags use Playfair Display
+    * What weights/styles of fonts should be used?
+    * What is the licensing for fonts? (eg https://typography.net/licensing#webfont)
+    * Homepage uses font smoothing globally, but it shouldn't
+      (https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/).
+      Most items on the homepage are bold when they display as normally
+      rendered on macOS or Chrome.
+
 * Colors:
 
   * Clarification around inconsistent colours in Brand DNA
@@ -15,15 +27,16 @@
 
 ## Technical
 
+* Fonts require `sed` to rework their directory paths:
+  upgrade typeface packages once
+  https://github.com/KyleAMathews/typefaces/pull/161 is merged
+
 * Can't use fusv to find usused variables because of lack of @import support
   https://github.com/XhmikosR/find-unused-sass-variables/issues/23.
   Linting CSS in this way is disabled for now.
 
 * `imagemin` loses directory structure on output of minified images
   https://github.com/imagemin/imagemin/issues/191
-
-* Fonts require `sed` to rework their directory paths:
-  https://github.com/KyleAMathews/typefaces/issues/79
 
 * Bootstrap:
 

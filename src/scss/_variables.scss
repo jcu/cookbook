@@ -105,9 +105,14 @@ $spacer: 1.5rem !default;  // Wider spacing on all Components
 $body-bg:                   $white !default;
 $body-color:                $gray-900 !default;
 
-// Brand DNA calls for Chronicle SSM or Bliss, but website uses Open Sans
-// Use the default Bootstrap fallback font family, but use Open Sans first
+// Brand DNA calls for Chronicle SSM or Bliss, but website uses Open Sans and
+// 2020 homepage uses Bliss 2 or Open Sans/sans-serif (but Bliss is a serif
+// font)...
+// Ref: Use Open Sans but use default Bootstrap system font stack
 $font-family-sans-serif:      "Open Sans", -apple-system, blinkmacsystemfont, "Segoe UI", roboto, "Helvetica Neue", arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+// Ref: 2020 Homepage, with fallbacks based on data from fontfamily.io
+//      and https://readium.org/readium-css/docs/CSS09-default_fonts.html
+$font-family-serif:           "Playfair Display", athelas, constantia, georgia, serif;
 
 $list-inline-padding:         $spacer !default;
 
@@ -135,3 +140,5 @@ $close-color: $body-color !default;
 // Custom Web Framework options
 $enable-iconography:           true !default;
 $mdi-font-path:                "../fonts/mdi" !default;
+$playfair-display-font-path:   "../fonts/playfair-display" !default;
+$open-sans-font-path:          "../fonts/open-sans" !default;

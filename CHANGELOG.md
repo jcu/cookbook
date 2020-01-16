@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+* Included intial spec for serif fonts
+
+### Fixed
+
+* Remove double-up of nested font directories by only copying subfiles
+
+### Changed
+
+* Adjust build process pass `node_modules/` as an include path within SCSS
+* Use upcoming SCSS support in `typeface-*` packages; this removes the need
+  for a find-and-replace process during font builds
+
 ## [2.0.0-alpha.3] - 2019-12-16
 
 ### Fixed
