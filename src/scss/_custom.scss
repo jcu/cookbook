@@ -16,7 +16,7 @@
   opacity: .75;
 
   &:not(:disabled):not(.disabled) {
-    @include hover-focus {
+    @include hover-focus() {
       opacity: 1;
     }
   }
