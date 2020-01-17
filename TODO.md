@@ -1,6 +1,7 @@
 ## Inclusions
 
 * Favicon.ico - further sizes, transparent background and so on
+* CI checks for accessibility (https://github.com/pa11y/pa11y-ci)
 
 ## Project management
 
@@ -20,10 +21,10 @@
 
 * Colors:
 
-  * Clarification around inconsistent colours in Brand DNA
+  * Clarification around inconsistent colours in Brand DNA and on webpages
   * Should JCU logo be using black (#000) or off-black/grey (#231f20) --
     website uses the former, download .zip files use the latter.
-  * Incorrect colours in use on Torres Straight Islanders Flag on website
+  * Incorrect colours in use on Torres Straight Islander Flag on website
 
 ## Technical
 
