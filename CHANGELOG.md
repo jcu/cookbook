@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 * Remove double-up of nested font directories by only copying subfiles
+* Adjust Australia Unlimited logo to remove empty space at bottom
 
 ### Changed
 
