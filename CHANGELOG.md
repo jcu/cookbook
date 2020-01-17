@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+* Added `.font-serif` utility for setting serif fonts; serif fonts may be
+  applied by default to certain headings or display typography in future
+* Added `.font-smooth` utility for enabling non-standard font-smoothing. This
+  adds feature/appearance-parity with the JCU homepage but is
+  [non-standard](https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth)
+  and [inadvisable](https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/)
 * Included intial spec for serif fonts
 
 ### Fixed
