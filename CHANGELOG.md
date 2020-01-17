@@ -24,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+* Adjust colours according to 2020 homepage; these are subject to change
+  depending on future web redesigns
 * Adjust build process pass `node_modules/` as an include path within SCSS
 * Use upcoming SCSS support in `typeface-*` packages; this removes the need
   for a find-and-replace process during font builds
