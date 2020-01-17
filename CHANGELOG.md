@@ -20,6 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Adjust build process pass `node_modules/` as an include path within SCSS
 * Use upcoming SCSS support in `typeface-*` packages; this removes the need
   for a find-and-replace process during font builds
+* Remove background colour from Breadcrumbs; it can be added manually via
+  `.bg-light` as required
 
 ## [2.0.0-alpha.3] - 2019-12-16
 
