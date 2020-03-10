@@ -178,6 +178,9 @@ and the core components it provides.
 * Institutional logos (retrieved in `.zip` archive form, converted into
   web-compatible SVG format and colours set to match the JCU website logo)
 
+  * 50th Anniversary logos had duplicate `0` (zero) and `YEARS` shapes
+    removed from vectorised files (except small vertical/shield variants)
+
 #### Flags
 
 See
