@@ -9928,6 +9928,10 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
+h1, .h1 {
+  font-family: "Playfair Display", athelas, constantia, georgia, serif;
+}
+
 .btn-outline-secondary {
   color: #6c757d;
   border-color: #6c757d;
@@ -9970,15 +9974,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 .table-hover tbody .table-dark:hover {
   color: #f0f0f0;
-}
-
-.font-serif {
-  font-family: "Playfair Display", athelas, constantia, georgia, serif;
-}
-
-.font-smooth {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 .alert.mdi::before {
@@ -10028,5 +10023,14 @@ a.text-dark:hover, a.text-dark:focus {
 
 .navbar-brand.mdi:not(:empty)::before {
   margin-right: 0.15625rem;
+}
+
+.font-serif {
+  font-family: "Playfair Display", athelas, constantia, georgia, serif !important;
+}
+
+.font-smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 /*# sourceMappingURL=jcu-web-framework.css.map */
