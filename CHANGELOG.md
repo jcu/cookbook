@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+* Changed `h1` to use serif font
+
 ## [2.0.0-alpha.4] - 2020-01-17
 
 ### Added

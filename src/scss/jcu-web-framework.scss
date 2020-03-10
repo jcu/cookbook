@@ -59,6 +59,7 @@ $colors: map-merge($colors-override, $colors);
 //
 // Web Framework additions
 //
+@import "type";
 @import "custom";
 @import "iconography";
 @import "utilities/text";
