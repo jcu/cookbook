@@ -1,0 +1,16 @@
+// stylelint-disable declaration-no-important
+
+//
+// Text
+//
+
+// Fonts
+.font-serif {
+  font-family: $font-family-serif !important;
+}
+
+// Font smoothing; suitable for isolated usage, such as light text on dark backgrounds
+.font-smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

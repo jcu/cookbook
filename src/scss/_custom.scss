@@ -29,18 +29,3 @@
 .table-hover tbody .table-dark:hover {
   color: $light;
 }
-
-//
-// Utilities
-//
-
-// Fonts
-.font-serif {
-  font-family: $font-family-serif;
-}
-
-// Suitable for isolated usage, such as light text on dark backgrounds
-.font-smooth {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
