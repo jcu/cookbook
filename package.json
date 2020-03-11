@@ -1,6 +1,6 @@
 {
   "name": "@jcu/web-framework",
-  "version": "2.0.0-alpha.5",
+  "version": "2.0.0-alpha.6",
   "version_short": "2.0",
   "description": "The web UI framework for building responsive, mobile-first web projects with University styling",
   "main": "dist/js/bootstrap.js",
