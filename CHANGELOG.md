@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
+## [2.0.0-alpha.5] - 2020-03-11
+
 ### Added
 
 * Added JCU 50th Anniversary logo variations
@@ -109,6 +112,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   lists
 * Use theme colours from microsite layout (fixes #10).
 
+[2.0.0-alpha.5]: https://github.com/jcu/web-framework/releases/tag/v2.0.0-alpha.5
+[2.0.0-alpha.4]: https://github.com/jcu/web-framework/releases/tag/v2.0.0-alpha.4
 [2.0.0-alpha.3]: https://github.com/jcu/web-framework/releases/tag/v2.0.0-alpha.3
 [2.0.0-alpha.2]: https://github.com/jcu/web-framework/releases/tag/v2.0.0-alpha.2
 [2.0.0-alpha.1]: https://github.com/jcu/web-framework/releases/tag/v2.0.0-alpha.1
