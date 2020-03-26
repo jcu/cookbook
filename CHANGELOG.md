@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * Removed customisations for `.btn-outline-warning`; it should now only be
   used on a dark background
+* Switched breadcrumb styles and divider to match JCU website (where
+  accessible)
 
 ## [2.0.0-alpha.5] - 2020-03-11
 

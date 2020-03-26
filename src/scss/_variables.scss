@@ -120,8 +120,11 @@ $list-inline-padding:         $spacer !default;
 
 $btn-disabled-opacity:        .7 !default;
 
-$breadcrumb-bg: null !default;
-$breadcrumb-active-color: $body-color !default;
+$breadcrumb-item-padding:           .75rem !default;
+$breadcrumb-bg:                     transparent !default; // Ref: Website, allows for fluid layouts
+$breadcrumb-divider-color:          $gray-700 !default;   // Ref: a11y
+$breadcrumb-active-color:           $gray-800 !default;   // Ref: a11y
+$breadcrumb-divider:                quote(">") !default;  // Ref: Website, "menu-update2019.css"
 
 $navbar-nav-link-padding-x:         1rem !default;
 
