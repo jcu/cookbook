@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * Add `--font-family-serif` variable to root
 
+### Fixed
+
+* Bump jQuery version to resolve security issues
+
 ### Changed
 
 * Removed customisations for `.btn-outline-warning`; it should now only be
