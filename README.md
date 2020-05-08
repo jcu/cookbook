@@ -41,6 +41,40 @@ essence a themed version of Bootstrap and can be used as such, like so:
   * As a custom theme or as a base for creating customised Sass within Create React App
     ([documentation](https://facebook.github.io/create-react-app/docs/adding-bootstrap#using-a-custom-theme))
 
+
+## Usage
+
+JCU Web Framework resources can be included in your project from JCU's
+official CDN in a similar manner to that of
+[BootstrapCDN](https://getbootstrap.com/docs/4.4/getting-started/download/#bootstrapcdn):
+
+```html
+<!-- In the <head> of your project -->
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/web-framework/2.0.0-alpha.6/css/jcu-web-framework.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/web-framework/2.0.0-alpha.6/css/fonts.min.css">
+
+<!-- Before the closing </body> tag in your project -->
+<script src="https://cdn.jcu.edu.au/web-framework/2.0.0-alpha.6/js/jquery.min.js"></script>
+<script src="https://cdn.jcu.edu.au/web-framework/2.0.0-alpha.6/js/popper.min.js"></script>
+<script src="https://cdn.jcu.edu.au/web-framework/2.0.0-alpha.6/js/bootstrap.min.js"></script>
+```
+
+Refer to the official User Documentation links above for how to build pages
+using Bootstap.
+
+If you'd like to use the optional iconography library, you can add the
+following as well:
+
+```html
+<!-- In the <head> of your project -->
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/web-framework/2.0.0-alpha.6/css/materialdesignicons.min.css">
+```
+
+You can now use icons by following the instructions at
+<https://dev.materialdesignicons.com/getting-started/webfont> (skipping the
+setup steps as you've already done them).
+
+
 ## Development
 
 Builds utilise the same style of package scripts defined in `package.json`
