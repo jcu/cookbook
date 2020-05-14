@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+* Upgrade Bootstrap to v4.5.0. Note the changes at
+  https://github.com/twbs/bootstrap/releases/tag/v4.5.0
+* Upgrade mdi icons to v5.2.45
+
 ### Fixed
 
 * Fixed JS error in site docs homepage
