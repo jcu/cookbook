@@ -26,7 +26,7 @@ function regExpQuoteReplacement(string) {
 
 const DRY_RUN = false
 
-function walkAsync(directory, excludedDirectories, fileCallback, errback) {
+function walkAsync(directory, excludedDirectories, excludedFiles, fileCallback, errback) {
   if (excludedDirectories.has(path.parse(directory).base)) {
     return
   }
@@ -38,6 +38,10 @@ function walkAsync(directory, excludedDirectories, fileCallback, errback) {
     }
 
     names.forEach(name => {
+      if (excludedFiles.has(name)) {
+        return
+      }
+
       const filepath = path.join(directory, name)
       fs.lstat(filepath, (err, stats) => {
         if (err) {
@@ -46,7 +50,7 @@ function walkAsync(directory, excludedDirectories, fileCallback, errback) {
         }
 
         if (stats.isDirectory()) {
-          process.nextTick(walkAsync, filepath, excludedDirectories, fileCallback, errback)
+          process.nextTick(walkAsync, filepath, excludedDirectories, excludedFiles, fileCallback, errback)
         } else if (stats.isFile()) {
           process.nextTick(fileCallback, filepath)
         }
@@ -55,7 +59,7 @@ function walkAsync(directory, excludedDirectories, fileCallback, errback) {
   })
 }
 
-function replaceRecursively(directory, excludedDirectories, allowedExtensions, original, replacement) {
+function replaceRecursively(directory, excludedDirectories, excludedFiles, allowedExtensions, original, replacement) {
   original = new RegExp(regExpQuote(original), 'g')
   replacement = regExpQuoteReplacement(replacement)
   const updateFile = DRY_RUN ?
@@ -72,7 +76,7 @@ function replaceRecursively(directory, excludedDirectories, allowedExtensions, o
       }
     }
 
-  walkAsync(directory, excludedDirectories, updateFile, err => {
+  walkAsync(directory, excludedDirectories, excludedFiles, updateFile, err => {
     console.error('ERROR while traversing directory!:')
     console.error(err)
     process.exit(1)
@@ -94,6 +98,9 @@ function main(args) {
     'node_modules',
     'vendor'
   ])
+  const EXCLUDED_FILES = new Set([
+    'CHANGELOG.md'
+  ])
   const INCLUDED_EXTENSIONS = new Set([
     // This extension whitelist is how we avoid modifying binary files
     '',
@@ -101,12 +108,12 @@ function main(args) {
     '.html',
     '.js',
     '.json',
-    //'.md',
+    '.md',
     '.scss',
     '.txt',
     '.yml'
   ])
-  replaceRecursively('.', EXCLUDED_DIRS, INCLUDED_EXTENSIONS, oldVersion, newVersion)
+  replaceRecursively('.', EXCLUDED_DIRS, EXCLUDED_FILES, INCLUDED_EXTENSIONS, oldVersion, newVersion)
 }
 
 main(process.argv.slice(2))
