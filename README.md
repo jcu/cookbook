@@ -2,7 +2,7 @@
 
 ## User documentation
 
-* Bootstrap: https://getbootstrap.com/docs/4.4/
+* Bootstrap: https://getbootstrap.com/docs/4.5/
 * Icon reference: https://materialdesignicons.com/
 
 ## Features
@@ -46,7 +46,7 @@ essence a themed version of Bootstrap and can be used as such, like so:
 
 JCU Web Framework resources can be included in your project from JCU's
 official CDN in a similar manner to that of
-[BootstrapCDN](https://getbootstrap.com/docs/4.4/getting-started/download/#bootstrapcdn):
+[BootstrapCDN](https://getbootstrap.com/docs/4.5/getting-started/download/#bootstrapcdn):
 
 ```html
 <!-- In the <head> of your project -->
