@@ -1,9 +1,7 @@
-# JCU CookBook (formerly the Web Framework)
+# JCU CookBook
 
-## User documentation
-
-* Bootstrap: https://getbootstrap.com/docs/4.5/
-* Icon reference: https://materialdesignicons.com/
+CookBook, formerly the JCU Web Framework, can be integrated with any type of web project
+you're working on – particularly those that support Bootstrap.
 
 ## Features
 
@@ -14,7 +12,7 @@
   * Layout and typography
   * Components like buttons, cards, navigation and more
   * Utilities
-  * ...and everything else [Bootstrap supports](https://getbootstrap.com/docs/)
+  * ...and everything else that [Bootstrap supports](https://getbootstrap.com/docs/)
 
 * JCU logos and website artwork
 * Iconography from [Material Design Icons](https://materialdesignicons.com/)
@@ -22,11 +20,14 @@
 * Font families and CSS for Open Sans and Playfair Display (optional)
 * Dedicated CDN hosting of all resources, including fonts and iconography
 
+## User documentation
+
+* Bootstrap: https://getbootstrap.com/docs/4.5/
+* Icon reference: https://materialdesignicons.com/
+
 ## Integration
 
-The JCU CookBook can be integrated with any type of web project you're
-working on – particularly those that support Bootstrap.  CookBook is, in
-essence, a themed version of Bootstrap and can be used as such, like so:
+CookBook is, in essence, a themed version of Bootstrap and can be used as such, like so:
 
 * Web and HTML:
 
