@@ -1,4 +1,4 @@
-# JCU Web Framework
+# JCU CookBook (formerly the Web Framework)
 
 ## User documentation
 
@@ -24,9 +24,9 @@
 
 ## Integration
 
-The JCU Web Framework can be integrated with any type of web project you're
-working on – particularly those that support Bootstrap.  The Framework is in
-essence a themed version of Bootstrap and can be used as such, like so:
+The JCU CookBook can be integrated with any type of web project you're
+working on – particularly those that support Bootstrap.  CookBook is, in
+essence, a themed version of Bootstrap and can be used as such, like so:
 
 * Web and HTML:
 
@@ -44,7 +44,7 @@ essence a themed version of Bootstrap and can be used as such, like so:
 
 ## Usage
 
-JCU Web Framework resources can be included in your project from JCU's
+JCU CookBook resources can be included in your project from JCU's
 official CDN in a similar manner to that of
 [BootstrapCDN](https://getbootstrap.com/docs/4.5/getting-started/download/#bootstrapcdn):
 
@@ -178,7 +178,7 @@ this in the near future.
 
 ## Accessibility
 
-The JCU Web Framework aims to allow websites and applications that that use it
+The JCU CookBook aims to allow websites and applications that that use it
 to be compliant with [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/quickref/).
 As a component library, it is possible for system implementers and developers
 to mix and match components, add styles and integrate with applications in
@@ -235,9 +235,9 @@ for details.  Reproduction of the following resources is underst
 
 ## Licensing
 
-Use of the JCU Web Framework and its resources are limited to James Cook
+Use of CookBook and its resources are limited to James Cook
 University projects and where appropriate permission is sought to use the
-branding.  Specific aspects of the JCU Web Framework, such as logos and
+branding.  Specific aspects of CookBook, such as logos and
 artwork, may be subject to their own approvals, copyright or licensing and
 users are advised to seek their own independent advice regarding their usage
 from the appropriate University departments.
