@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0-alpha.8] - 2020-07-31
+
 ### Changed
 
 * Renamed project to JCU CookBook
@@ -145,6 +147,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   lists
 * Use theme colours from microsite layout (fixes #10).
 
+[2.0.0-alpha.8]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.8
 [2.0.0-alpha.7]: https://github.com/jcu/web-framework/releases/tag/v2.0.0-alpha.7
 [2.0.0-alpha.6]: https://github.com/jcu/web-framework/releases/tag/v2.0.0-alpha.6
 [2.0.0-alpha.5]: https://github.com/jcu/web-framework/releases/tag/v2.0.0-alpha.5
