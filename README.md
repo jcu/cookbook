@@ -91,17 +91,13 @@ in this package.  At a high level, however, the process looks like so:
 The resulting distribution is then published to the CDN and documentation
 published accordingly online (coming shortly).
 
-### Build process
+### Building
 
-1. Install this package and its dependenies with:
+1. Install this package and its dependencies with:
 
    ```sh
    yarn
    ```
-
-1. Set up a local environment with `rclone config` and create a remote called
-   `jcu-cdn-cookbook`. Ask a maintainer if you're unsure what the configuration should
-   contain.
 
 1. Execute a build with:
 
@@ -114,6 +110,14 @@ published accordingly online (coming shortly).
    At present during the alpha and beta process, this involves manual testing
    with the HTML documentation and checking against in-development
    applications.
+
+### Release process
+
+1. Firstly, follow the instructions above for Building this project.
+
+1. Set up an Rclone environment with `rclone config` and create a remote
+   called `jcu-cdn-cookbook`. Ask a maintainer if you're unsure what the
+   configuration should contain.
 
 1. Build a release and copy the distribution to CDN via:
 
@@ -198,6 +202,7 @@ and the core components it provides.
 ### Guidelines
 
 * Favicons: https://github.com/audreyr/favicon-cheat-sheet
+* Code Guide: https://codeguide.co
 
 ### Sources
 
