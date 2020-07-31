@@ -52,13 +52,13 @@ official CDN in a similar manner to that of
 
 ```html
 <!-- In the <head> of your project -->
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.8/css/cookbook.min.css">
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.8/css/fonts.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.7/css/cookbook.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.7/css/fonts.min.css">
 
 <!-- Before the closing </body> tag in your project -->
-<script src="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.8/js/jquery.min.js"></script>
-<script src="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.8/js/popper.min.js"></script>
-<script src="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.8/js/bootstrap.min.js"></script>
+<script src="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.7/js/jquery.min.js"></script>
+<script src="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.7/js/popper.min.js"></script>
+<script src="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.7/js/bootstrap.min.js"></script>
 ```
 
 Refer to the official User Documentation links above for how to build pages
@@ -69,7 +69,7 @@ following as well:
 
 ```html
 <!-- In the <head> of your project -->
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.8/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.7/css/materialdesignicons.min.css">
 ```
 
 You can now use icons by following the instructions at
