@@ -1902,11 +1902,6 @@ pre code {
   box-shadow: 0 0 0 0.2rem rgba(0, 102, 179, 0.25);
 }
 
-.form-control::-webkit-input-placeholder {
-  color: #6c757d;
-  opacity: 1;
-}
-
 .form-control::-moz-placeholder {
   color: #6c757d;
   opacity: 1;
@@ -4573,7 +4568,7 @@ input[type="button"].btn-block {
   display: inline-block;
   padding-right: 0.75rem;
   color: #495057;
-  content: ">";
+  content: "/";
 }
 
 .breadcrumb-item + .breadcrumb-item:hover::before {
@@ -9611,4 +9606,4 @@ h1, .h1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/*# sourceMappingURL=jcu-web-framework.css.map */
+/*# sourceMappingURL=cookbook.css.map */
