@@ -1,7 +1,8 @@
 # JCU CookBook
 
-CookBook, formerly the JCU Web Framework, can be integrated with any type of web project
-you're working on – particularly those that support Bootstrap.
+CookBook, formerly known as the JCU Web Framework, can be integrated with any
+type of web project you're working on – particularly those that support
+Bootstrap.
 
 ## Features
 
@@ -51,13 +52,13 @@ official CDN in a similar manner to that of
 
 ```html
 <!-- In the <head> of your project -->
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/web-framework/2.0.0-alpha.8/css/jcu-web-framework.min.css">
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/web-framework/2.0.0-alpha.8/css/fonts.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.8/css/cookbook.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.8/css/fonts.min.css">
 
 <!-- Before the closing </body> tag in your project -->
-<script src="https://cdn.jcu.edu.au/web-framework/2.0.0-alpha.8/js/jquery.min.js"></script>
-<script src="https://cdn.jcu.edu.au/web-framework/2.0.0-alpha.8/js/popper.min.js"></script>
-<script src="https://cdn.jcu.edu.au/web-framework/2.0.0-alpha.8/js/bootstrap.min.js"></script>
+<script src="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.8/js/jquery.min.js"></script>
+<script src="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.8/js/popper.min.js"></script>
+<script src="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.8/js/bootstrap.min.js"></script>
 ```
 
 Refer to the official User Documentation links above for how to build pages
@@ -68,7 +69,7 @@ following as well:
 
 ```html
 <!-- In the <head> of your project -->
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/web-framework/2.0.0-alpha.8/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.8/css/materialdesignicons.min.css">
 ```
 
 You can now use icons by following the instructions at
@@ -99,7 +100,7 @@ published accordingly online (coming shortly).
    ```
 
 1. Set up a local environment with `rclone config` and create a remote called
-   `jcu-cdn`. Ask a maintainer if you're unsure what the configuration should
+   `jcu-cdn-cookbook`. Ask a maintainer if you're unsure what the configuration should
    contain.
 
 1. Execute a build with:
@@ -179,7 +180,7 @@ this in the near future.
 
 ## Accessibility
 
-The JCU CookBook aims to allow websites and applications that that use it
+JCU CookBook aims to allow websites and applications that that use it
 to be compliant with [WCAG 2.1 Level AA](https://www.w3.org/WAI/WCAG21/quickref/).
 As a component library, it is possible for system implementers and developers
 to mix and match components, add styles and integrate with applications in
@@ -236,9 +237,9 @@ for details.  Reproduction of the following resources is underst
 
 ## Licensing
 
-Use of CookBook and its resources are limited to James Cook
-University projects and where appropriate permission is sought to use the
-branding.  Specific aspects of CookBook, such as logos and
-artwork, may be subject to their own approvals, copyright or licensing and
-users are advised to seek their own independent advice regarding their usage
-from the appropriate University departments.
+Use of JCU CookBook and its resources are limited to James Cook University
+projects and where appropriate permission is sought to use the branding.
+Specific aspects of the JCU CookBook, such as logos and artwork, may be
+subject to their own approvals, copyright or licensing and users are advised
+to seek their own independent advice regarding their usage from the
+appropriate University departments.

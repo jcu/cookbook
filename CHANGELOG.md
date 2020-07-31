@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+* Renamed project to JCU CookBook
+
 ## [2.0.0-alpha.7] - 2020-05-14
 
 ### Changed
