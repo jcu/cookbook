@@ -99,7 +99,8 @@ function main(args) {
     'vendor'
   ])
   const EXCLUDED_FILES = new Set([
-    'CHANGELOG.md'
+    'CHANGELOG.md',
+    'README.md'
   ])
   const INCLUDED_EXTENSIONS = new Set([
     // This extension whitelist is how we avoid modifying binary files

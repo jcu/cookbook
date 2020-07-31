@@ -125,7 +125,8 @@ published accordingly online (coming shortly).
    yarn release
    ```
 
-1. Update `CHANGELOG.md` with the current date and released version
+1. Update `CHANGELOG.md` and CDN URLs inside `README.md` with the current date
+   and released version
 
 1. Commit the build to Git and tag accordingly:
 
