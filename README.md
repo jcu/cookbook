@@ -69,7 +69,7 @@ following as well:
 
 ```html
 <!-- In the <head> of your project -->
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.7/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.8/css/materialdesignicons.min.css">
 ```
 
 You can now use icons by following the instructions at
