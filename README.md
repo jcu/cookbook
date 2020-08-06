@@ -141,8 +141,8 @@ published accordingly online (coming shortly).
    yarn publish
    ```
 
-   Don't set a `New version` at this time.  We'll update it ourselves in a
-   moment.
+   Don't set a `New version` at this time; just hit enter/return.  We'll
+   update it ourselves in a moment.
 
 1. Update the working version number in the source code:
 
