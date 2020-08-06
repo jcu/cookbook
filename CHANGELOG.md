@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+* Upgrade Bootstrap to v4.5.1. Note the changes at
+  https://github.com/twbs/bootstrap/releases/tag/v4.5.1
+
 ## [2.0.0-alpha.8] - 2020-07-31
 
 ### Changed
