@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+* Add `latest` and `2.0` (version number) directories to CDN to always reflect
+  the latest version
+
 ### Changed
 
 * Upgrade Bootstrap to v4.5.2. Note the changes at

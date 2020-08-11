@@ -25,6 +25,7 @@ Bootstrap.
 
 * Bootstrap: https://getbootstrap.com/docs/4.5/
 * Icon reference: https://materialdesignicons.com/
+* [CookBook Changelog]
 
 ## Integration
 
@@ -48,17 +49,20 @@ CookBook is, in essence, a themed version of Bootstrap and can be used as such, 
 
 JCU CookBook resources can be included in your project from JCU's
 official CDN in a similar manner to that of
-[BootstrapCDN](https://getbootstrap.com/docs/4.5/getting-started/download/#bootstrapcdn):
+[BootstrapCDN](https://getbootstrap.com/docs/4.5/getting-started/download/#bootstrapcdn).
+Insert the following code into your project:
 
 ```html
 <!-- In the <head> of your project -->
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.9/css/cookbook.min.css">
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.9/css/fonts.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0/css/cookbook.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0/css/fonts.min.css">
+```
 
+```html
 <!-- Before the closing </body> tag in your project -->
-<script src="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.9/js/jquery.min.js"></script>
-<script src="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.9/js/popper.min.js"></script>
-<script src="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.9/js/bootstrap.min.js"></script>
+<script src="https://cdn.jcu.edu.au/cookbook/2.0/js/jquery.min.js"></script>
+<script src="https://cdn.jcu.edu.au/cookbook/2.0/js/popper.min.js"></script>
+<script src="https://cdn.jcu.edu.au/cookbook/2.0/js/bootstrap.min.js"></script>
 ```
 
 Refer to the official User Documentation links above for how to build pages
@@ -69,13 +73,42 @@ following as well:
 
 ```html
 <!-- In the <head> of your project -->
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0.0-alpha.9/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0/css/materialdesignicons.min.css">
 ```
 
 You can now use icons by following the instructions at
 <https://dev.materialdesignicons.com/getting-started/webfont> (skipping the
 setup steps as you've already done them).
 
+### Versions
+
+Different versions of CookBook are available on the CDN depending on your
+desired stability and level of control over the resources:
+
+* `latest` – always use the latest release, including major versions that may
+  have backwards incompatible changes; or
+* `2` – always use the latest release under this major version; or
+* `2.0` – always use the latest release under this minor version; or
+* `2.0.0-alpha.9` – A specific version number.
+
+So, for example, if you wanted to always use the latest version of CookBook,
+and are okay with major version changes, use the following format of URL:
+
+```html
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/latest/css/cookbook.min.css">
+```
+
+For other verisons, replace `latest` with your desired major, minor or patch
+version.  Note that you must keep all versions of resources in sync across all
+tags.
+
+### Upgrading
+
+To upgrade your project to use a more recent version of CookBook, simply
+change its version in your HTML. If you are moving to a new major version, you
+should refer to the [CookBook Changelog] for details of changes.  For minor or
+patch releases, you should do the same but given our use of SemVer, changes
+will be feature releases or bug fixes.
 
 ## Development
 
@@ -247,3 +280,6 @@ Specific aspects of the JCU CookBook, such as logos and artwork, may be
 subject to their own approvals, copyright or licensing and users are advised
 to seek their own independent advice regarding their usage from the
 appropriate University departments.
+
+[CookBook Changelog]: ./CHANGELOG.md
+
