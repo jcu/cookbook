@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0-alpha.10] - 2020-08-12
+
 ### Added
 
 * Add `latest` and `2.0` (version number) directories to CDN to always reflect
@@ -165,6 +167,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   lists
 * Use theme colours from microsite layout (fixes #10).
 
+[2.0.0-alpha.10]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.10
 [2.0.0-alpha.9]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.9
 [2.0.0-alpha.8]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.8
 [2.0.0-alpha.7]: https://github.com/jcu/web-framework/releases/tag/v2.0.0-alpha.7
