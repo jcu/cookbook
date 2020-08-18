@@ -68,6 +68,21 @@ Insert the following code into your project:
 Refer to the official User Documentation links above for how to build pages
 using Bootstap.
 
+### Resources
+
+Images can be used from the CDN like so:
+
+```html
+<link rel="icon" href="https://cdn.jcu.edu.au/web-framework/2.0/img/favicon.ico" />
+<img src="https://cdn.jcu.edu.au/cookbook/2.0/img/logos/jcu-logo-horizontal.svg" alt="James Cook University (JCU) Australia logo">
+```
+
+Available resources and their corresponding paths can be found by referrring to the
+[`dist/`](https://github.com/jcu/cookbook/tree/master/dist/) directory within this repository.
+The subpath should be appended after the version number in the URL, as per the example.
+
+### Iconography
+
 If you'd like to use the optional iconography library, you can add the
 following as well:
 
@@ -99,8 +114,8 @@ and are okay with major version changes, use the following format of URL:
 ```
 
 For other verisons, replace `latest` with your desired major, minor or patch
-version.  Note that you must keep all versions of resources in sync across all
-tags.
+version. Note that you must keep all versions of resources in sync across all
+HTML tags to ensure things function correctly.
 
 ### Upgrading
 
