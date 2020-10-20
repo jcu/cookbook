@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Upgrade dependencies
+
 ## [2.0.0-alpha.11] - 2020-10-16
 
 * Upgrade Bootstrap to v4.5.3. Note the changes at
