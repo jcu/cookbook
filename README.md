@@ -73,7 +73,7 @@ using Bootstap.
 Images can be used from the CDN like so:
 
 ```html
-<link rel="icon" href="https://cdn.jcu.edu.au/web-framework/2.0/img/favicon.ico" />
+<link rel="icon" href="https://cdn.jcu.edu.au/cookbook/2.0/img/favicon.ico" />
 <img src="https://cdn.jcu.edu.au/cookbook/2.0/img/logos/jcu-logo-horizontal.svg" alt="James Cook University (JCU) Australia logo">
 ```
 
