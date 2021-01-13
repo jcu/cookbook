@@ -1,3 +1,34 @@
 @import "variables";
-@import "typeface-open-sans/typeface";
-@import "typeface-playfair-display/typeface";
+
+@mixin fontFaces($name) {
+  $font: map-get($fonts, $name);
+
+  @each $weight in map-get($font, "weights") {
+    @each $style in map-get($font, "styles") {
+      @include fontFace(
+        $weight: $weight,
+        $style: $style,
+        $fontDir: "#{$font-path-base}/#{$name}",
+      );
+    }
+  }
+}
+
+$fonts: (
+  "open-sans": (
+    "styles": [normal, italic],
+    "weights": [300, 400, 600, 700, 800],
+  ),
+  "playfair-display": (
+    "styles": [normal, italic],
+    "weights": [400, 700, 900],
+  ),
+);
+
+// As `fontFace` is defined with the same name in each package (and @import
+// cannot occur within a loop), we must manually include each font's mixins
+@import "@fontsource/open-sans/scss/mixins";
+@include fontFaces("open-sans");
+
+@import "@fontsource/playfair-display/scss/mixins";
+@include fontFaces("playfair-display");

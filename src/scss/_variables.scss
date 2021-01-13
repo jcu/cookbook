@@ -144,6 +144,5 @@ $close-color: $body-color !default;
 
 // Custom CookBook options
 $enable-iconography:           true !default;
-$mdi-font-path:                "../fonts/mdi" !default;
-$playfair-display-font-path:   "../fonts/playfair-display" !default;
-$open-sans-font-path:          "../fonts/open-sans" !default;
+$font-path-base:               "../fonts" !default;
+$mdi-font-path:               "#{$font-path-base}/mdi" !default;

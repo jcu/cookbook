@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Switch `typeface` project packages for `fontsource`. This adds support for
+  characters in scripts other than Latin (such as Greek or Cyrillic).
 * Fix build by adding `postcss` as a dependency since it is now a peer
   dependency of `postcss-cli` in v8.0.0
 * Upgrade dependencies

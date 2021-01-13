@@ -28,14 +28,6 @@
 
 ## Technical
 
-* Typeface project is deprecated so we need to move to another solution such
-  as https://github.com/fontsource/fontsource/ but only if/when SCSS support
-  is added; see https://github.com/fontsource/fontsource/issues/64
-
-  * Fonts require `sed` to rework their directory paths:
-    upgrade typeface packages once
-    https://github.com/KyleAMathews/typefaces/pull/161 is merged
-
 * Can't use fusv to find usused variables because of lack of @import support
   https://github.com/XhmikosR/find-unused-sass-variables/issues/23.
   Linting CSS in this way is disabled for now.
