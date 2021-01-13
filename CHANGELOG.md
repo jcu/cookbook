@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Fix build by adding `postcss` as a dependency since it is now a peer
+  dependency of `postcss-cli` in v8.0.0
 * Upgrade dependencies
 
 ## [2.0.0-alpha.11] - 2020-10-16
