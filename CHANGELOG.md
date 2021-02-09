@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0-alpha.13] - 2021-02-10
+
 * Upgrade Bootstrap to v4.6.0. Note the changes at
   https://github.com/twbs/bootstrap/releases/tag/v4.6.0
 * Upgrade dependencies, pin @fontsource to ~4.1 to avoid known bug (see TODO)
@@ -185,7 +187,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   lists
 * Use theme colours from microsite layout (fixes #10).
 
-[2.0.0-alpha.10]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.11
+[2.0.0-alpha.13]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.13
+[2.0.0-alpha.12]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.12
+[2.0.0-alpha.11]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.11
 [2.0.0-alpha.10]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.10
 [2.0.0-alpha.9]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.9
 [2.0.0-alpha.8]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.8

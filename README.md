@@ -103,7 +103,7 @@ desired stability and level of control over the resources:
   have backwards incompatible changes; or
 * `2` – always use the latest release under this major version; or
 * `2.0` – always use the latest release under this minor version; or
-* `2.0.0-alpha.12` – A specific version number.
+* `2.0.0-alpha.13` – A specific version number.
 
 So, for example, if you wanted to always use the latest version of CookBook,
 and are okay with major version changes, use the following format of URL:
