@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+* Upgrade Bootstrap to v4.6.0. Note the changes at
+  https://github.com/twbs/bootstrap/releases/tag/v4.6.0
+* Upgrade dependencies, pin @fontsource to ~4.1 to avoid known bug (see TODO)
+
 ## [2.0.0-alpha.12] - 2021-01-13
 
 * Switch `typeface` project packages for `fontsource`. This adds support for

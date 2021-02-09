@@ -23,7 +23,7 @@ Bootstrap.
 
 ## User documentation
 
-* Bootstrap: https://getbootstrap.com/docs/4.5/
+* Bootstrap: https://getbootstrap.com/docs/4.6/
 * Icon reference: https://materialdesignicons.com/
 * [CookBook Changelog]
 
@@ -47,10 +47,9 @@ CookBook is, in essence, a themed version of Bootstrap and can be used as such, 
 
 ## Usage
 
-JCU CookBook resources can be included in your project from JCU's
-official CDN in a similar manner to that of
-[BootstrapCDN](https://getbootstrap.com/docs/4.5/getting-started/download/#bootstrapcdn).
-Insert the following code into your project:
+JCU CookBook resources can be included in your project from JCU's official CDN
+in a similar manner to that of Bootstrap's CDN.  Insert the following code
+into your project:
 
 ```html
 <!-- In the <head> of your project -->
@@ -297,4 +296,3 @@ to seek their own independent advice regarding their usage from the
 appropriate University departments.
 
 [CookBook Changelog]: ./CHANGELOG.md
-

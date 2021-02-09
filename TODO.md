@@ -28,6 +28,9 @@
 
 ## Technical
 
+* Cannot proceed past @fontsource fonts 4.1.0 because of
+  https://github.com/fontsource/fontsource/issues/153
+
 * Can't use fusv to find usused variables because of lack of @import support
   https://github.com/XhmikosR/find-unused-sass-variables/issues/23.
   Linting CSS in this way is disabled for now.
