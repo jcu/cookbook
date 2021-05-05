@@ -1,5 +1,7 @@
 # JCU CookBook
 
+[![Node.js CI](https://github.com/jcu/cookbook/actions/workflows/node.js.yml/badge.svg)](https://github.com/jcu/cookbook/actions/workflows/node.js.yml)
+
 CookBook, formerly known as the JCU Web Framework, can be integrated with any
 type of web project you're working on – particularly those that support
 Bootstrap.
