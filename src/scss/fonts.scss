@@ -6,6 +6,7 @@
   @each $weight in map-get($font, "weights") {
     @each $style in map-get($font, "styles") {
       @include fontFace(
+        $fontName: map-get($font, "fontName"),
         $weight: $weight,
         $style: $style,
         $fontDir: "#{$font-path-base}/#{$name}",
@@ -14,12 +15,15 @@
   }
 }
 
+// fontName is required until moving to node-sass as variables are global
 $fonts: (
   "open-sans": (
+    "fontName": "Open Sans",
     "styles": [normal, italic],
     "weights": [300, 400, 600, 700, 800],
   ),
   "playfair-display": (
+    "fontName": "Playfair Display",
     "styles": [normal, italic],
     "weights": [400, 700, 900],
   ),
