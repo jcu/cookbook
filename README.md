@@ -46,7 +46,6 @@ CookBook is, in essence, a themed version of Bootstrap and can be used as such, 
   * As a custom theme or as a base for creating customised Sass within Create React App
     ([documentation](https://facebook.github.io/create-react-app/docs/adding-bootstrap#using-a-custom-theme))
 
-
 ## Usage
 
 JCU CookBook resources can be included in your project from JCU's official CDN
@@ -141,6 +140,18 @@ The resulting distribution is then published to the CDN and documentation
 published accordingly online (coming shortly).
 
 ### Building
+
+1. Building currently requires `node-sass`, which does not support Node v16.
+   You will need to install an earlier version of Node, such as v14, and
+   ensure this is used before starting.  On macOS, you can do the following:
+
+   ```sh
+   brew install node@14
+   export PATH="/usr/local/opt/node@14/bin/:$PATH"
+   ```
+
+   When CookBook is moved to Bootstrap v5, this will no longer be an issue as
+   the latter switches to `dart-sass` instead.
 
 1. Install this package and its dependencies with:
 
