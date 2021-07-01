@@ -7,13 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+* Upgrade dependencies, which improves output of font definitions from
+  `fontsource`.
+
 ## [2.0.0-alpha.13] - 2021-02-10
+
+### Changed
 
 * Upgrade Bootstrap to v4.6.0. Note the changes at
   https://github.com/twbs/bootstrap/releases/tag/v4.6.0
 * Upgrade dependencies, pin @fontsource to ~4.1 to avoid known bug (see TODO)
 
 ## [2.0.0-alpha.12] - 2021-01-13
+
+### Changed
 
 * Switch `typeface` project packages for `fontsource`. This adds support for
   characters in scripts other than Latin (such as Greek or Cyrillic).
@@ -22,6 +31,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * Upgrade dependencies
 
 ## [2.0.0-alpha.11] - 2020-10-16
+
+### Changed
 
 * Upgrade Bootstrap to v4.5.3. Note the changes at
   https://github.com/twbs/bootstrap/releases/tag/v4.5.3

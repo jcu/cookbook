@@ -58,8 +58,8 @@
     "watch-js": "nodemon --watch node_modules/jquery/dist --watch node_modules/popper.js/dist/umd --watch node_modules/bootstrap/dist/js --ext js --exec \"npm run js\""
   },
   "devDependencies": {
-    "@fontsource/open-sans": "~4.2.2",
-    "@fontsource/playfair-display": "~4.2.2",
+    "@fontsource/open-sans": "~4.4.5",
+    "@fontsource/playfair-display": "~4.4.5",
     "@khanacademy/tota11y": "^0.2.0",
     "@mdi/font": "^5.9.55",
     "bootstrap": "^4.6.0",
@@ -70,14 +70,14 @@
     "jquery": "^3.6.0",
     "live-server": "^1.2.1",
     "node-sass": "^5.0.0",
-    "nodemon": "^2.0.7",
+    "nodemon": "^2.0.9",
     "npm-run-all": "^4.1.5",
     "popper.js": "^1.16.1",
-    "postcss": "^8.2.13",
+    "postcss": "^8.3.5",
     "postcss-cli": "^8.3.1",
     "shx": "^0.3.3",
     "stylelint": "^13.13.1",
-    "stylelint-config-twbs-bootstrap": "^2.2.0"
+    "stylelint-config-twbs-bootstrap": "^2.2.1"
   },
   "files": [
     "dist/**",
