@@ -9,10 +9,7 @@
 //
 // Bootstrap build process
 //
-// Replicate the whole Bootstrap import list so we can remove the core colours
-// as per https://getbootstrap.com/docs/4.4/getting-started/theming/
-// otherwise we're wasting bandwidth on colours that'll never be used.
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "bootstrap/scss/bootstrap";
 
 //
 // Web Framework additions
