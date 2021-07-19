@@ -1,0 +1,9 @@
+/.cache/
+/.github/
+/src/
+/site/
+/build/
+
+/.stylelint*
+/nodemon.json
+/yarn.lock
