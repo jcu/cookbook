@@ -170,6 +170,14 @@ published accordingly online (coming shortly).
    At present, this involves manual testing with the HTML documentation and
    checking against in-development applications.
 
+   To obtain public URLs to test with, create a release to the test CDN
+   environment:
+
+   ```sh
+   yarn dist
+   yarn release-cdn-test
+   ```
+
 ### Release process
 
 1. Firstly, follow the instructions above for Building this project.
