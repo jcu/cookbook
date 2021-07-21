@@ -47,3 +47,10 @@ Thumbs.db
 /js/coverage/
 /node_modules/
 dist
+
+
+# Env
+.env*
+
+# NPM
+.npmrc

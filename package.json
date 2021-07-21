@@ -1,8 +1,8 @@
 {
   "name": "@jcu/cookbook",
-  "version": "2.0.1",
-  "version_short": "2.0",
-  "version_major": "2",
+  "version": "3.0.0",
+  "version_short": "3.0",
+  "version_major": "3",
   "description": "The web UI framework for building responsive, mobile-first web projects with University styling",
   "main": "dist/js/bootstrap.js",
   "repository": "https://github.com/jcu/cookbook.git",
@@ -10,7 +10,7 @@
   "license": "UNLICENSED",
   "private": false,
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "scripts": {
     "start": "npm-run-all --parallel watch serve",

@@ -4,11 +4,10 @@ name: Build & Publish
 on:
   push:
     branches:
-      - "main"
-      - "v5-migration"
+      - "master"
   pull_request:
     branches: 
-      - "main"
+      - "master"
   create:
 
 
@@ -49,7 +48,7 @@ jobs:
     needs: build
     name: Pre Release
 
-    if: ${{ github.event_name == 'push' }} #&& github.repository_owner == 'jcu-eresearch' && github.ref == 'refs/heads/master' }} # Only Run on push + on eResearch Repo + on master branch
+    if: ${{ github.event_name == 'push' && github.repository_owner == 'jcu-eresearch' && github.ref == 'refs/heads/master' }} # Only Run on push + on eResearch Repo + on master branch
 
     runs-on: ubuntu-latest
     steps:
@@ -74,7 +73,8 @@ jobs:
     - name: Update Package Version
       run: sed -i ${{ format('''s/"version":.*\"\(\([0-9]\+\).\([0-9]\+\).\([0-9]\+\)\)"/"version"{0} "\1-{1}"/''', ':', github.sha) }} package.json
       # Original sed: 's/"version":.*\"\(\([0-9]\+\).\([0-9]\+\).\([0-9]\+\)\)"/"version": "\1-<id>"/'
-      # Basically appends a pre-release onto the version number e.g. 3.1.34 -> 3.1.34-
+      # Basically appends a pre-release onto the version number e.g. 3.1.34 -> 3.1.34-c86b73084ae08d05b61367a950d65211563fb5c9
+
 
     - name: Upload to CDN
       uses: jakejarvis/s3-sync-action@master
@@ -85,7 +85,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'ap-southeast-2'
-        SOURCE_DIR: 'dist' # cookbook prefix required as Setting up Node is required to publish on npm
+        SOURCE_DIR: 'dist'
         DEST_DIR: 'public/master'
 
     - name: Publish NPM Package
@@ -100,7 +100,7 @@ jobs:
     needs: build
     name: Publish Release
     
-    if: ${{ startsWith(github.ref, 'refs/tags/v') }} # && github.repository_owner == 'jcu-eresearch' }} # Only Run on a Tag in eResearch Repo
+    if: ${{ startsWith(github.ref, 'refs/tags/v') && github.repository_owner == 'jcu-eresearch' }} # Only Run on a Tag in eResearch Repo
 
     runs-on: ubuntu-latest
     steps:
@@ -221,7 +221,7 @@ jobs:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         AWS_REGION: 'ap-southeast-2'
-        SOURCE_DIR: 'cookbook/dist' # cookbook prefix required as Setting up Node is required to publish on npm
+        SOURCE_DIR: 'dist'
         DEST_DIR: 'public/latest'
 
     - name: Publish NPM Package
