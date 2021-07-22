@@ -70,6 +70,10 @@ jobs:
     - name: Output Distributed Version
       run: echo "${{ github.sha }}" > dist/version.txt
 
+    # Hash All Files Not Ending with .txt
+    - name: Hash All Release Files
+      run: find . -type f \( ! -iname "*.txt" \) -exec sh -c 'cat "{}" | openssl dgst -sha512 -binary | openssl base64 -A | sed -e "s/^/sha512-/;" > "{}.hash.txt"' \;
+
     - name: Update Package Version
       run: sed -i ${{ format('''s/"version":.*\"\(\([0-9]\+\).\([0-9]\+\).\([0-9]\+\)\)"/"version"{0} "\1-{1}"/''', ':', github.sha) }} package.json
       # Original sed: 's/"version":.*\"\(\([0-9]\+\).\([0-9]\+\).\([0-9]\+\)\)"/"version": "\1-<id>"/'
@@ -169,6 +173,10 @@ jobs:
 
     - name: Output Distributed Version
       run: echo "${{ env.RELEASE_VERSION }}" > dist/version.txt
+
+    # Hash All Files Not Ending with .txt
+    - name: Hash All Release Files
+      run: find . -type f \( ! -iname "*.txt" \) -exec sh -c 'cat "{}" | openssl dgst -sha512 -binary | openssl base64 -A | sed -e "s/^/sha512-/;" > "{}.hash.txt"' \;
 
     - name: Upload to Release Version on CDN (x.x.x-x.x)
       uses: jakejarvis/s3-sync-action@master
