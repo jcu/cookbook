@@ -79,11 +79,34 @@
     "sass": "^1.35.2",
     "shx": "^0.3.3",
     "stylelint": "^13.13.1",
-    "stylelint-config-twbs-bootstrap": "^2.2.1"
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-config-twbs-bootstrap": "^2.2.1",
+    "stylelint-scss": "^3.20.1"
   },
   "files": [
     "dist/**",
     "!dist/**/.gitkeep",
     "src/scss/**/*.scss"
-  ]
+  ],
+  "stylelint": {
+    "plugins": [
+      "stylelint-a11y",
+      "stylelint-scss"
+    ],
+    "extends": [
+      "stylelint-config-twbs-bootstrap/scss",
+      "stylelint-a11y/recommended"
+    ],
+    "rules": {
+      "property-disallowed-list": [
+        "border-radius",
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-bottom-right-radius",
+        "border-bottom-left-radius",
+        "transition"
+      ]
+    }
+  }
 }
