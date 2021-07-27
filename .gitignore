@@ -48,9 +48,17 @@ Thumbs.db
 /node_modules/
 dist
 
-
 # Env
 .env*
 
 # NPM
 .npmrc
+
+# Yarn 2
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
