@@ -1,0 +1,43 @@
+name: 'Compare SemVer'
+description: 'Compare 2 SemVer versions were one can be retrieved from a URL'
+inputs:
+  version:  # id of input
+    description: 'The Source Version'
+    required: true
+  compare:
+    description: 'The Version to Compare the provided "Version"'
+    required: true
+outputs:
+  latest-version:
+    description: 'Which Version Between the two provided versions is the latest'
+  version-is-latest:
+    description: 'The Provided version is newer than the compared version'
+    
+  version-major:
+    description: 'The Provided versions major'
+  version-minor:
+    description: 'The Provided versions minor'
+  version-patch:
+    description: 'The Provided versions patch'
+  version-prerelease:
+    description: 'The Provided versions prerelease'
+  version-build:
+    description: 'The Provided versions build'
+  version-version:
+    description: 'The Provided version is newer than the '
+  compare-major:
+    description: 'The Provided compare versions major'
+  compare-minor:
+    description: 'The Provided compare versions minor'
+  compare-patch:
+    description: 'The Provided compare versions patch'
+  compare-prerelease:
+    description: 'The Provided compare versions prerelease'
+  compare-build:
+    description: 'The Provided compare versions build'
+  compare-version:
+    description: 'The Provided compare version is newer than the '
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

@@ -113,6 +113,11 @@ jobs:
         node-version: '14' # Use Latest LTS
         cache: 'yarn'
         registry-url: 'https://registry.npmjs.org'
+    
+    - name: Build Compare-Semver Workflow Action
+      run: | 
+        yarn --cwd './actions/compare-semver'
+        yarn --cwd './actions/compare-semver' compile
 
     - name: Download Build Artifact
       uses: actions/download-artifact@v2
@@ -131,7 +136,7 @@ jobs:
 
     - name: Compare SemVers (Latest)
       id: compared_semvers 
-      uses: TimEnglart/compare-semver@latest
+      uses: ./actions/compare-semver
       with:
         version: ${{ env.RELEASE_VERSION }}
         compare: ${{ env.LATEST_VERSION }}
@@ -154,14 +159,14 @@ jobs:
 
     - name: Compare SemVers (Major)
       id: compared_semvers_major
-      uses: TimEnglart/compare-semver@latest
+      uses: ./actions/compare-semver
       with:
         version: ${{ env.RELEASE_VERSION }}
         compare: ${{ env.LATEST_MAJOR_VERSION }}
 
     - name: Compare SemVers (Minor)
       id: compared_semvers_minor
-      uses: TimEnglart/compare-semver@latest
+      uses: ./actions/compare-semver
       with:
         version: ${{ env.RELEASE_VERSION }}
         compare: ${{ env.LATEST_MINOR_VERSION }}
