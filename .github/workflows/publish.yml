@@ -88,6 +88,7 @@ jobs:
         AWS_REGION: 'ap-southeast-2'
         SOURCE_DIR: 'dist'
         DEST_DIR: 'public/master'
+    # Maybe Add the option to push all branches to the CDN but don't NPM package them?
 
     - name: Publish NPM Package
       env: 
