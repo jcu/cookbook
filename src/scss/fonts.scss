@@ -19,7 +19,7 @@
   }
 }
 
-@import "@fontsource/open-sans/scss/mixins";
+@import "~@fontsource/open-sans/scss/mixins";
 @include loadFont("open-sans", "Open Sans", 300 400 600 700 800, normal italic);
-@import "@fontsource/playfair-display/scss/mixins";
+@import "~@fontsource/playfair-display/scss/mixins";
 @include loadFont("playfair-display", "Playfair Display", 400 700 900, normal italic);

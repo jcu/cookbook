@@ -4,14 +4,20 @@
  */
 
 // Required
-@import "bootstrap/scss/functions";
+@import "~bootstrap/scss/functions";
 // JCU Cookbook variable setup
 @import "variables";
+
+
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/utilities";
+// Custom Boostrap Utilities
+@import "utilities/utilities";
 
 //
 // Bootstrap build process
 //
-@import "bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap";
 
 //
 // Web Framework additions
