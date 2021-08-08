@@ -17,3 +17,13 @@
   }
 }
 
+// Remove Default Link colouring and underlining from Bootstrap 5
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: unset;
+    text-decoration: underline;
+  }
+}
