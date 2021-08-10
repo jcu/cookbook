@@ -37,7 +37,7 @@
     "css-prefix-main": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.min.css\"",
     "css-prefix-docs": "postcss --config build/postcss.config.js --replace \"site/docs/**/*.css\" \"site/docs/**/*.css\"",
     "img": "npm-run-all img-optimise img-favicon img-copy",
-    "img-optimise": "cross-env-shell shx mkdir -p dist/img && cross-env-shell shx cp -r src/img dist/ && find dist/img -type d -exec imagemin {}/* --out-dir={} \\;",
+    "img-optimise": "cross-env-shell shx mkdir -p dist/img && cross-env-shell shx cp -r src/img dist/ && find dist/img -type d -exec imagemin '{}/*' --out-dir='{}' \\;",
     "img-favicon": "cross-env-shell convert dist/img/favicon-*.png dist/img/favicon.ico",
     "img-copy": "cross-env-shell shx mkdir -p site/docs/$npm_package_version_short/dist/ && cross-env-shell shx cp -r dist/img/ site/docs/$npm_package_version_short/dist/",
     "js": "npm-run-all js-deps js-copy",
