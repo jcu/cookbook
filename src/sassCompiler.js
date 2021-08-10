@@ -11,6 +11,9 @@ const appendMin = (fileName) => {
 }
 
 const sassify = (options) => {
+  const outputDir = path.dirname(options.outputFile)
+  if(!fs.existsSync(outputDir) && options.outputFile.split('.').some((x) => x !== 'min'))
+    fs.mkdirSync(outputDir, { recursive: true })
   sass.render({
     // Settings Copied from old package.json
     // sass --style expanded --source-map --load-path=node_modules --embed-sources --no-error-css src/scss/fonts.scss dist/css/fonts.css
