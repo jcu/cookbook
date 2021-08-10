@@ -2,17 +2,9 @@ const sass = require('sass')
 const path = require('path')
 const fs = require('fs')
 
-const appendMin = (fileName) => {
-  const path = fileName.split(/\\\//) // some/file/path/style.scss -> [ 'some', 'file', 'path', 'style.scss' ]
-  const extensions = path[path.length - 1].split('.') // [ 'style', 'scss' ]
-  extensions.splice(1, 0, 'min')  // [ 'style', 'min', 'scss' ]
-  path.splice(path.length - 1, 1, extensions.join('.'))  // [ 'some', 'file', 'path', 'style.min.scss' ]
-  return path.join('/') // some/file/path/style.min.scss
-}
-
 const sassify = (options) => {
   const outputDir = path.dirname(options.outputFile)
-  if(!fs.existsSync(outputDir) && options.outputFile.split('.').some((x) => x !== 'min'))
+  if(!fs.existsSync(outputDir))
     fs.mkdirSync(outputDir, { recursive: true })
   sass.render({
     // Settings Copied from old package.json
@@ -53,19 +45,10 @@ const [inputFile, outputFile] = args[2].split(':')
 console.log(`Input: ${inputFile}`)
 console.log(`Output: ${outputFile}`)
 
-// Normal CSS
 sassify({
   inputFile: inputFile,
   outputFile: outputFile,
   outputStyle: 'expanded',
-  sourceMap: true,
-  sourceMapEmbed: true,
-})
-// Minified CSS
-sassify({
-  inputFile: inputFile,
-  outputFile: appendMin(outputFile),
-  outputStyle: 'compressed',
   sourceMap: true,
   sourceMapEmbed: true,
 })
