@@ -21,10 +21,10 @@
     "css-main": "npm-run-all css-lint css-compile-main css-prefix-main css-minify-main css-copy",
     "css-docs": "npm-run-all css-compile-docs css-prefix-docs css-minify-docs",
     "css-compile": "npm-run-all --parallel 'css-compile-*'",
-    "css-compile-main": "cross-env-shell shx mkdir -p dist/css && node ./src/sassCompiler src/scss/cookbook.scss:dist/css/cookbook.css",
-    "css-compile-fonts": "cross-env-shell shx mkdir -p dist/css && node ./src/sassCompiler src/scss/fonts.scss:dist/css/fonts.css",
-    "css-compile-mdi": "cross-env-shell shx mkdir -p dist/css && node ./src/sassCompiler src/scss/materialdesignicons.scss:dist/css/materialdesignicons.css",
-    "css-compile-docs": "cross-env-shell shx mkdir -p site/docs/$npm_package_version_short/dist/css && cross-env-shell node ./src/sassCompiler site/docs/$npm_package_version_short/assets/scss/docs.scss:site/docs/$npm_package_version_short/dist/css/docs.min.css",
+    "css-compile-main": "cross-env-shell shx mkdir -p dist/css && yarn prefix-css src/scss/cookbook.scss dist/css/cookbook.css",
+    "css-compile-fonts": "cross-env-shell shx mkdir -p dist/css && yarn prefix-css src/scss/fonts.scss dist/css/fonts.css",
+    "css-compile-mdi": "cross-env-shell shx mkdir -p dist/css && yarn prefix-css src/scss/materialdesignicons.scss dist/css/materialdesignicons.css",
+    "css-compile-docs": "cross-env-shell shx mkdir -p site/docs/$npm_package_version_short/dist/css && cross-env-shell yarn prefix-css site/docs/$npm_package_version_short/assets/scss/docs.scss site/docs/$npm_package_version_short/dist/css/docs.min.css",
     "css-lint": "npm-run-all --aggregate-output --continue-on-error --parallel 'css-lint-*'",
     "css-lint-main": "stylelint \"src/scss/**/*.scss\" --cache --cache-location .cache/.stylelintcache",
     "disabled-css-lint-vars": "fusv src/scss/",
@@ -56,7 +56,8 @@
     "watch-css-main": "nodemon --watch src/scss/ --ext scss --exec \"npm run css-main\"",
     "watch-img": "nodemon --watch src/img/ --ext svg --exec \"npm run img\"",
     "watch-js": "nodemon --watch node_modules/jquery/dist --watch node_modules/popper.js/dist/umd --watch node_modules/bootstrap/dist/js --ext js --exec \"npm run js\"",
-    "build": "npm-run-all 'css-lint*' css img js docs"
+    "build": "npm-run-all 'css-lint*' css img js docs",
+    "prefix-css": "sh -c 'cat \"$1\" | sed -e \"s/\\\\(^@import.*\\\\)~\\\\(.*\\\\)/\\\\1\\\\2/\" | sass --style expanded --source-map --source-map-urls relative --embed-sources --no-error-css --load-path=node_modules --load-path=src/scss --stdin $2' \\;"
   },
   "devDependencies": {
     "@fontsource/open-sans": "~4.5.0",
