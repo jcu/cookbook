@@ -9,7 +9,7 @@ Bootstrap.
 ## Features
 
 * Fully-featured web front-end component library, styled with JCU colours and
-  based on [Bootstrap v4](https://getbootstrap.com), including:
+  based on [Bootstrap v5](https://getbootstrap.com), including:
 
   * Responsive grid system
   * Layout and typography
@@ -22,10 +22,11 @@ Bootstrap.
   (optional)
 * Font families and CSS for Open Sans and Playfair Display (optional)
 * Dedicated CDN hosting of all resources, including fonts and iconography
+* NPM releases
 
 ## User documentation
 
-* Bootstrap: https://getbootstrap.com/docs/4.6/
+* Bootstrap: https://getbootstrap.com/docs/5.0/
 * Icon reference: https://materialdesignicons.com/
 * [CookBook Changelog]
 
@@ -45,6 +46,7 @@ CookBook is, in essence, a themed version of Bootstrap and can be used as such, 
     [`react-bootstrap`](https://react-bootstrap.netlify.com/getting-started/introduction/#stylesheets)
   * As a custom theme or as a base for creating customised Sass within Create React App
     ([documentation](https://facebook.github.io/create-react-app/docs/adding-bootstrap#using-a-custom-theme))
+  * Used in the `cookbook-react` library which contains custom components which are already themed *(Coming Soon)*
 
 ## Usage
 
@@ -60,7 +62,6 @@ into your project:
 
 ```html
 <!-- Before the closing </body> tag in your project -->
-<script src="https://cdn.jcu.edu.au/cookbook/2.0/js/jquery.min.js"></script>
 <script src="https://cdn.jcu.edu.au/cookbook/2.0/js/popper.min.js"></script>
 <script src="https://cdn.jcu.edu.au/cookbook/2.0/js/bootstrap.min.js"></script>
 ```
@@ -97,14 +98,17 @@ setup steps as you've already done them).
 
 ### Versions
 
+#### CDN
+
 Different versions of CookBook are available on the CDN depending on your
 desired stability and level of control over the resources:
 
-* `latest` – always use the latest release, including major versions that may
-  have backwards incompatible changes; or
 * `2` – always use the latest release under this major version; or
 * `2.0` – always use the latest release under this minor version; or
-* `2.0.0` – A specific version number.
+* `2.0.0` – A specific version number; or
+* `latest` *(Not Recommended)* – always use the latest release, including major versions that may
+  have backwards incompatible changes; or
+* `master` *(Not Recommended)* - the most recent commit's build on the master branch; which are useful for development
 
 So, for example, if you wanted to always use the latest version of CookBook,
 and are okay with major version changes, use the following format of URL:
@@ -116,6 +120,14 @@ and are okay with major version changes, use the following format of URL:
 For other verisons, replace `latest` with your desired major, minor or patch
 version. Note that you must keep all versions of resources in sync across all
 HTML tags to ensure things function correctly.
+
+### NPM
+
+If You are using a NodeJS based project there is also published package on NPM under `@jcu/cookbook`:
+
+* **(Recommended)** The `@jcu/cookbook` tag will installed the latest version and needs to be **explicitly** upgraded to future versions
+* The `@jcu/cookbook@latest` tag is equivalent to the `latest` version on the CDN
+* The `@jcu/cookbook@dev` tag is the equivalent to the `master` version on the CDN
 
 ### Upgrading
 
@@ -141,31 +153,19 @@ published accordingly online (coming shortly).
 
 ### Building
 
-1. Building currently requires `node-sass`, which does not support Node v16.
-   You will need to install an earlier version of Node, such as v14, and
-   ensure this is used before starting.  On macOS, you can do the following:
-
-   ```sh
-   brew install node@14
-   export PATH="/usr/local/opt/node@14/bin/:$PATH"
-   ```
-
-   When CookBook is moved to Bootstrap v5, this will no longer be an issue as
-   the latter switches to `dart-sass` instead.
-
 1. Install this package and its dependencies with:
 
    ```sh
    yarn
    ```
 
-1. Execute a build with:
+2. Execute a build with:
 
    ```sh
    yarn dist
    ```
 
-1. Test the resulting build.
+3. Test the resulting build.
 
    At present, this involves manual testing with the HTML documentation and
    checking against in-development applications.
@@ -179,6 +179,8 @@ published accordingly online (coming shortly).
    ```
 
 ### Release process
+
+#### Rclone Method
 
 1. Firstly, follow the instructions above for Building this project.
 
@@ -227,6 +229,42 @@ published accordingly online (coming shortly).
    git push
    git push --tags
    ```
+
+#### Github Actions Method
+
+1. Ensure the Github Repository has the following environment secrets
+   * NPM_TOKEN
+   * AWS_ACCESS_KEY_ID
+   * AWS_S3_BUCKET
+   * AWS_SECRET_ACCESS_KEY
+
+1. Update `CHANGELOG.md` and CDN URLs inside `README.md` with the current date and released version
+
+1. Commit and create a release tag (e.g. v3.0.1)
+
+   ```sh
+      git commit CHANGELOG.md README.md dist/ -m "Release v3.0.1"
+      git tag v3.0.1
+   ```
+
+1. Update the working version number in the source code:
+
+   ```sh
+   yarn release-version [old-version eg 3.0.1] [new-version eg 3.0.2]
+   git commit -a -m "Back to development"
+   ```
+
+   When using `yarn release-version`, ensure you omit any `v` prefix for
+   version numbers.
+
+1. Push to the Github Repo
+
+   ```sh
+      git push
+      git push --tags
+   ```
+
+      * This will make the release workflow run which will upload the generated files to the CDN and NPM for created release
 
 ### Upgrades
 

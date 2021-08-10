@@ -1,0 +1,236 @@
+
+name: Build & Publish
+
+on:
+  push:
+    branches:
+      - "master"
+  create:
+
+jobs:
+  build:
+    name: "Build"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js LTS
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14' # Use Latest LTS
+        cache: 'yarn'
+
+    - name: Install Packages
+      run: yarn
+
+    # - name: Run Tests
+    #   run: yarn test
+
+    - name: Create Distribution
+      run: yarn dist
+
+    - name: Upload Build Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist
+        path: dist/
+        retention-days: 1
+
+
+  pre-release:
+    needs: build
+    name: Pre Release
+
+    if: ${{ github.event_name == 'push' && github.repository_owner == 'jcu-eresearch' && github.ref == 'refs/heads/master' }} # Only Run on push + on eResearch Repo + on master branch
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14' # Use Latest LTS
+        cache: 'yarn'
+        registry-url: 'https://registry.npmjs.org'
+
+    - name: Download Build Artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: dist
+        path: ./dist
+
+    - name: Output Distributed Version
+      run: echo "${{ github.sha }}" > dist/version.txt
+
+    # Hash All Files Not Ending with .txt
+    - name: Hash All Release Files
+      run: find . -type f \( ! -iname "*.txt" \) -exec sh -c 'cat "{}" | openssl dgst -sha512 -binary | openssl base64 -A | sed -e "s/^/sha512-/;" > "{}.hash.txt"' \;
+
+    - name: Update Package Version
+      run: sed -i ${{ format('''s/"version":.*\"\(\([0-9]\+\).\([0-9]\+\).\([0-9]\+\)\)"/"version"{0} "\1-{1}"/''', ':', github.sha) }} package.json
+      # Original sed: 's/"version":.*\"\(\([0-9]\+\).\([0-9]\+\).\([0-9]\+\)\)"/"version": "\1-<id>"/'
+      # Basically appends a pre-release onto the version number e.g. 3.1.34 -> 3.1.34-c86b73084ae08d05b61367a950d65211563fb5c9
+
+
+    - name: Upload to CDN
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --follow-symlinks --delete
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'ap-southeast-2'
+        SOURCE_DIR: 'dist'
+        DEST_DIR: 'public/master'
+    # Maybe Add the option to push all branches to the CDN but don't NPM package them?
+
+    - name: Publish NPM Package
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: yarn publish --tag dev
+
+
+
+
+  publish:
+    needs: build
+    name: Publish Release
+
+    if: ${{ startsWith(github.ref, 'refs/tags/v') && github.repository_owner == 'jcu-eresearch' }} # Only Run on a Tag in eResearch Repo
+
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14' # Use Latest LTS
+        cache: 'yarn'
+        registry-url: 'https://registry.npmjs.org'
+
+    - name: Build Compare-Semver Workflow Action
+      run: |
+        yarn --cwd './actions/compare-semver'
+        yarn --cwd './actions/compare-semver' compile
+
+    - name: Download Build Artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: dist
+        path: dist/
+
+    - name: Get Tag
+      run: echo "RELEASE_VERSION=${GITHUB_REF#refs/tags/v*}" >> $GITHUB_ENV
+
+    # Version will be 0.0.0 on non-zero exit code
+    - name: Get Latest Release Version
+      run: |
+        LATEST_VERSION=$(curl -sf ${{ secrets.CDN_URL }}/latest/version.txt || echo "0.0.0")
+        echo "LATEST_VERSION=$LATEST_VERSION" >> $GITHUB_ENV;
+
+    - name: Compare SemVers (Latest)
+      id: compared_semvers
+      uses: ./actions/compare-semver
+      with:
+        version: ${{ env.RELEASE_VERSION }}
+        compare: ${{ env.LATEST_VERSION }}
+
+    - name: Get Latest Major Version
+      run: |
+        LOOKUP_VERSION="${{ steps.compared_semvers.outputs.version-major }}"
+        LATEST_MAJOR_VERSION=$(curl -sf ${{ secrets.CDN_URL }}/$LOOKUP_VERSION/version.txt || echo "0.0.0")
+        echo "LATEST_MAJOR_VERSION=$LATEST_MAJOR_VERSION" >> $GITHUB_ENV;
+
+    - name: Get Latest Minor Version
+      run: |
+        LOOKUP_VERSION="${{ steps.compared_semvers.outputs.version-major }}.${{ steps.compared_semvers.outputs.version-minor }}"
+        LATEST_MINOR_VERSION=$(curl -sf ${{ secrets.CDN_URL }}/$LOOKUP_VERSION/version.txt || echo "0.0.0")
+        echo "LATEST_MINOR_VERSION=$LATEST_MINOR_VERSION" >> $GITHUB_ENV;
+
+    # Our CDN's S3 Throws an XML Exception Page When no Files are found
+
+    - name: Compare SemVers (Major)
+      id: compared_semvers_major
+      uses: ./actions/compare-semver
+      with:
+        version: ${{ env.RELEASE_VERSION }}
+        compare: ${{ env.LATEST_MAJOR_VERSION }}
+
+    - name: Compare SemVers (Minor)
+      id: compared_semvers_minor
+      uses: ./actions/compare-semver
+      with:
+        version: ${{ env.RELEASE_VERSION }}
+        compare: ${{ env.LATEST_MINOR_VERSION }}
+
+    # Patch, Release and Builds are Specifically chosen
+
+    - name: Output Distributed Version
+      run: echo "${{ env.RELEASE_VERSION }}" > dist/version.txt
+
+    # Hash All Files Not Ending with .txt
+    - name: Hash All Release Files
+      run: find . -type f \( ! -iname "*.txt" \) -exec sh -c 'cat "{}" | openssl dgst -sha512 -binary | openssl base64 -A | sed -e "s/^/sha512-/;" > "{}.hash.txt"' \;
+
+    - name: Upload to Release Version on CDN (x.x.x-x.x)
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --follow-symlinks --delete
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'ap-southeast-2'
+        SOURCE_DIR: 'dist'
+        DEST_DIR: 'public/${{ env.RELEASE_VERSION }}'
+
+    # Patch, Pre-release and Build need to specifically referenced on the CDN to access and wont
+    # be pushed to a auto updated CDN location
+
+    - name: Upload to Major Version on CDN (x)
+      if: ${{ steps.compared_semvers_major.outputs.version-is-latest == 'true' && steps.compared_semvers_major.outputs.version-prerelease == null && steps.compared_semvers_major.outputs.version-build == null }}
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --follow-symlinks --delete
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'ap-southeast-2'
+        SOURCE_DIR: 'dist'
+        DEST_DIR: 'public/${{ steps.compared_semvers_major.outputs.version-major }}'
+
+    - name: Upload to Minor Version on CDN (x.x)
+      if: ${{ steps.compared_semvers_minor.outputs.version-is-latest == 'true' && steps.compared_semvers_minor.outputs.version-prerelease == null && steps.compared_semvers_minor.outputs.version-build == null }}
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --follow-symlinks --delete
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'ap-southeast-2'
+        SOURCE_DIR: 'dist'
+        DEST_DIR: 'public/${{ steps.compared_semvers_minor.outputs.version-major }}.${{ steps.compared_semvers_minor.outputs.version-minor }}'
+
+    - name: Upload to Latest Release on CDN
+      if: ${{ steps.compared_semvers.outputs.version-is-latest == 'true' && steps.compared_semvers.outputs.version-prerelease == null && steps.compared_semvers.outputs.version-build == null }}
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --follow-symlinks --delete
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'ap-southeast-2'
+        SOURCE_DIR: 'dist'
+        DEST_DIR: 'public/latest'
+
+    - name: Publish NPM Package
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      run: yarn publish
+

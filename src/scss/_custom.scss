@@ -10,16 +10,20 @@
   opacity: .75;
 
   &:not(:disabled):not(.disabled) {
-    @include hover-focus() {
+    &:hover,
+    &:focus {
       opacity: 1;
     }
   }
 }
 
-// Workaround https://github.com/twbs/bootstrap/issues/27879
-// This ensures that the `.table-dark` context class produces a dark row
-@include table-row-variant("dark", $dark, $gray-600);
+// Remove Default Link colouring and underlining from Bootstrap 5
+a {
+  text-decoration: none;
 
-.table-hover tbody .table-dark:hover {
-  color: $light;
+  &:hover,
+  &:focus {
+    color: unset;
+    text-decoration: underline;
+  }
 }

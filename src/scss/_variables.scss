@@ -62,7 +62,7 @@ $dark:            $dark-gray !default;
 
 // Colour mapping structure
 // stylelint-disable-next-line scss/dollar-variable-default
-$colors-override: (
+$colors: (
   "turquoise":       $turquoise,
   "bright-blue":     $bright-blue,
   "mid-blue":        $mid-blue,
@@ -92,8 +92,6 @@ $colors-override: (
   "gray-dark":       $dark-gray,
   "black":           $black
 );
-
-$theme-color-interval:      10% !default;
 
 //
 // Options

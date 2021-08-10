@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+* Automated uploading & hashing of distribution files to the JCU CDN and NPM via Github Actions
+
+### Changed
+
+* **BREAKING** `bootstrap` upgraded to v5 (was 4.6.0) ([Migration Docs](https://getbootstrap.com/docs/5.0/migration/))
+* **BREAKING** Updated `react-bootstrap` to `next` (change to v2 when released) tag to have bootstrap 5 compatibility ([Migration Docs](https://react-bootstrap.github.io/migrating/))
+* **BREAKING** Updated SASS compiler to `dart-sass` (was `node-sass`)
+* **BREAKING** Yarn upgraded to v2 (without PnP functionality)
+
+### Removed
+
+* **BREAKING** Removed the committed distributable files (`dist` folders for both the project and its docs)
+
 ## [2.0.0] - 2021-07-01
 
 ### Changed
