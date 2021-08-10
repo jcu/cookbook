@@ -21,12 +21,12 @@ Bootstrap.
 * Iconography from [Material Design Icons](https://materialdesignicons.com/)
   (optional)
 * Font families and CSS for Open Sans and Playfair Display (optional)
-* Dedicated CDN hosting of all resources, including fonts and iconography
-* NPM releases
+* Dedicated and automated CDN hosting of all resources, including fonts and iconography
+* Automated npm releases
 
 ## User documentation
 
-* Bootstrap: https://getbootstrap.com/docs/5.0/
+* Bootstrap: https://getbootstrap.com/docs/5.1/
 * Icon reference: https://materialdesignicons.com/
 * [CookBook Changelog]
 
@@ -56,14 +56,14 @@ into your project:
 
 ```html
 <!-- In the <head> of your project -->
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0/css/cookbook.min.css">
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0/css/fonts.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/3.0/css/cookbook.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/3.0/css/fonts.min.css">
 ```
 
 ```html
 <!-- Before the closing </body> tag in your project -->
-<script src="https://cdn.jcu.edu.au/cookbook/2.0/js/popper.min.js"></script>
-<script src="https://cdn.jcu.edu.au/cookbook/2.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jcu.edu.au/cookbook/3.0/js/popper.min.js"></script>
+<script src="https://cdn.jcu.edu.au/cookbook/3.0/js/bootstrap.min.js"></script>
 ```
 
 Refer to the official User Documentation links above for how to build pages
@@ -74,8 +74,8 @@ using Bootstap.
 Images can be used from the CDN like so:
 
 ```html
-<link rel="icon" href="https://cdn.jcu.edu.au/cookbook/2.0/img/favicon.ico" />
-<img src="https://cdn.jcu.edu.au/cookbook/2.0/img/logos/jcu-logo-horizontal.svg" alt="James Cook University (JCU) Australia logo">
+<link rel="icon" href="https://cdn.jcu.edu.au/cookbook/3.0/img/favicon.ico" />
+<img src="https://cdn.jcu.edu.au/cookbook/3.0/img/logos/jcu-logo-horizontal.svg" alt="James Cook University (JCU) Australia logo">
 ```
 
 Available resources and their corresponding paths can be found by referrring to the
@@ -89,7 +89,7 @@ following as well:
 
 ```html
 <!-- In the <head> of your project -->
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/2.0/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/3.0/css/materialdesignicons.min.css">
 ```
 
 You can now use icons by following the instructions at
@@ -103,12 +103,13 @@ setup steps as you've already done them).
 Different versions of CookBook are available on the CDN depending on your
 desired stability and level of control over the resources:
 
-* `2` – always use the latest release under this major version; or
-* `2.0` – always use the latest release under this minor version; or
-* `2.0.0` – A specific version number; or
-* `latest` *(Not Recommended)* – always use the latest release, including major versions that may
-  have backwards incompatible changes; or
-* `master` *(Not Recommended)* - the most recent commit's build on the master branch; which are useful for development
+* `3` – always use the latest release under this major version; or
+* `3.0` – always use the latest release under this minor version; or
+* `3.0.0` – A specific version number; or
+* `latest` *(Not Recommended)* – always use the latest release, including
+  major versions that may have backwards incompatible changes; or
+* `master` *(Not Recommended)* - the most recent commit's build on the master
+  branch; which are useful for development
 
 So, for example, if you wanted to always use the latest version of CookBook,
 and are okay with major version changes, use the following format of URL:
@@ -121,9 +122,9 @@ For other verisons, replace `latest` with your desired major, minor or patch
 version. Note that you must keep all versions of resources in sync across all
 HTML tags to ensure things function correctly.
 
-### NPM
+### npm
 
-If You are using a NodeJS based project there is also published package on NPM under `@jcu/cookbook`:
+If you are using a NodeJS-based project there is also published package on npm under `@jcu/cookbook`:
 
 * **(Recommended)** The `@jcu/cookbook` tag will installed the latest version and needs to be **explicitly** upgraded to future versions
 * The `@jcu/cookbook@latest` tag is equivalent to the `latest` version on the CDN
@@ -204,7 +205,7 @@ published accordingly online (coming shortly).
    git tag v9.9.9
    ```
 
-1. Publish to NPM via the following:
+1. Publish to npm via the following:
 
    ```sh
    yarn publish
