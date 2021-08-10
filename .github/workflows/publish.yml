@@ -7,10 +7,6 @@ on:
       - "master"
   create:
 
-
-env:
-  cdn_url: https://cdn.awstest.jcu.edu.au/cookbook
-
 jobs:
   build:
     name: "Build"
@@ -132,7 +128,7 @@ jobs:
     # Version will be 0.0.0 on non-zero exit code
     - name: Get Latest Release Version
       run: |
-        LATEST_VERSION=$(curl -sf ${{ env.cdn_url }}/latest/version.txt || echo "0.0.0")
+        LATEST_VERSION=$(curl -sf ${{ secrets.CDN_URL }}/latest/version.txt || echo "0.0.0")
         echo "LATEST_VERSION=$LATEST_VERSION" >> $GITHUB_ENV;
 
     - name: Compare SemVers (Latest)
@@ -145,13 +141,13 @@ jobs:
     - name: Get Latest Major Version
       run: |
         LOOKUP_VERSION="${{ steps.compared_semvers.outputs.version-major }}"
-        LATEST_MAJOR_VERSION=$(curl -sf ${{ env.cdn_url }}/$LOOKUP_VERSION/version.txt || echo "0.0.0")
+        LATEST_MAJOR_VERSION=$(curl -sf ${{ secrets.CDN_URL }}/$LOOKUP_VERSION/version.txt || echo "0.0.0")
         echo "LATEST_MAJOR_VERSION=$LATEST_MAJOR_VERSION" >> $GITHUB_ENV;
 
     - name: Get Latest Minor Version
       run: |
         LOOKUP_VERSION="${{ steps.compared_semvers.outputs.version-major }}.${{ steps.compared_semvers.outputs.version-minor }}"
-        LATEST_MINOR_VERSION=$(curl -sf ${{ env.cdn_url }}/$LOOKUP_VERSION/version.txt || echo "0.0.0")
+        LATEST_MINOR_VERSION=$(curl -sf ${{ secrets.CDN_URL }}/$LOOKUP_VERSION/version.txt || echo "0.0.0")
         echo "LATEST_MINOR_VERSION=$LATEST_MINOR_VERSION" >> $GITHUB_ENV;
 
     # Our CDN's S3 Throws an XML Exception Page When no Files are found
