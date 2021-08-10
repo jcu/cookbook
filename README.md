@@ -233,11 +233,19 @@ published accordingly online (coming shortly).
 
 #### Github Actions Method
 
-1. Ensure the Github Repository has the following environment secrets
-   * NPM_TOKEN
-   * AWS_ACCESS_KEY_ID
-   * AWS_S3_BUCKET
-   * AWS_SECRET_ACCESS_KEY
+1. Ensure the Github Repository has the following environment secrets:
+
+   * `CDN_URL`: base URL used for retrieving published version details (such
+     as `https://cdn.jcu.edu.au/cookbook`)
+   * `NPM_TOKEN`: _Automation_ token for publishing npm packages automatically
+     (see npm's documentation on [Creating and viewing access
+     tokens](https://docs.npmjs.com/creating-and-viewing-access-tokens))
+   * S3-compatible storage access credentials used by
+     [`s3-sync-action`](https://github.com/jakejarvis/s3-sync-action#configuration):
+
+     * `AWS_S3_BUCKET`: name of the bucket to sync to
+     * `AWS_ACCESS_KEY_ID`: AWS Access Key
+     * `AWS_SECRET_ACCESS_KEY`: AWS Secret Access Key
 
 1. Update `CHANGELOG.md` and CDN URLs inside `README.md` with the current date and released version
 
