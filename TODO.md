@@ -1,3 +1,10 @@
+## Workarounds
+
+* https://github.com/yarnpkg/berry/issues/2670: npm-run-all commands in
+  `package.json` need to be quoted
+* https://github.com/Ayc0/yarn-plugin-envs: reintroduce npm environment
+  variables into scripts
+
 ## Inclusions
 
 * Favicon.ico - further sizes, transparent background and so on
@@ -28,18 +35,9 @@
 
 ## Technical
 
-* Cannot proceed past @fontsource fonts 4.1.0 because of
-  https://github.com/fontsource/fontsource/issues/153
-
 * Can't use fusv to find usused variables because of lack of @import support
   https://github.com/XhmikosR/find-unused-sass-variables/issues/23.
   Linting CSS in this way is disabled for now.
 
 * `imagemin` loses directory structure on output of minified images
   https://github.com/imagemin/imagemin/issues/191
-
-* Bootstrap:
-
-  * Bootstrap's colours fail WCAG AA https://github.com/twbs/bootstrap/issues/25126
-  * `.table-dark` has conflicting styles: <https://github.com/twbs/bootstrap/issues/27879>.
-    We are currently working around this issue in `_fixes.scss`
