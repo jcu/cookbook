@@ -4,6 +4,8 @@
   `package.json` need to be quoted
 * https://github.com/Ayc0/yarn-plugin-envs: reintroduce npm environment
   variables into scripts
+* https://github.com/imagemin/imagemin/issues/389: imagemin 7 and 8 have
+  problems processing file extensions; have downgraded to verison 6 for now
 
 ## Inclusions
 
