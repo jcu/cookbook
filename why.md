@@ -12,7 +12,7 @@ This is something that hasn't been attempted...until now.
 * It makes apps shiny
 * Reusable across systems
 * Score better UX and consistency with less effort
-* Collaborate at <https://web.jcu.io>
+* Collaborate at <https://cookbook.jcu.io>
 * It needs a better name
 * Based on Bootstrap v4
 
