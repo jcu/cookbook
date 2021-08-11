@@ -252,7 +252,7 @@ published accordingly online (coming shortly).
 1. Commit and create a release tag (e.g. v3.0.1)
 
    ```sh
-      git commit CHANGELOG.md README.md dist/ -m "Release v3.0.1"
+      git commit CHANGELOG.md README.md -m "Release v3.0.1"
       git tag v3.0.1
    ```
 
