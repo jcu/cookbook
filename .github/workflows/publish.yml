@@ -110,7 +110,7 @@ jobs:
     - name: Build Compare-Semver Workflow Action
       run: |
         yarn --cwd './actions/compare-semver'
-        yarn --cwd './actions/compare-semver' compile
+        yarn --cwd './actions/compare-semver' run compile
 
     - name: Download Build Artifact
       uses: actions/download-artifact@v2
