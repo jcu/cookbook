@@ -215,6 +215,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   lists
 * Use theme colours from microsite layout (fixes #10).
 
+[2.0.0]: https://github.com/jcu/cookbook/releases/tag/v2.0.0
 [2.0.0-alpha.13]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.13
 [2.0.0-alpha.12]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.12
 [2.0.0-alpha.11]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.11
