@@ -1,25 +1,28 @@
-// @use "@fontsource/open-sans/scss/mixins" as OpenSans;
-// @use "@fontsource/playfair-display/scss/mixins" as Playfair;
+@use "@fontsource/open-sans/scss/mixins" as OpenSans;
+@use "@fontsource/playfair-display/scss/mixins" as Playfair;
+
 @import "variables";
 
-// Can't use @use lower in the document and can't pass a namespace or mixin as a parameter to another mixin
-// @import also cannot be used inside a mixin and cannot be called as a parameter
-
-@mixin loadFont($fontsource-name, $font-name, $font-weights, $font-styles)
-{
-  @each $weight in $font-weights {
-    @each $style in $font-styles {
-      @include fontFace(
-        $fontName: $font-name,
-        $weight: $weight,
-        $style: $style,
-        $fontDir: "#{$font-path-base}/#{$fontsource-name}",
-      );
-    }
+$open-sans-weights: 300 400 600 700 800;
+$open-sans-styles: normal italic;
+@each $weight in $open-sans-weights {
+  @each $style in $open-sans-styles {
+    @include OpenSans.fontFace(
+      $weight: $weight,
+      $style: $style,
+      $fontDir: "#{$font-path-base}/#{OpenSans.$fontId}",
+    );
   }
 }
 
-@import "~@fontsource/open-sans/scss/mixins";
-@include loadFont("open-sans", "Open Sans", 300 400 600 700 800, normal italic);
-@import "~@fontsource/playfair-display/scss/mixins";
-@include loadFont("playfair-display", "Playfair Display", 400 700 900, normal italic);
+$playfair-display-weights: 400 700 900;
+$playfair-display-styles: normal italic;
+@each $weight in $playfair-display-weights {
+  @each $style in $playfair-display-styles {
+    @include Playfair.fontFace(
+      $weight: $weight,
+      $style: $style,
+      $fontDir: "#{$font-path-base}/#{Playfair.$fontId}",
+    );
+  }
+}
