@@ -1,11 +1,7 @@
 
 name: Build & Publish
 
-on:
-  push:
-    branches:
-      - "master"
-  create:
+on: [push, pull_request]
 
 jobs:
   build:
@@ -89,7 +85,7 @@ jobs:
     - name: Publish NPM Package
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      run: yarn publish --tag dev
+      run: npm publish . --tag dev
 
 
 
@@ -232,5 +228,5 @@ jobs:
     - name: Publish NPM Package
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-      run: yarn publish
+      run: npm publish .
 

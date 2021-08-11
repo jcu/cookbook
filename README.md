@@ -256,15 +256,22 @@ published accordingly online (coming shortly).
       git tag v3.0.1
    ```
 
-1. Update the working version number in the source code:
+1. Update the working version number in the source code (Ensure updated version is newer than the version you just tagged. e.g. `v3.0.1` -> `v3.0.2`):
+
+   There are multiple files that need to be updated to the latest working version:
+
+   * `package.json`:
+      * `version`
+      * `version_short`
+      * `version_major`
+   * `src/cookbook.scss`:
+      * `JCU Cookbook vx.x.x` (at top of file)
+
+   Proceed to then commit the new version
 
    ```sh
-   yarn release-version [old-version eg 3.0.1] [new-version eg 3.0.2]
    git commit -a -m "Back to development"
    ```
-
-   When using `yarn release-version`, ensure you omit any `v` prefix for
-   version numbers.
 
 1. Push to the Github Repo
 
