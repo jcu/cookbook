@@ -44,9 +44,11 @@ CookBook is, in essence, a themed version of Bootstrap and can be used as such, 
 
   * As a drop-in replacement for stylesheets in
     [`react-bootstrap`](https://react-bootstrap.netlify.com/getting-started/introduction/#stylesheets)
-  * As a custom theme or as a base for creating customised Sass within Create React App
+  * As a custom theme or as a base for creating customised Sass within Create
+    React App
     ([documentation](https://facebook.github.io/create-react-app/docs/adding-bootstrap#using-a-custom-theme))
-  * Used in the `cookbook-react` library which contains custom components which are already themed *(Coming Soon)*
+  * Used in the `cookbook-react` library which contains custom components
+    which are already themed *(Coming Soon)*
 
 ## Usage
 
@@ -66,8 +68,8 @@ into your project:
 <script src="https://cdn.jcu.edu.au/cookbook/3.0/js/bootstrap.min.js"></script>
 ```
 
-Refer to the official User Documentation links above for how to build pages
-using Bootstap.
+Refer to the official [User documentation](#user-content-user-documentation)
+links above for how to build pages using Bootstap.
 
 ### Resources
 
@@ -78,14 +80,15 @@ Images can be used from the CDN like so:
 <img src="https://cdn.jcu.edu.au/cookbook/3.0/img/logos/jcu-logo-horizontal.svg" alt="James Cook University (JCU) Australia logo">
 ```
 
-Available resources and their corresponding paths can be found by referrring to the
-[`dist/`](https://github.com/jcu/cookbook/tree/master/dist/) directory within this repository.
-The subpath should be appended after the version number in the URL, as per the example.
+Available resources and their corresponding paths can be found by referrring
+to the [`dist/`](https://github.com/jcu/cookbook/tree/master/dist/) directory
+within this repository.  The subpath should be appended after the version
+number in the URL, as per the example.
 
 ### Iconography
 
 If you'd like to use the optional iconography library, you can add the
-following as well:
+following into your page or app as well:
 
 ```html
 <!-- In the <head> of your project -->
@@ -124,11 +127,15 @@ HTML tags to ensure things function correctly.
 
 ### npm
 
-If you are using a NodeJS-based project there is also published package on npm under `@jcu/cookbook`:
+If you are using a NodeJS-based project there is also published package on npm
+under `@jcu/cookbook`:
 
-* **(Recommended)** The `@jcu/cookbook` tag will installed the latest version and needs to be **explicitly** upgraded to future versions
-* The `@jcu/cookbook@latest` tag is equivalent to the `latest` version on the CDN
-* The `@jcu/cookbook@dev` tag is the equivalent to the `master` version on the CDN
+* **(Recommended)** `@jcu/cookbook`: this tag will install the latest version
+  and needs to be **explicitly** upgraded to future versions
+* `@jcu/cookbook@latest`: this tag is equivalent to the `latest` version on
+  the CDN
+* `@jcu/cookbook@dev`: this tag is the equivalent to the `master` version on
+  the CDN
 
 ### Upgrading
 
@@ -256,38 +263,44 @@ published accordingly online (coming shortly).
       git tag v3.0.1
    ```
 
-1. Update the working version number in the source code (Ensure updated version is newer than the version you just tagged. e.g. `v3.0.1` -> `v3.0.2`):
-
-   There are multiple files that need to be updated to the latest working version:
-
-   * `package.json`:
-      * `version`
-      * `version_short`
-      * `version_major`
-   * `src/cookbook.scss`:
-      * `JCU Cookbook vx.x.x` (at top of file)
-
-   Proceed to then commit the new version
+1. Update the working version number in the source code:
 
    ```sh
-   git commit -a -m "Back to development"
+   yarn release-version [current-version eg 3.0.1] [development-version eg 3.0.2]
    ```
 
-1. Push to the Github Repo
+   When using `yarn release-version`, ensure you omit any `v` prefix for
+   version numbers.
+
+1. Check and commit the changes that were made. Care will need to be taken in
+   the case where CookBook's version change conflicts with another, hence a
+   patch commit is suggested:
 
    ```sh
-      git push
-      git push --tags
+   git add -p .
+   git commit -m "Back to development"
    ```
 
-      * This will make the release workflow run which will upload the generated files to the CDN and NPM for created release
+   Additionally, if releasing a new major or minor version, `package.json`
+   will need to be updated to reflect this.
+
+1. Push the results:
+
+   ```sh
+   git push
+   git push --tags
+   ```
+
+   This will automatically execute the release workflow which will upload the
+   generated distribution to the CDN and release a corresponding package to
+   npm.
 
 ### Upgrades
 
 Upgrading dependencies – including Bootstrap – takes place via:
 
 ```sh
-yarn upgrade-interactive --latest
+yarn upgrade-interactive
 ```
 
 where you can inspect the recent changes and assess the impact of the
@@ -353,7 +366,6 @@ for details.  Reproduction of the following resources is underst
 
 * Torres Straight Islanders Flag: https://en.wikipedia.org/wiki/File:Flag_of_the_Torres_Strait_Islanders.svg
   (Non-free media; education use in Australia)
-
 
 ## Acknowledgements
 

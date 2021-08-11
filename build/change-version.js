@@ -100,7 +100,8 @@ function main(args) {
   ])
   const EXCLUDED_FILES = new Set([
     'CHANGELOG.md',
-    'README.md'
+    'README.md',
+    '.yarnrc.yml'
   ])
   const INCLUDED_EXTENSIONS = new Set([
     // This extension whitelist is how we avoid modifying binary files
