@@ -12,7 +12,7 @@ outputs:
     description: 'Which Version Between the two provided versions is the latest'
   version-is-latest:
     description: 'The Provided version is newer than the compared version'
-    
+
   version-major:
     description: 'The Provided versions major'
   version-minor:
