@@ -1,8 +1,7 @@
 name: Build & Publish
 on: [push, pull_request]
 env:
-  # CDN_URL: https://cdn.jcu.edu.au/cookbook
-  CDN_URL: https://cdn.awstest.jcu.edu.au/cookbook
+  CDN_URL: https://cdn.jcu.edu.au/cookbook
   CDN_AWS_REGION: ap-southeast-2
 
 jobs:
