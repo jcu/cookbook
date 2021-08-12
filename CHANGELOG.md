@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0] - 2021-08-12
+
 ### Added
 
 * Automated uploading & hashing of distribution files to the JCU CDN and NPM via Github Actions
@@ -215,6 +217,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   lists
 * Use theme colours from microsite layout (fixes #10).
 
+[3.0.0]: https://github.com/jcu/cookbook/releases/tag/v3.0.0
 [2.0.0]: https://github.com/jcu/cookbook/releases/tag/v2.0.0
 [2.0.0-alpha.13]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.13
 [2.0.0-alpha.12]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.12
