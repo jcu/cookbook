@@ -82,6 +82,7 @@ jobs:
         DEST_DIR: 'public/master'
 
     - name: Publish npm package
+      if: ${{ contains(github.event.head_commit.message, '[npm publish]') }}
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: npm publish . --tag dev
