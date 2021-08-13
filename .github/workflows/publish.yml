@@ -3,6 +3,7 @@ on: [push, pull_request]
 env:
   CDN_URL: https://cdn.jcu.edu.au/cookbook
   CDN_AWS_REGION: ap-southeast-2
+  NPM_PACKAGE_NAME: "@jcu/cookbook"
 
 jobs:
   build:
@@ -224,3 +225,18 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: npm publish .
+
+    - name: Verify Publish
+      env:
+        URL: ${{ env.CDN_URL }}/${{ env.RELEASE_VERSION }}
+      run: |
+        curl -sf "$URL/css/cookbook.min.css"
+        curl -sf "$URL/js/bootstrap.min.js"
+        curl -sf "$URL/img/favicon.ico"
+        mkdir -p verification
+        cd verification
+        yarn init -y
+        yarn
+        yarn add ${{ env.NPM_PACKAGE_NAME }}@${{ env.RELEASE_VERSION }}
+
+
