@@ -167,13 +167,13 @@ published accordingly online (coming shortly).
    yarn
    ```
 
-2. Execute a build with:
+1. Execute a build with:
 
    ```sh
    yarn dist
    ```
 
-3. Test the resulting build.
+1. Test the resulting build.
 
    At present, this involves manual testing with the HTML documentation and
    checking against in-development applications.
@@ -186,59 +186,14 @@ published accordingly online (coming shortly).
    yarn release-cdn-test
    ```
 
+   To automatically create an in-development package that's available on npm,
+   include the magic string `[npm publish]` within your commit message. Note
+   that this doesn't affect the publishing of packages for tags; these occur
+   automatically on creating and pushing a tagged release.
+
 ### Release process
 
-#### Rclone Method
-
-1. Firstly, follow the instructions above for Building this project.
-
-1. Set up an Rclone environment with `rclone config` and create a remote
-   called `jcu-cdn-cookbook`. Ask a maintainer if you're unsure what the
-   configuration should contain.
-
-1. Build a release and copy the distribution to CDN via:
-
-   ```sh
-   yarn release
-   ```
-
-1. Update `CHANGELOG.md` and CDN URLs inside `README.md` with the current date
-   and released version
-
-1. Commit the build to Git and tag accordingly:
-
-   ```sh
-   git commit CHANGELOG.md README.md dist/ -m "Release v9.9.9"
-   git tag v9.9.9
-   ```
-
-1. Publish to npm via the following:
-
-   ```sh
-   yarn publish
-   ```
-
-   Don't set a `New version` at this time; just hit enter/return.  We'll
-   update it ourselves in a moment.
-
-1. Update the working version number in the source code:
-
-   ```sh
-   yarn release-version [old-version eg 2.0.0] [new-version eg 2.0.1]
-   git commit -a -m "Back to development"
-   ```
-
-   When using `yarn release-version`, ensure you omit any `v` prefix for
-   version numbers.
-
-1. Push the results:
-
-   ```sh
-   git push
-   git push --tags
-   ```
-
-#### Github Actions Method
+#### Automated: GitHub Actions method
 
 1. Ensure the Github Repository has the following environment secrets:
 
@@ -293,7 +248,58 @@ published accordingly online (coming shortly).
 
    This will automatically execute the release workflow which will upload the
    generated distribution to the CDN and release a corresponding package to
-   npm.
+   npm, checking the success of these outputs in the process.
+
+#### Manual: Rclone method
+
+1. Firstly, follow the instructions above for
+   [Building](#user-content-building) this project.
+
+1. Set up an Rclone environment with `rclone config` and create a remote
+   called `jcu-cdn-cookbook`. Ask a maintainer if you're unsure what the
+   configuration should contain.
+
+1. Build a release and copy the distribution to CDN via:
+
+   ```sh
+   yarn release
+   ```
+
+1. Update `CHANGELOG.md` and CDN URLs inside `README.md` with the current date
+   and released version
+
+1. Commit the build to Git and tag accordingly:
+
+   ```sh
+   git commit CHANGELOG.md README.md dist/ -m "Release v9.9.9"
+   git tag v9.9.9
+   ```
+
+1. Publish to npm via the following:
+
+   ```sh
+   yarn publish
+   ```
+
+   Don't set a `New version` at this time; just hit enter/return.  We'll
+   update it ourselves in a moment.
+
+1. Update the working version number in the source code:
+
+   ```sh
+   yarn release-version [old-version eg 2.0.0] [new-version eg 2.0.1]
+   git commit -a -m "Back to development"
+   ```
+
+   When using `yarn release-version`, ensure you omit any `v` prefix for
+   version numbers.
+
+1. Push the results:
+
+   ```sh
+   git push
+   git push --tags
+   ```
 
 ### Upgrades
 
