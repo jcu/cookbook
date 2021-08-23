@@ -27,3 +27,16 @@ a {
     text-decoration: underline;
   }
 }
+
+.form-switch {
+
+  .form-check-input {
+    /* stylelint-disable-line */
+    border-radius: valid-radius($form-switch-border-radius);
+
+    &-lg {
+      width: $form-check-input-width * 3;
+      height: $form-check-input-width * 1.5;
+    }
+  }
+}
