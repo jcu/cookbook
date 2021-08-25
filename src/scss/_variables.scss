@@ -98,7 +98,8 @@ $colors: (
 //
 
 // Core Bootstrap options
-$enable-rounded:                             false !default;
+$enable-rounded:              false !default;
+$enable-negative-margins:     true !default;
 
 $spacer: 1.5rem !default;  // Wider spacing on all Components
 
