@@ -10,6 +10,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 * Enable negative margin utilities
+* Add `-lg` variant for larger form switches (`.form-switch .form-check-input-lg`)
+
+### Changed
+
+* Enable rounded corners on form switches
 
 ## [3.0.0] - 2021-08-12
 
