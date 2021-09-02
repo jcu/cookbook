@@ -240,3 +240,22 @@ jobs:
         yarn add ${{ env.NPM_PACKAGE_NAME }}@${{ env.RELEASE_VERSION }}
 
 
+      # Update Redirection Page to point to latest docs page
+    - name: Update Landing Page Redirect
+      env:
+        version: ${{ steps.compared_semvers_minor.outputs.version-major }}.${{ steps.compared_semvers_minor.outputs.version-minor }}
+      run: sed -i 's/\/docs\/.*"/\/docs\/${{ env.version }}"/' ./site/index.html
+
+
+      # Publish to the gh-pages with the Major.Minor (x.x) Version like Bootstrap
+    - name: Publish Docs
+      uses: peaceiris/actions-gh-pages@v3
+      env:
+        version: ${{ steps.compared_semvers_minor.outputs.version-major }}.${{ steps.compared_semvers_minor.outputs.version-minor }}
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./site/docs/${{ env.version }}
+        destination_dir: ./docs/${{ env.version }}
+        commit_message: "Update Docs to Version: ${{ env.RELEASE_VERSION }}"
+
+
