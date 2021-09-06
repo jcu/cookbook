@@ -119,6 +119,10 @@ $list-inline-padding:         $spacer !default;
 
 $btn-disabled-opacity:        .7 !default;
 
+$form-check-input-border:                 1px solid rgba($black, .5) !default;
+
+$form-switch-color:               rgba(0, 0, 0, .5) !default;
+
 $breadcrumb-item-padding:           .75rem !default;
 $breadcrumb-bg:                     transparent !default; // Ref: Website, allows for fluid layouts
 $breadcrumb-divider-color:          $gray-700 !default;   // Ref: a11y

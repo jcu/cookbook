@@ -17,9 +17,10 @@
   }
 }
 
+// Form Switch - rounded corners and large variant
 .form-switch {
   .form-check-input {
-    /* stylelint-disable-line */
+    // stylelint-disable-next-line property-disallowed-list
     border-radius: valid-radius($form-switch-border-radius);
 
     &-lg {
