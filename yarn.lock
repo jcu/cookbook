@@ -288,6 +288,7 @@ __metadata:
     npm-run-all: ^4.1.5
     postcss: ^8.3.6
     postcss-cli: ^8.3.1
+    prettier: ^2.3.2
     sass: ^1.39.0
     shx: ^0.3.3
     stylelint: ^13.13.1
@@ -6187,6 +6188,15 @@ fsevents@~2.3.2:
   version: 2.0.0
   resolution: "prepend-http@npm:2.0.0"
   checksum: 7694a9525405447662c1ffd352fcb41b6410c705b739b6f4e3a3e21cf5fdede8377890088e8934436b8b17ba55365a615f153960f30877bf0d0392f9e93503ea
+  languageName: node
+  linkType: hard
+
+"prettier@npm:^2.3.2":
+  version: 2.3.2
+  resolution: "prettier@npm:2.3.2"
+  bin:
+    prettier: bin-prettier.js
+  checksum: 17ce5784ac67621c292df58e2da60b2ee150c2d6aebea22a6ad9e52fcd6a5e66c349d0a8436ea3bd8ff9d778920a5f68000d7625b74f43558718a49755aa5259
   languageName: node
   linkType: hard
 
