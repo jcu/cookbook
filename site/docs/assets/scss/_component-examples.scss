@@ -1,0 +1,29 @@
+// Source: https://raw.githubusercontent.com/twbs/bootstrap/v5.1.0/site/assets/scss/_component-examples.scss
+//
+// Code snippets
+//
+
+.highlight {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: $gray-100;
+
+  @include media-breakpoint-up(sm) {
+    padding: 1rem 1.5rem;
+  }
+
+  pre {
+    padding: 0;
+    margin-top: .65rem;
+    margin-bottom: .65rem;
+    white-space: pre;
+    background-color: transparent;
+    border: 0;
+  }
+
+  pre code {
+    @include font-size(inherit);
+    color: $gray-900; // Effectively the base text color
+    word-wrap: normal;
+  }
+}

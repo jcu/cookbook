@@ -1,5 +1,7 @@
 ## Workarounds
 
+* Add cheatsheet when https://github.com/twbs/bootstrap/pull/34699 is released
+  (next release of Bootstrap v5.x)
 * https://github.com/yarnpkg/berry/issues/2670: npm-run-all commands in
   `package.json` need to be quoted
 * https://github.com/Ayc0/yarn-plugin-envs: reintroduce npm environment

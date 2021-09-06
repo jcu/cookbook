@@ -85,6 +85,7 @@ footer a.link-light:hover {
   width: 100px;
   height: 100px;
   flex-shrink: 0;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -266,11 +267,15 @@ footer a.link-light:hover {
 }
 
 .hyphens-auto {
+  -webkit-hyphens: auto !important;
+  -ms-hyphens: auto !important;
   hyphens: auto !important;
 }
 
 @media (min-width: 768px) {
   .hyphens-auto {
+    -webkit-hyphens: inherit !important;
+    -ms-hyphens: inherit !important;
     hyphens: inherit !important;
   }
 }
@@ -389,3 +394,4 @@ footer a.link-light:hover {
   margin: 0px;
   padding: 0.7em;
 }
+/*# sourceMappingURL=index.css.map */

@@ -1,4 +1,3 @@
-
 (function() {
   VERSION = "3.0.0"; // Release Version of the Docs
   const [docsVersionMajor, docsVersionMinor, docsVersionPatch] = VERSION.split('.');
