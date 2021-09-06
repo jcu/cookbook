@@ -246,7 +246,7 @@ jobs:
         yarn
         yarn run docs
 
-      # Update Redirection Page to point to latest docs page
+    # Update Redirection Page to point to latest docs page
     - name: Update Landing Page Redirect
       if: ${{ steps.compared_semvers.outputs.version-is-latest == 'true' }}
       env:
@@ -257,8 +257,7 @@ jobs:
         mv ./site/docs/* ./deploy_site/docs/${{ env.version }}
         mv ./site/index.html ./deploy_site
 
-
-      # Publish to the gh-pages with the Major.Minor (x.x) Version like Bootstrap
+    # Publish to the gh-pages with the Major.Minor (x.x) Version like Bootstrap
     - name: Publish Docs
       if: ${{ steps.compared_semvers.outputs.version-is-latest == 'true' }}
       uses: peaceiris/actions-gh-pages@v3
@@ -269,6 +268,3 @@ jobs:
         publish_dir: ./deploy_site
         commit_message: "Update Docs to Version: ${{ env.RELEASE_VERSION }}"
         keep_files: true
-
-
-
