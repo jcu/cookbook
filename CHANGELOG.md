@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+* Enable underlining on links to match default Bootstrap 5
 * Enable negative margin utilities
 * Add `-lg` variant for larger form switches (`.form-switch .form-check-input-lg`)
 
