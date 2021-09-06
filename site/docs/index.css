@@ -1,0 +1,391 @@
+.footer-cols > :not(:first-child) > ul {
+  padding-top: 0.75rem;
+  border-top: 1px solid #ced4da;
+}
+
+@media (min-width: 576px) {
+  .footer-cols > :not(:first-child) > ul {
+    padding-top: 0;
+    padding-left: 1.5rem;
+    border-top: 0 none;
+    border-left: 1px solid #ced4da;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-cols > :not(:first-child) > ul {
+    padding-left: 2.25rem;
+  }
+}
+
+.footer-cols.footer-center {
+  justify-content: center;
+}
+
+.footer-cols.footer-center > div {
+  text-align: center;
+}
+
+.img-flag {
+  max-height: 30px;
+}
+
+.footer-partners {
+  border-bottom: 1px solid #ced4da;
+}
+
+.list-inline-bordered .list-inline-item:not(:last-child) {
+  border-right: 1px solid #adb5bd;
+  margin-right: 1em;
+  padding-right: 1em;
+}
+
+@media (min-width: 992px) {
+  .list-business-info > li {
+    display: inline-block;
+  }
+
+  .list-business-info > li:not(:last-child) {
+    border-right: 1px solid #adb5bd;
+    margin-right: 1em;
+    padding-right: 1em;
+  }
+}
+
+footer a.link-light {
+  text-decoration: none;
+}
+
+footer a.link-light:hover {
+  text-decoration: underline;
+  color: #ffc72c;
+}
+
+@media (max-width: 575.98px) {
+  footer .acknowledgements {
+    text-align: center;
+  }
+
+  footer .partners,
+  footer .col-flag {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+.btn svg {
+  flex-shrink: 0;
+}
+
+.navbar.navbar-secondary .nav-link.active::after {
+  background-color: #53565a;
+}
+
+.mini-photo {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* Features for consideration for the JCU CookBook */
+.text-black {
+  color: #000 !important;
+}
+
+.text-underline {
+  text-decoration: underline !important;
+}
+
+.text-compress {
+  letter-spacing: -0.03em;
+}
+
+.text-compress-more {
+  letter-spacing: -0.06em;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 2px #000;
+}
+
+.link-light {
+  color: #f0f0f0;
+}
+
+.link-light:hover,
+.link-light:focus {
+  color: #ffc72c;
+}
+
+.border-3 {
+  border-width: 3px;
+}
+
+.border-input {
+  border-color: #ced4da !important;
+}
+
+.lh-short {
+  line-height: 1.2;
+}
+
+.link-implicit {
+  color: inherit;
+}
+
+.link-implicit:hover {
+  border-bottom: 1px solid currentcolor;
+}
+
+.border-right {
+  border-right: 1px solid #dee2e6 !important;
+}
+
+.mw-50 {
+  max-width: 50% !important;
+}
+
+.mw-75 {
+  max-width: 75% !important;
+}
+
+@media (min-width: 576px) {
+  .border-sm-right {
+    border-right: 1px solid #dee2e6 !important;
+  }
+
+  .mw-sm-50 {
+    max-width: 50% !important;
+  }
+
+  .mw-sm-75 {
+    max-width: 75% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .border-md-right {
+    border-right: 1px solid #dee2e6 !important;
+  }
+
+  .mw-md-50 {
+    max-width: 50% !important;
+  }
+
+  .mw-md-75 {
+    max-width: 75% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .border-lg-right {
+    border-right: 1px solid #dee2e6 !important;
+  }
+
+  .mw-lg-50 {
+    max-width: 50% !important;
+  }
+
+  .mw-lg-75 {
+    max-width: 75% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .border-xl-right {
+    border-right: 1px solid #dee2e6 !important;
+  }
+
+  .mw-xl-50 {
+    max-width: 50% !important;
+  }
+
+  .mw-xl-75 {
+    max-width: 75% !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .border-xxl-right {
+    border-right: 1px solid #dee2e6 !important;
+  }
+
+  .mw-xxl-50 {
+    max-width: 50% !important;
+  }
+
+  .mw-xxl-75 {
+    max-width: 75% !important;
+  }
+}
+
+.col-fit {
+  width: min-intrinsic;
+  width: -moz-min-content;
+  width: -webkit-min-content;
+  width: min-content;
+  flex-grow: 1;
+}
+
+.btn-group-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btn-group-flex .btn {
+  flex: auto;
+  margin-right: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.btn-md {
+  display: block;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .btn-md {
+    display: inline-block;
+    width: auto;
+  }
+
+  .border-left-md {
+    border-left: 1px solid #dee2e6 !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .mw-lg-50 {
+    max-width: 50% !important;
+  }
+
+  .border-left-lg {
+    border-left: 1px solid #dee2e6 !important;
+  }
+}
+
+.hyphens-auto {
+  hyphens: auto !important;
+}
+
+@media (min-width: 768px) {
+  .hyphens-auto {
+    hyphens: inherit !important;
+  }
+}
+
+.navbar .nav-link {
+  font-weight: 400;
+}
+
+@media (min-width: 576px) {
+  .navbar .nav-link {
+    padding-top: 0.95rem;
+    padding-bottom: 0.7rem;
+  }
+}
+
+.navbar .nav-link.active {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  margin: 0.15rem auto 0;
+  background: transparent;
+  transition: width 0.15s ease, background-color 0.15s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+  background-color: #53565a;
+}
+
+.navbar .nav-link.active::after,
+.navbar .nav-link.active:hover::after {
+  width: 100%;
+  background-color: #edb800;
+}
+
+.overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dropdown-toggle-implicit::after {
+  display: none;
+}
+
+.header {
+  border-bottom: 1px solid #e9ecef;
+}
+
+.header .navbar-nav a {
+  text-decoration: none;
+}
+
+@media (min-width: 992px) {
+  .header {
+    border-bottom: 0 none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar-menu .container-lg {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.brand-logo {
+  white-space: nowrap;
+}
+
+.brand-logo-img {
+  height: 3rem;
+}
+
+.brand-logo-sitename {
+  display: inline-block;
+  max-width: 25vw;
+  white-space: normal;
+  vertical-align: text-top;
+  margin-left: 0.75rem;
+  padding-left: 0.5625rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-left: 1px solid #adb5bd;
+  font-size: 80%;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.brand-logo-sitename:hover {
+  text-decoration: underline;
+}
+
+.brand-logo-sitename:hover.text-light {
+  color: #a4a4a4 !important;
+}
+
+@media (min-width: 768px) {
+  .brand-logo-img {
+    height: 4rem;
+  }
+
+  .brand-logo-sitename {
+    margin-left: 1.5rem;
+    padding-left: 1.125rem;
+    font-size: 100%;
+  }
+}
+
+.alert {
+  margin: 0px;
+  padding: 0.7em;
+}
