@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * Enable rounded corners on form switches
 
+### Fixed
+
+* Darken default colour for form switches and form checkbox/switch borders
+
 ## [3.0.0] - 2021-08-12
 
 ### Added
