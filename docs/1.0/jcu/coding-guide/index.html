@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="The JCU Web Framework, based on Bootstrap.">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="David Beitey and JCU contributors">
+
+<title>
+
+    Coding Guide &middot; JCU Web Framework
+
+</title>
+
+<!-- Bootstrap core CSS -->
+
+  <link href="/docs/1.0/dist/css/jcu.min.css" rel="stylesheet">
+
+
+<!-- Documentation extras -->
+<link href="/docs/1.0/assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/1.0/dist/images/apple-touch-icon.png">
+<link rel="icon" href="/docs/1.0/dist/images/favicon.ico">
+
+  </head>
+  <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+<a href="/"><div class="alert alert-warning text-xs-center m-b-0 mb-0" role="alert">A Newer version of cookbook is available. Check it out</div></a>
+
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+
+<header class="navbar navbar-dark navbar-static-top bd-navbar jcu-bg--black-90pc" role="banner">
+
+
+
+  <nav>
+    <div class="clearfix">
+      <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        &#9776;
+      </button>
+      <a class="navbar-brand hidden-sm-up" href="/docs/1.0/">
+        JCU Web Framework
+      </a>
+    </div>
+    <div class="collapse navbar-toggleable-xs" id="bd-main-nav">
+      <ul class="nav navbar-nav">
+        <li class="nav-item active hidden-xs-down">
+          <a class="nav-item nav-link " href="/docs/1.0/">JCU Web Framework</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link active" href="/docs/1.0/jcu/introduction/">Documentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link " href="/docs/1.0/examples/">Examples</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+    <div class="bd-pageheader">
+      <div class="container">
+
+  <h1>JCU Web Framework</h1>
+  <p class="lead">
+    The <em>living style guide</em> for University web applications.
+  </p>
+
+
+      </div>
+    </div>
+
+    <main class="container">
+
+      <div class="row jcu-content">
+        <div class="container-fluid">
+          <div class="col-md-3 col-md-push-9 bd-sidebar">
+            <form class="bd-search hidden-sm-down">
+  <input type="text" class="form-control" id="search-input" placeholder="Search..." autocomplete="off">
+  <div class="dropdown-menu bd-search-results" id="search-results"></div>
+</form>
+
+<nav class="bd-links" id="docsNavbarContent">
+
+
+
+
+
+
+
+  <div class="bd-toc-item active">
+
+        <a class="bd-toc-link" href="/docs/1.0/jcu/introduction">
+
+        JCU
+      </a>
+
+      <ul class="nav bd-sidenav">
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/introduction">
+              Introduction
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/download">
+              Download
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/application-theming">
+              Application Theming
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="active bd-sidenav-active">
+            <a href="/docs/1.0/jcu/coding-guide">
+              Coding Guide
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/layout">
+              Layout
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/typography">
+              Typography
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/themes">
+              Themes
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/iconography">
+              Iconography
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/dropdowns">
+              Dropdowns
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/navs">
+              Navs
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/accordion">
+              Accordion
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/overlay">
+              Overlay
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/card">
+              Card
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/utilities">
+              Utilities
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/campus-stack">
+              Campus Stack
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/header">
+              Header
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/exposition">
+              Exposition
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/toolbar">
+              Toolbar
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/explorer">
+              Explorer
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/section-navigator">
+              Section Navigator
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/content">
+              Content
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/footer">
+              Footer
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/colophon">
+              Colophon
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/styling">
+              Styling
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/building">
+              Building
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/useful-resources">
+              Useful Resources
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/to-do">
+              To Do
+            </a>
+
+
+          </li>
+
+      </ul>
+    </div>
+
+
+
+
+
+
+
+  <div class="bd-toc-item ">
+
+        <a class="bd-toc-link" href="/docs/1.0/getting-started/introduction">
+
+        Getting started
+      </a>
+
+      <ul class="nav bd-sidenav">
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/introduction">
+              Introduction
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/contents">
+              Contents
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/browsers-devices">
+              Browsers & devices
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/javascript">
+              JavaScript
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/options">
+              Options
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/flexbox">
+              Flexbox
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/build-tools">
+              Build tools
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/best-practices">
+              Best practices
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/accessibility">
+              Accessibility
+            </a>
+
+
+          </li>
+
+      </ul>
+    </div>
+
+
+
+
+
+
+
+  <div class="bd-toc-item ">
+
+        <a class="bd-toc-link" href="/docs/1.0/layout/overview">
+
+        Layout
+      </a>
+
+      <ul class="nav bd-sidenav">
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/layout/overview">
+              Overview
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/layout/grid">
+              Grid
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/layout/media-object">
+              Media object
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/layout/responsive-utilities">
+              Responsive utilities
+            </a>
+
+
+          </li>
+
+      </ul>
+    </div>
+
+
+
+
+
+
+
+  <div class="bd-toc-item ">
+
+        <a class="bd-toc-link" href="/docs/1.0/content/reboot">
+
+        Content
+      </a>
+
+      <ul class="nav bd-sidenav">
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/content/reboot">
+              Reboot
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/content/typography">
+              Typography
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/content/code">
+              Code
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/content/images">
+              Images
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/content/tables">
+              Tables
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/content/figures">
+              Figures
+            </a>
+
+
+          </li>
+
+      </ul>
+    </div>
+
+
+
+
+
+
+
+  <div class="bd-toc-item ">
+
+        <a class="bd-toc-link" href="/docs/1.0/components/buttons">
+
+        Components
+      </a>
+
+      <ul class="nav bd-sidenav">
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/buttons">
+              Buttons
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/button-group">
+              Button group
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/button-dropdown">
+              Button dropdown
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/forms">
+              Forms
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/input-group">
+              Input group
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/dropdowns">
+              Dropdowns
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/jumbotron">
+              Jumbotron
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/label">
+              Label
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/alerts">
+              Alerts
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/card">
+              Card
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/navs">
+              Navs
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/navbar">
+              Navbar
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/breadcrumb">
+              Breadcrumb
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/pagination">
+              Pagination
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/progress">
+              Progress
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/list-group">
+              List group
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/modal">
+              Modal
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/scrollspy">
+              Scrollspy
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/tooltips">
+              Tooltips
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/popovers">
+              Popovers
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/collapse">
+              Collapse
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/carousel">
+              Carousel
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/utilities">
+              Utilities
+            </a>
+
+
+          </li>
+
+      </ul>
+    </div>
+
+
+
+
+
+
+
+  <div class="bd-toc-item ">
+
+        <a class="bd-toc-link" href="/docs/1.0/migration/">
+
+        Migration
+      </a>
+
+      <ul class="nav bd-sidenav">
+
+      </ul>
+    </div>
+
+</nav>
+
+          </div>
+          <div class="col-md-9 col-md-pull-3 bd-content">
+            <h1 class="bd-title" id="content">Coding Guide</h1>
+            <div class="bd-callout bd-callout-info">
+<p><strong>Heads up!</strong> You probably don’t need this if you’re an application owner or
+developer and not part of the Web or Marketing teams. However, you might like to
+try and keep your application (especially if it’s a custom or in-house one) up
+to the standards set by this framework.</p>
+</div>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#tools" id="markdown-toc-tools">Tools</a></li>
+  <li><a href="#recommended-practices" id="markdown-toc-recommended-practices">Recommended practices</a>    <ul>
+      <li><a href="#new-technologies" id="markdown-toc-new-technologies">New technologies</a></li>
+      <li><a href="#accessibility" id="markdown-toc-accessibility">Accessibility</a></li>
+      <li><a href="#coding-guide" id="markdown-toc-coding-guide">Coding guide</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="tools">Tools</h2>
+
+<ul>
+  <li><a href="http://www.w3.org/TR/html5/dom.html#ariusage-notea">W3C default element ARIA semantics</a></li>
+  <li><a href="https://validator.w3.org/nu/">W3C Nu HTML checker</a></li>
+</ul>
+
+<h2 id="recommended-practices">Recommended practices</h2>
+
+<h3 id="new-technologies">New technologies</h3>
+
+<ul>
+  <li>Use <a href="http://caniuse.com">Can I use</a> to determine if a browser feature is
+widely available across user agents and what, if any, workarounds are
+available or caveats should be noted.</li>
+</ul>
+
+<h3 id="accessibility">Accessibility</h3>
+
+<p>All templates must be accessible and pass standards Section 508 and WCAG2AA.
+In order to test accessibility, we use a number of different tools:</p>
+
+<ul>
+  <li>
+    <p><a href="http://pa11y.org">pa11y</a>: command-line and server driven testing of
+rendered pages using a local browser instance.  This uses the HTML5
+CodeSniffer and is capable of Section508 and WCAG2 testing.</p>
+  </li>
+  <li>
+    <p><a href="https://khan.github.io/tota11y/">tota11y</a>: in-browser testing of elements
+within actual pages.  Follow the instructions on the project page to use
+<code class="highlighter-rouge">tota11y</code> on live application or any other pages. <code class="highlighter-rouge">tota11y</code> is also included
+on all documentation pages for additional testing—look for the glasses in the
+bottom-left corner!</p>
+
+    <p>Use <code class="highlighter-rouge">tota11y</code> to determine contrast ratios for absolutely positioned
+elements where <code class="highlighter-rouge">pa11y</code> reports warnings.</p>
+  </li>
+</ul>
+
+<p>For how to use these tools in practice, see
+<a href="/docs/1.0/jcu/building/#accessibility-testing">Accessibility testing</a>.</p>
+
+<h3 id="coding-guide">Coding guide</h3>
+
+<ul>
+  <li>
+    <p>Follow the <a href="http://codeguide.co">Code Guide</a> HTML and CSS standards; these
+guidelines are what Bootstrap strives to abide by.  In terms of specific class
+names, follow BEM (Block, Element, Modifier) semantic syntax, where possible.</p>
+
+    <ul>
+      <li>Note that BEM only applies if styling is DOM-dependent, for instance a
+heading or list that is styled <em>because</em> it is within another class.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Use only CSS classes for selectors in styling; do not use IDs.  Note that this
+only applies to styling and does not apply JavaScript-based components that
+require IDs for operation.</p>
+  </li>
+  <li>
+    <p>All components are given names that describe their purpose, rather than being
+arbitrary or specifically dictating their position.  This also has the added
+benefit of making components easily identifiable and discussable.  For
+example, the <a href="/docs/1.0/jcu/exposition">Exposition</a>
+component sets the theme for the page with a background image and the
+<a href="/docs/1.0/jcu/explorer">Explorer</a> component consists of
+the way in which users can navigate and <em>explore</em> a content-rich site.</p>
+  </li>
+  <li>
+    <p>All custom variables and classes in code should follow Bootstrap’s lead
+and use American English (for example, <code class="highlighter-rouge">color</code> over <code class="highlighter-rouge">colour</code>).  This
+decision is for consistency when mixing stock and custom variables.  Comments
+and content in documentation pages should follow standard Australian English
+spelling and grammar (<code class="highlighter-rouge">colour</code>).</p>
+  </li>
+  <li>
+    <p>Avoid all use of inline styles within the framework; reusable classes should
+be provided instead.</p>
+  </li>
+  <li>
+    <p>Consistently name files: [suggestion coming]</p>
+  </li>
+  <li>
+    <p>Internet Explorer’s print layouts for A4 adhere to <code class="highlighter-rouge">sm</code> (small) sized media
+queries.  In order to combat this, ensure print layouts are not affected or
+are specifically excluded in <code class="highlighter-rouge">@include media-breakpoint-down</code> styles.</p>
+  </li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bd-footer" role="contentinfo">
+  <div class="container">
+    <div class="col-sm-8">
+      <ul class="bd-footer-links">
+        <li><a href="https://github.com/jcu/web-framework">Source Code</a></li>
+        <li><a href="https://web.jcu.io">Hosted Documentation</a></li>
+        <li><a href="https://github.com/jcu/web-framework/issues">Issue Tracker</a></li>
+        <li><a href="/docs/1.0/examples/">Examples</a></li>
+        <li><a href="/docs/1.0/about/history/">About</a></li>
+      </ul>
+      <p>Created and developed  by <a href="http://github.com/davidjb" target="_blank">@davidjb</a>.</p>
+      <p>Currently v1.0.0-beta.1. Based upon Bootstrap v4.0.0-alpha.2.</p>
+      <p>Original code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.  Documentation &copy; <a href="https://github.com/orgs/twbs/people">Bootstrap core team</a> and <a href="https://github.com/twbs/bootstrap/graphs/contributors">contributors</a>.</p>
+      <p>&copy; James Cook University and respective owners, where appropriate. Trademarks and branding used with permission.</p>
+      <p class="p-b-2">Content, including text, imagery and styles, are drawn from publicly available sources and used to illustrate functionality present. Confirm licensing requirements are met before re-use.</p>
+      <p>CDN hosting kindly provided by <a href="https://www.keycdn.com">KeyCDN</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/docs/1.0/assets/js/vendor/jquery.min.js"></script>
+
+<script src="/docs/1.0/assets/js/vendor/tether.min.js"></script>
+
+
+  <script src="/docs/1.0/dist/js/jcu.min.js"></script>
+
+
+
+  <script src="/docs/1.0/assets/js/docs.min.js"></script>
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/docs/1.0/assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="/docs/1.0/assets/js/ie-emulation-modes-warning.js"></script>
+
+
+<script src="/docs/1.0/assets/js/vendor/jekyll-search.min.js"></script>
+
+<script>
+SimpleJekyllSearch.init({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('search-results'),
+  searchResultTemplate: '<a class="dropdown-item" href="{url}">{title}</a>',
+  noResultsText: '<div class="dropdown-item no-results">Sorry, there are no results for that search.</div>',
+  json: '/search.json'
+})
+</script>
+
+
+<script>
+Holder.addTheme('gray', {
+  background: '#777',
+  foreground: 'rgba(255,255,255,.75)',
+  font: 'Helvetica',
+  fontweight: 'normal'
+})
+</script>
+
+<script src="/docs/1.0/assets/js/vendor/tota11y.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="The JCU Web Framework, based on Bootstrap.">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="David Beitey and JCU contributors">
+
+<title>
+
+    Building &middot; JCU Web Framework
+
+</title>
+
+<!-- Bootstrap core CSS -->
+
+  <link href="/docs/1.0/dist/css/jcu.min.css" rel="stylesheet">
+
+
+<!-- Documentation extras -->
+<link href="/docs/1.0/assets/css/docs.min.css" rel="stylesheet">
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/1.0/dist/images/apple-touch-icon.png">
+<link rel="icon" href="/docs/1.0/dist/images/favicon.ico">
+
+  </head>
+  <body class="bd-docs" data-spy="scroll" data-target=".bd-sidenav-active">
+<a href="/"><div class="alert alert-warning text-xs-center m-b-0 mb-0" role="alert">A Newer version of cookbook is available. Check it out</div></a>
+
+    <a id="skippy" class="sr-only sr-only-focusable" href="#content">
+      <div class="container">
+        <span class="skiplink-text">Skip to main content</span>
+      </div>
+    </a>
+
+
+<header class="navbar navbar-dark navbar-static-top bd-navbar jcu-bg--black-90pc" role="banner">
+
+
+
+  <nav>
+    <div class="clearfix">
+      <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-controls="bd-main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        &#9776;
+      </button>
+      <a class="navbar-brand hidden-sm-up" href="/docs/1.0/">
+        JCU Web Framework
+      </a>
+    </div>
+    <div class="collapse navbar-toggleable-xs" id="bd-main-nav">
+      <ul class="nav navbar-nav">
+        <li class="nav-item active hidden-xs-down">
+          <a class="nav-item nav-link " href="/docs/1.0/">JCU Web Framework</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link active" href="/docs/1.0/jcu/introduction/">Documentation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link " href="/docs/1.0/examples/">Examples</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+
+    <div class="bd-pageheader">
+      <div class="container">
+
+  <h1>JCU Web Framework</h1>
+  <p class="lead">
+    The <em>living style guide</em> for University web applications.
+  </p>
+
+
+      </div>
+    </div>
+
+    <main class="container">
+
+      <div class="row jcu-content">
+        <div class="container-fluid">
+          <div class="col-md-3 col-md-push-9 bd-sidebar">
+            <form class="bd-search hidden-sm-down">
+  <input type="text" class="form-control" id="search-input" placeholder="Search..." autocomplete="off">
+  <div class="dropdown-menu bd-search-results" id="search-results"></div>
+</form>
+
+<nav class="bd-links" id="docsNavbarContent">
+
+
+
+
+
+
+
+  <div class="bd-toc-item active">
+
+        <a class="bd-toc-link" href="/docs/1.0/jcu/introduction">
+
+        JCU
+      </a>
+
+      <ul class="nav bd-sidenav">
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/introduction">
+              Introduction
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/download">
+              Download
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/application-theming">
+              Application Theming
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/coding-guide">
+              Coding Guide
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/layout">
+              Layout
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/typography">
+              Typography
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/themes">
+              Themes
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/iconography">
+              Iconography
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/dropdowns">
+              Dropdowns
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/navs">
+              Navs
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/accordion">
+              Accordion
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/overlay">
+              Overlay
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/card">
+              Card
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/utilities">
+              Utilities
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/campus-stack">
+              Campus Stack
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/header">
+              Header
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/exposition">
+              Exposition
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/toolbar">
+              Toolbar
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/explorer">
+              Explorer
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/section-navigator">
+              Section Navigator
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/content">
+              Content
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/footer">
+              Footer
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/colophon">
+              Colophon
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/styling">
+              Styling
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="active bd-sidenav-active">
+            <a href="/docs/1.0/jcu/building">
+              Building
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/useful-resources">
+              Useful Resources
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/jcu/to-do">
+              To Do
+            </a>
+
+
+          </li>
+
+      </ul>
+    </div>
+
+
+
+
+
+
+
+  <div class="bd-toc-item ">
+
+        <a class="bd-toc-link" href="/docs/1.0/getting-started/introduction">
+
+        Getting started
+      </a>
+
+      <ul class="nav bd-sidenav">
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/introduction">
+              Introduction
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/contents">
+              Contents
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/browsers-devices">
+              Browsers & devices
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/javascript">
+              JavaScript
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/options">
+              Options
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/flexbox">
+              Flexbox
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/build-tools">
+              Build tools
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/best-practices">
+              Best practices
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/getting-started/accessibility">
+              Accessibility
+            </a>
+
+
+          </li>
+
+      </ul>
+    </div>
+
+
+
+
+
+
+
+  <div class="bd-toc-item ">
+
+        <a class="bd-toc-link" href="/docs/1.0/layout/overview">
+
+        Layout
+      </a>
+
+      <ul class="nav bd-sidenav">
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/layout/overview">
+              Overview
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/layout/grid">
+              Grid
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/layout/media-object">
+              Media object
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/layout/responsive-utilities">
+              Responsive utilities
+            </a>
+
+
+          </li>
+
+      </ul>
+    </div>
+
+
+
+
+
+
+
+  <div class="bd-toc-item ">
+
+        <a class="bd-toc-link" href="/docs/1.0/content/reboot">
+
+        Content
+      </a>
+
+      <ul class="nav bd-sidenav">
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/content/reboot">
+              Reboot
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/content/typography">
+              Typography
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/content/code">
+              Code
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/content/images">
+              Images
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/content/tables">
+              Tables
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/content/figures">
+              Figures
+            </a>
+
+
+          </li>
+
+      </ul>
+    </div>
+
+
+
+
+
+
+
+  <div class="bd-toc-item ">
+
+        <a class="bd-toc-link" href="/docs/1.0/components/buttons">
+
+        Components
+      </a>
+
+      <ul class="nav bd-sidenav">
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/buttons">
+              Buttons
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/button-group">
+              Button group
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/button-dropdown">
+              Button dropdown
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/forms">
+              Forms
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/input-group">
+              Input group
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/dropdowns">
+              Dropdowns
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/jumbotron">
+              Jumbotron
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/label">
+              Label
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/alerts">
+              Alerts
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/card">
+              Card
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/navs">
+              Navs
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/navbar">
+              Navbar
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/breadcrumb">
+              Breadcrumb
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/pagination">
+              Pagination
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/progress">
+              Progress
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/list-group">
+              List group
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/modal">
+              Modal
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/scrollspy">
+              Scrollspy
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/tooltips">
+              Tooltips
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/popovers">
+              Popovers
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/collapse">
+              Collapse
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/carousel">
+              Carousel
+            </a>
+
+
+          </li>
+
+
+
+
+
+
+          <li class="">
+            <a href="/docs/1.0/components/utilities">
+              Utilities
+            </a>
+
+
+          </li>
+
+      </ul>
+    </div>
+
+
+
+
+
+
+
+  <div class="bd-toc-item ">
+
+        <a class="bd-toc-link" href="/docs/1.0/migration/">
+
+        Migration
+      </a>
+
+      <ul class="nav bd-sidenav">
+
+      </ul>
+    </div>
+
+</nav>
+
+          </div>
+          <div class="col-md-9 col-md-pull-3 bd-content">
+            <h1 class="bd-title" id="content">Building</h1>
+            <div class="bd-callout bd-callout-info">
+<p><strong>Heads up!</strong> You don’t need to read this documentation if you’re just looking
+to use a pre-produced version.  If you’re looking to extend or customise the JCU
+Web Framework further then read on.</p>
+</div>
+
+<div class="bd-callout bd-callout-warning">
+<p><strong>First things first!</strong> If you haven’t read the documentation on Bootstrap’s
+<a href="/docs/1.0/getting-started/build-tools">Build tools</a>, head over there
+and go through that first.  Everything here will make a lot more sense once you
+also understand the purpose of each tool Bootstrap uses and that you have those
+tools installed on your system.</p>
+</div>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#getting-started" id="markdown-toc-getting-started">Getting started</a></li>
+  <li><a href="#grunt-tasks" id="markdown-toc-grunt-tasks">Grunt tasks</a></li>
+  <li><a href="#branches-and-structure" id="markdown-toc-branches-and-structure">Branches and structure</a></li>
+  <li><a href="#making-changes" id="markdown-toc-making-changes">Making changes</a></li>
+  <li><a href="#accessibility-testing" id="markdown-toc-accessibility-testing">Accessibility testing</a>    <ul>
+      <li><a href="#tota11y" id="markdown-toc-tota11y">tota11y</a></li>
+      <li><a href="#pa11y" id="markdown-toc-pa11y">pa11y</a></li>
+    </ul>
+  </li>
+  <li><a href="#updating-bootstrap-versions" id="markdown-toc-updating-bootstrap-versions">Updating Bootstrap versions</a></li>
+  <li><a href="#updating-third-party-components" id="markdown-toc-updating-third-party-components">Updating third-party components</a></li>
+  <li><a href="#releasing-a-new-jcu-web-framework-version" id="markdown-toc-releasing-a-new-jcu-web-framework-version">Releasing a new JCU Web Framework version</a></li>
+  <li><a href="#cleaning-up-the-cdn" id="markdown-toc-cleaning-up-the-cdn">Cleaning up the CDN</a></li>
+</ul>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>How you get started depends on your operating system.  The simplest
+option is to use a terminal and if you are on a Mac or Linux computer, you’ll
+have the required tools already present by default – a Terminal and the <code class="highlighter-rouge">git</code>
+command.  If you’re on Windows, or otherwise looking for a GUI solution, you’ll
+need to install some form Git application (such as <a href="https://desktop.github.com/">GitHub
+Desktop</a>) to help you manage the code.</p>
+
+<ol>
+  <li>
+    <p>This project uses <a href="http://editorconfig.org/">EditorConfig</a> to maintain
+consistent styling for indenting and line endings.  Ensure your editor of
+choice is configured with support for EditorConfig; there are many
+<a href="http://editorconfig.org/#download">plugins</a> available.</p>
+  </li>
+  <li>
+    <p>Visit the <a href="https://github.com/jcu/web-framework">web framework repository</a> repository and clone
+it.  You’ll find clone URLs at the top-left side of the page.  Ensure that
+you clone the repository <em>recursively</em>, which ensures that third-party
+submodules are also obtained.  For those using a terminal, run:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>git clone --recursive https://github.com/jcu/web-framework
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Ensure all of the
+<a href="/docs/1.0/getting-started/build-tools">Build tools</a> needed
+are installed on your system.</p>
+  </li>
+  <li>
+    <p>Install any Node.js dependencies with:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="nb">cd </span>jcu-web-framework
+npm install
+</code></pre>
+    </div>
+
+    <p><a name="a11y-install"></a>Optionally, if you’d like to carry out
+accessibility testing, install these additional tools (noting that
+administrative or <code class="highlighter-rouge">sudo</code> access may be required):</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>npm install -g pa11y phantomjs
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Your system may already have a Ruby environment configured. As such, it is
+easier and cleaner to have Bundler install its resources locally to the
+<code class="highlighter-rouge">jcu-web-framework</code> directory with:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>bundler install --path vendor/bundle
+</code></pre>
+    </div>
+
+    <p>Once you’ve run this once, you don’t need to specify the path if you re-run
+<code class="highlighter-rouge">bundle</code>.  If just run <code class="highlighter-rouge">bundle</code> or <code class="highlighter-rouge">bundle install</code>, Bundler will try and
+install the required gems in your system path.</p>
+  </li>
+  <li>
+    <p>Now you’re ready to build and test!</p>
+  </li>
+</ol>
+
+<h2 id="grunt-tasks">Grunt tasks</h2>
+
+<p>All tasks from the default Bootstrap
+<a href="/docs/1.0/getting-started/build-tools#using-grunt">Gruntfile</a> are
+automatically available.  Our Gruntfile adds the following commands and tasks:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="highlighter-rouge">grunt jcu-publish</code></td>
+      <td>Builds documentation via Jekyll for hosting, and uploads to the <code class="highlighter-rouge">gh-pages</code> branch in the repo.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">grunt jcu-cdn</code></td>
+      <td>Push the current dist release to the CDN hosting using Rsync.</td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">grunt dist-images</code></td>
+      <td><code class="highlighter-rouge">grunt dist-images</code> optimises images in the <code class="highlighter-rouge">/images</code> directory, placing the results in <code class="highlighter-rouge">/dist/images</code>. This is incorporated as part of <code class="highlighter-rouge">grunt dist</code> and doesn’t need to be run directly.  <strong>Uses <a href="https://github.com/1000ch/grunt-image">grunt-image</a>, which uses various image optimisers under the hood.</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="branches-and-structure">Branches and structure</h2>
+
+<ul>
+  <li>Latest stable version is always located in <code class="highlighter-rouge">master</code> branch</li>
+  <li>Development changes take place on the <code class="highlighter-rouge">develop</code> branch</li>
+  <li>Features and developments should branch off <code class="highlighter-rouge">develop</code></li>
+  <li>Fixes can be made via pull request to the <code class="highlighter-rouge">develop</code> branch</li>
+  <li>Releases are tagged using SemVer (for example, <code class="highlighter-rouge">v4.0.0</code>)</li>
+</ul>
+
+<p>This branching model follows that of
+<a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">Gitflow</a>,
+following Bootstrap’s lead for version numbers.</p>
+
+<h2 id="making-changes">Making changes</h2>
+
+<ol>
+  <li>
+    <p>Make changes to the repository and save your files with your favourite
+editor.  Ensure that your editor is compatible with EditorConfig to ensure
+that file formats and line endings are correct and stay that way.</p>
+  </li>
+  <li>
+    <p>Test and build the framework (<code class="highlighter-rouge">dist</code>) and the documentation (<code class="highlighter-rouge">docs</code>):</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>grunt dist docs
+</code></pre>
+    </div>
+
+    <p>Once you’ve done this the first time, you can run:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>grunt watch
+</code></pre>
+    </div>
+
+    <p>to continue watching for further changes.  This is a lot faster than having
+to re-run the above commands manually and particularly helpful if
+you’re trying out a few different changes at once.</p>
+  </li>
+  <li>
+    <p>Build and serve the documentation:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>bundler <span class="nb">exec </span>jekyll serve
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Load and inspect the documentation at <a href="http://localhost:9001">http://localhost:9001</a> in your browser.
+There are a number of JCU customisation pages, which you must add to or
+expand if you are adding a new web component.  There are a number of example
+layouts which are used by downstream web applications for theming; you can use
+these for testing your changes.</p>
+  </li>
+</ol>
+
+<div class="bd-callout bd-callout-info">
+<p>If you’re doing a lot of work, you can leave the two latter commands above
+running simultaneously (in different terminals) as you make changes.  They’ll
+automatically detect all changes to the main SCSS files and documentation and
+rebuild everything automagically.</p>
+</div>
+
+<h2 id="accessibility-testing">Accessibility testing</h2>
+
+<h3 id="tota11y">tota11y</h3>
+
+<p>To test with <code class="highlighter-rouge">tota11y</code>, the in-browser visualisation toolkit, use the glasses
+icon at the bottom-left of any documentation page or custom JCU examples. For
+any non-JCU examples, install and use the Bookmarklet, available on the <a href="https://khan.github.io/tota11y/#Installation">tota11y
+project page</a>.</p>
+
+<p>Click the glasses now and see how you can toggle heading markers, colour
+contrast, link text testing, and more.</p>
+
+<div class="bd-callout bd-callout-info">
+<p><code class="highlighter-rouge">pa11y</code>, with its Section508 and WCAG2 tests, is limited in its ability to test
+absolutely positioned elements within a web page and produces warnings to this
+effect (<code class="highlighter-rouge">Warning: This element is absolutely positioned and the background color
+can not be determined [...]</code>).  <code class="highlighter-rouge">tota11y</code> should be used in these situations to
+test via its <code class="highlighter-rouge">Contrast</code> toggle.</p>
+</div>
+
+<h3 id="pa11y">pa11y</h3>
+
+<p><code class="highlighter-rouge">pa11y</code> is a command-line tool that can be used to test pages against Section508
+and WCAG2. For an in-depth introduction, consule <a href="http://cruft.io/posts/accessibility-testing-with-pa11y/">Accessibility Testing with
+pa11y</a>.</p>
+
+<p>To test the framework’s pages:</p>
+
+<ol>
+  <li>
+    <p>Ensure that you’ve followed the instructions for <a href="#getting-started">Getting
+started</a> and that you have installed the <a href="#a11y-install">accessibility
+tools</a>.</p>
+  </li>
+  <li>
+    <p>Start a documentation server running with:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>bundler <span class="nb">exec </span>jekyll serve
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>In another terminal, test individual pages, one at a time, with:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>pa11y &lt;url&gt;
+pa11y --standard Section508 &lt;url&gt;
+</code></pre>
+    </div>
+
+    <p>If not specified, the <code class="highlighter-rouge">--standard</code> defaults to <code class="highlighter-rouge">WCAG2AA</code>.</p>
+
+    <p>So, to test the Content Page example:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>pa11y http://localhost:9001/examples/jcu-content-page
+pa11y --standard Section508 http://localhost:9001/examples/jcu-content-page
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Consult the report and follow its suggestions to improve and fix the given
+page structure or corresponding CSS.</p>
+  </li>
+  <li>
+    <p>When complete, commit the results to the framework.</p>
+  </li>
+</ol>
+
+<h2 id="updating-bootstrap-versions">Updating Bootstrap versions</h2>
+
+<p>The JCU Web Framework is built upon Bootstrap and adds a number of <em>commits</em>
+which change various settings, add new features and generally craft Bootstrap
+into a framework that’s in-keeping with JCU’s branding guide.  There will come
+times when the underlying version of Bootstrap should be upgraded to either
+introduce new features, fix bugs, or perhaps stay up-to-date with the latest web
+practices and standards.</p>
+
+<p>Because we are using Git to track versions, the commands to run this
+process are straightforward.  Resolving differences between JCU’s customisations
+and Bootstrap core requires careful attention as Bootstrap may restructure or
+otherwise can change significantly between versions.</p>
+
+<ol>
+  <li>
+    <p>Add the official Bootstrap repository as a remote called <code class="highlighter-rouge">upstream</code> in your
+cloned repository and fetch its contents.  For those using a terminal, run:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="nb">cd </span>jcu-web-framework
+git remote add upstream https://github.com/twbs/bootstrap.git
+git fetch --no-tags upstream
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Fetch the latest changes from the <code class="highlighter-rouge">upstream</code> remote.  In a terminal, this is:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>git fetch --no-tags upstream
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Determine the version you wish to update to and attempt the merge,
+substituting in your version number:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>git merge v4.1.1
+</code></pre>
+    </div>
+
+    <p>The merge can be specified as anything that Git recognises as a reference; in
+this case, we use a tag for a specific version, but can, if the need arises,
+be a branch name or commit hash.</p>
+  </li>
+  <li>
+    <p>You will likely be informed that merge conflicts have occurred.  These appear
+where the changes in JCU’s framework are at odds with changes in the official
+Bootstrap code.</p>
+
+    <p>Go through each file (except those in <code class="highlighter-rouge">dist/</code> or <code class="highlighter-rouge">docs/dist/</code>) that is
+conflicted and resolve the merge.  See <a href="https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/">this
+page</a>
+from GitHub on how to resolve conflicts on the command line.  Your Git
+application likely offers similar functionality.  In essence, you’ll edit
+each conflicted file, merge changes together, and stage (<code class="highlighter-rouge">git add …</code>) the
+files.</p>
+
+    <p>For any files located in <code class="highlighter-rouge">dist/</code> or <code class="highlighter-rouge">docs/dist</code>, you can leave these until
+rebuilding the framework as they are generated from the <code class="highlighter-rouge">grunt</code> build tasks
+you’ll run in the next step.</p>
+  </li>
+  <li>
+    <p>Once all non <code class="highlighter-rouge">dist/</code> and <code class="highlighter-rouge">docs/dist</code> conflicts are resolved, build and test
+the framework.</p>
+
+    <ol>
+      <li>
+        <p>You <em>must</em> re-run the installation steps in order to update any
+dependencies for changes between Bootstrap versions:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code>npm install
+bundle
+</code></pre>
+        </div>
+      </li>
+      <li>
+        <p>Now build the framework. Most technical issues (such as changes to
+variable names and classes) will show at this point.</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code>grunt dist docs
+</code></pre>
+        </div>
+
+        <p>If you’re continuing to work on the framework, use <code class="highlighter-rouge">grunt watch</code> to
+automatically rebuild on changes.</p>
+      </li>
+      <li>
+        <p>Visually inspect and test the components and documentation via your web
+browser.  Start a documentation server with:</p>
+
+        <div class="highlighter-rouge"><pre class="highlight"><code>bundler <span class="nb">exec </span>jekyll serve
+</code></pre>
+        </div>
+
+        <p>and load <a href="http://localhost:9001">http://localhost:9001</a> in your browser.  Visual and accessibility
+issues need to be inspected by loading the examples and style guide in your
+browser to ensure things appear correctly.  To resolve issues, ensure you
+check:</p>
+
+        <ul>
+          <li><a href="/docs/1.0/migration">Official migration documentation</a></li>
+          <li><code class="highlighter-rouge">git blame</code> or Git version control history for the upstream repository</li>
+          <li>Existing classes being renamed or extended (such as <code class="highlighter-rouge">text-right</code> to
+<code class="highlighter-rouge">test-[size]-right</code>)</li>
+          <li>Core variables that have been added or adjusted (such as
+<code class="highlighter-rouge">$font-size-base</code> to <code class="highlighter-rouge">16px</code> )</li>
+          <li>Modification to existing classes or structure (such as addition of extra
+padding to <code class="highlighter-rouge">.dropdown-menu</code>)</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Once fully tested, make a note in the change log (<code class="highlighter-rouge">CHANGELOG.md</code>), commit
+the results and push to the server.</p>
+  </li>
+  <li>
+    <p>Rebuild the main documentation, push to the server and deploy to CDN in one
+go by running:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>grunt prep-release jcu-publish
+</code></pre>
+    </div>
+
+    <p>If this happens to complain about uncommitted changes in the working
+directory, even if there are none.  In this case, you can run the final commit
+task manually:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>grunt buildcontrol:pages
+</code></pre>
+    </div>
+  </li>
+</ol>
+
+<h2 id="updating-third-party-components">Updating third-party components</h2>
+
+<p>The JCU Web Framework is built upon several extra components that underpin
+certain aspects such as the dropdown menus and icons.  These are all held within
+the <code class="highlighter-rouge">scss/components</code> directory and managed as <a href="https://www.git-scm.com/book/en/v2/Git-Tools-Submodules">Git
+submodules</a>.</p>
+
+<p>Firstly, in order to update one of these components, determine the version to
+update to as a Git reference (such as a branch name, tag or commit).  You’ll use
+this to <code class="highlighter-rouge">checkout</code> in the process that follows.  These instructions are for
+those using a terminal; adapt them to your own environment.</p>
+
+<ol>
+  <li>
+    <p>Change into the component directory:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="nb">cd </span>scss/components/[component-id]
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Fetch the latest changes for this submodule’s repository:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>git fetch
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Checkout the version you wish to update to that you determined earlier.</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>git checkout <span class="o">[</span>version-id]
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Change back to the main framework directory and pull any nested submodule
+updates:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code><span class="nb">cd</span> ../../..
+git submodule update --init --recursive
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Commit the change in component version into the main framework:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>git commit scss/components/[component-id]
+</code></pre>
+    </div>
+
+    <p>Ensure that you add a suitable commit message explaining what the change was
+and what effect it has.</p>
+  </li>
+</ol>
+
+<p>It is rare that these components will need to be updated, though bug fixes and
+new features will need to be drawn in from time to time.</p>
+
+<h2 id="releasing-a-new-jcu-web-framework-version">Releasing a new JCU Web Framework version</h2>
+
+<ul>
+  <li>
+    <p>Complete testing, commit all existing changes and run the final build for
+this new version with:
+<code class="highlighter-rouge">grunt dist docs</code></p>
+  </li>
+  <li>
+    <p>Commit any final changes from this command and ensure you are in a clean Git checkout.</p>
+  </li>
+  <li>
+    <p>Run <code class="highlighter-rouge">node grunt/change-version.js [old-version] [new-version]</code> at the root
+of the repository. Do not include <code class="highlighter-rouge">v</code> in the version numbering.  This will
+change all versions across all different files, including JS, CSS, package
+files and documentation.</p>
+  </li>
+  <li>
+    <p>Follow instructions from <a href="https://www.srihash.org/">SRIHash.org</a> to generate
+an SRI hash of the production minified versions of CSS and JS:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>openssl dgst -sha384 -binary dist/css/jcu.min.css | openssl base64 -A
+openssl dgst -sha384 -binary dist/js/jcu.min.js | openssl base64 -A
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Change the documentation <code class="highlighter-rouge">_config.yml</code> to reflect these SRI changes and
+rebuild the documentation with:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>grunt docs
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Commit the results of the version change and documentation update, ensuring
+you also update the <code class="highlighter-rouge">CHANGELOG.md</code> file with the relevant date.</p>
+  </li>
+  <li>
+    <p>Create the new release with, this will create a zip file, upload to CDN and
+release the new documentation in one hit.</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>grunt prep-release jcu-publish
+</code></pre>
+    </div>
+
+    <p>If there are any final changes to be committed, commit them and publish the
+docs pages again with:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>grunt buildcontrol:pages
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Tag the current commit with the given version number:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>git tag v1.0.0-beta.1
+git push --tags
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Push all remaining changes to GitHub after a final merge into <code class="highlighter-rouge">master</code>:</p>
+
+    <div class="highlighter-rouge"><pre class="highlight"><code>git checkout master
+git merge -s recursive -X theirs develop
+git push origin master develop
+</code></pre>
+    </div>
+  </li>
+  <li>
+    <p>Now upload the final zip file to GitHub in the releases area, typing in the
+given tag version, publish the release and you are done!</p>
+  </li>
+</ul>
+
+<h2 id="cleaning-up-the-cdn">Cleaning up the CDN</h2>
+
+<p>If old directories need to be cleaned up on the CDN, use the following <code class="highlighter-rouge">rsync</code>
+command.  This includes only the given directory (<code class="highlighter-rouge">dir_to_delete</code>) and its
+contents inside the given target location on the CDN.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>rsync -arv --delete --include<span class="o">=</span><span class="s1">'/dir_to_delete/***'</span> --exclude<span class="o">=</span><span class="s1">'*'</span> <span class="k">$(</span>mktemp -d<span class="k">)</span>/ jcu0@rsync.keycdn.com:zones/jcu/
+</code></pre>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bd-footer" role="contentinfo">
+  <div class="container">
+    <div class="col-sm-8">
+      <ul class="bd-footer-links">
+        <li><a href="https://github.com/jcu/web-framework">Source Code</a></li>
+        <li><a href="https://web.jcu.io">Hosted Documentation</a></li>
+        <li><a href="https://github.com/jcu/web-framework/issues">Issue Tracker</a></li>
+        <li><a href="/docs/1.0/examples/">Examples</a></li>
+        <li><a href="/docs/1.0/about/history/">About</a></li>
+      </ul>
+      <p>Created and developed  by <a href="http://github.com/davidjb" target="_blank">@davidjb</a>.</p>
+      <p>Currently v1.0.0-beta.1. Based upon Bootstrap v4.0.0-alpha.2.</p>
+      <p>Original code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.  Documentation &copy; <a href="https://github.com/orgs/twbs/people">Bootstrap core team</a> and <a href="https://github.com/twbs/bootstrap/graphs/contributors">contributors</a>.</p>
+      <p>&copy; James Cook University and respective owners, where appropriate. Trademarks and branding used with permission.</p>
+      <p class="p-b-2">Content, including text, imagery and styles, are drawn from publicly available sources and used to illustrate functionality present. Confirm licensing requirements are met before re-use.</p>
+      <p>CDN hosting kindly provided by <a href="https://www.keycdn.com">KeyCDN</a>.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="/docs/1.0/assets/js/vendor/jquery.min.js"></script>
+
+<script src="/docs/1.0/assets/js/vendor/tether.min.js"></script>
+
+
+  <script src="/docs/1.0/dist/js/jcu.min.js"></script>
+
+
+
+  <script src="/docs/1.0/assets/js/docs.min.js"></script>
+
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script src="/docs/1.0/assets/js/ie10-viewport-bug-workaround.js"></script>
+<script src="/docs/1.0/assets/js/ie-emulation-modes-warning.js"></script>
+
+
+<script src="/docs/1.0/assets/js/vendor/jekyll-search.min.js"></script>
+
+<script>
+SimpleJekyllSearch.init({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('search-results'),
+  searchResultTemplate: '<a class="dropdown-item" href="{url}">{title}</a>',
+  noResultsText: '<div class="dropdown-item no-results">Sorry, there are no results for that search.</div>',
+  json: '/search.json'
+})
+</script>
+
+
+<script>
+Holder.addTheme('gray', {
+  background: '#777',
+  foreground: 'rgba(255,255,255,.75)',
+  font: 'Helvetica',
+  fontweight: 'normal'
+})
+</script>
+
+<script src="/docs/1.0/assets/js/vendor/tota11y.min.js"></script>
+
+  </body>
+</html>
