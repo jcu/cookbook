@@ -276,7 +276,7 @@ __metadata:
     "@fontsource/playfair-display": ~4.5.0
     "@khanacademy/tota11y": ^0.2.0
     "@mdi/font": ^5.9.55
-    "@popperjs/core": ^2.9.3
+    "@popperjs/core": ^2.10.1
     bootstrap: ^5.1.0
     clean-css-cli: ^5.3.3
     cross-env: ^7.0.3
@@ -288,7 +288,7 @@ __metadata:
     npm-run-all: ^4.1.5
     postcss: ^8.3.6
     postcss-cli: ^8.3.1
-    sass: ^1.37.5
+    sass: ^1.39.0
     shx: ^0.3.3
     stylelint: ^13.13.1
     stylelint-a11y: ^1.2.3
@@ -349,10 +349,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@popperjs/core@npm:^2.9.3":
-  version: 2.9.3
-  resolution: "@popperjs/core@npm:2.9.3"
-  checksum: 4cb94c271eaa13416ab8169c6af778c5b6160614351a79c68e8219d6ee0a40b8f71080ca29e139591c7c0c8e08fc1627d0e18d40a64609713a42b58d683a009d
+"@popperjs/core@npm:^2.10.1":
+  version: 2.10.1
+  resolution: "@popperjs/core@npm:2.10.1"
+  checksum: 55262eb98984a03364a844177a9d4b9ab1c6e3503eaa1ecb086c028b5b6d93985a92b5b5783008962633015fc9f0232fda3ce88f5b17930a909a633387a06505
   languageName: node
   linkType: hard
 
@@ -6759,14 +6759,14 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.37.5":
-  version: 1.37.5
-  resolution: "sass@npm:1.37.5"
+"sass@npm:^1.39.0":
+  version: 1.39.0
+  resolution: "sass@npm:1.39.0"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
   bin:
     sass: sass.js
-  checksum: 301925e66ea8ac402fedc8e9b938fc000b8ae683ffeae474ed05bf34ee8a4b7a2e1a42a37a1bf2fbb7a5a9e88df5c0175bdbb3866cedc3bedde41a4270514d75
+  checksum: 390751da385af1a46775876a44748e1401e9b1664ddeda6841ffe76dc1c14d1949a40b2c5b31beca7a494da11e8283ffcef55c0e581d1979c72177b8721684c2
   languageName: node
   linkType: hard
 
