@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* MaterialDesignIcons.com */
 @font-face {
   font-family: "Material Design Icons";
@@ -23839,7 +23838,7 @@
 }
 
 .mdi-blank::before {
-  content: "";
+  content: "\f68c";
   visibility: hidden;
 }
 
