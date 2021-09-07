@@ -15,10 +15,10 @@ jobs:
     - name: Use Node.js LTS
       uses: actions/setup-node@v2
       with:
-        node-version: '14' # Use Latest LTS
+        node-version: '14' # Use latest LTS
         cache: 'yarn'
 
-    - name: Install Packages
+    - name: Install packages
       run: yarn
 
     # - name: Run Tests
@@ -65,7 +65,8 @@ jobs:
     - name: Hash all release files
       run: find . -type f \( ! -iname "*.txt" \) -exec sh -c 'cat "{}" | openssl dgst -sha512 -binary | openssl base64 -A | sed -e "s/^/sha512-/;" > "{}.hash.txt"' \;
 
-    # Basically appends a pre-release onto the version number e.g. 3.1.34 -> 3.1.34-c86b73084ae08d05b61367a950d65211563fb5c9
+    # Append a pre-release onto the version number, e.g.
+    #   3.1.34 -> 3.1.34-c86b73084ae08d05b61367a950d65211563fb5c9
     # Original sed: 's/"version":.*\"\(\([0-9]\+\).\([0-9]\+\).\([0-9]\+\)\)"/"version": "\1-<id>"/'
     - name: Update package version
       run: sed -i ${{ format('''s/"version":.*\"\(\([0-9]\+\).\([0-9]\+\).\([0-9]\+\)\)"/"version"{0} "\1-{1}"/''', ':', github.sha) }} package.json
@@ -92,7 +93,7 @@ jobs:
     needs: build
     name: Publish tagged release
 
-    # Only run on a Tag in the main repository
+    # Only run on a tag in the main repository
     if: ${{ startsWith(github.ref, 'refs/tags/v') && github.repository_owner == 'jcu' }}
 
     runs-on: ubuntu-latest
@@ -102,7 +103,7 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v2
       with:
-        node-version: '14' # Use Latest LTS
+        node-version: '14' # Use latest LTS
         cache: 'yarn'
         registry-url: 'https://registry.npmjs.org'
 
@@ -180,8 +181,8 @@ jobs:
         SOURCE_DIR: 'dist'
         DEST_DIR: 'public/${{ env.RELEASE_VERSION }}'
 
-    # Patch, Pre-release and Build need to specifically referenced on the CDN to access and won't
-    # be pushed to a auto updated CDN location
+    # Patch, Pre-release and Build need to specifically referenced on the CDN
+    # to access and won't be pushed to a auto updated CDN location
     - name: Upload to major version path on CDN (/x/)
       if: ${{ steps.compared_semvers_major.outputs.version-is-latest == 'true' && steps.compared_semvers_major.outputs.version-prerelease == null && steps.compared_semvers_major.outputs.version-build == null }}
       uses: jakejarvis/s3-sync-action@master
@@ -227,7 +228,7 @@ jobs:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: npm publish .
 
-    - name: Verify Publish
+    - name: Verify publish
       if: ${{ steps.compared_semvers.outputs.version-is-latest == 'true' && steps.compared_semvers.outputs.version-prerelease == null && steps.compared_semvers.outputs.version-build == null }}
       env:
         URL: ${{ env.CDN_URL }}/${{ env.RELEASE_VERSION }}
@@ -241,13 +242,14 @@ jobs:
         yarn
         yarn add ${{ env.NPM_PACKAGE_NAME }}@${{ env.RELEASE_VERSION }}
 
-    - name: Build Docs
+    - name: Build docs
       run: |
         yarn
         yarn run docs
 
-    # Update Redirection Page to point to latest docs page
-    - name: Update Landing Page Redirect
+    # Create MAJOR.MINOR (x.x) version directory structure and update
+    # redirection page to point to this directory like Bootstrap
+    - name: Update landing page redirect
       if: ${{ steps.compared_semvers.outputs.version-is-latest == 'true' }}
       env:
         version: ${{ steps.compared_semvers_minor.outputs.version-major }}.${{ steps.compared_semvers_minor.outputs.version-minor }}
@@ -257,7 +259,7 @@ jobs:
         mv ./site/docs/* ./deploy_site/docs/${{ env.version }}
         mv ./site/index.html ./deploy_site
 
-    # Publish to the gh-pages with the Major.Minor (x.x) Version like Bootstrap
+    # Publish to gh-pages branch, keeping existing files
     - name: Publish Docs
       if: ${{ steps.compared_semvers.outputs.version-is-latest == 'true' }}
       uses: peaceiris/actions-gh-pages@v3
@@ -266,5 +268,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./deploy_site
-        commit_message: "Update Docs to Version: ${{ env.RELEASE_VERSION }}"
+        commit_message: "Update docs to Version: ${{ env.RELEASE_VERSION }}"
         keep_files: true
