@@ -219,6 +219,10 @@ published accordingly online (coming shortly).
    * `src/scss/cookbook.scss`: version message
    * `site/docs/index.js`: version variable
 
+   For major or minor version releases, also change the following:
+
+   * `site/docs/index.html`: version navbar entries
+
 1. Commit and create a release tag (e.g. `v99.0.1`)
 
    ```sh
