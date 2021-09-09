@@ -19,6 +19,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+* Restore `h1` font family to sans-serif; this fixes consistency with source
+  website content
 * Darken default colour for form switches and form checkbox/switch borders
 
 ## [3.0.0] - 2021-08-12

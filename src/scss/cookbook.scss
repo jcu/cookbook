@@ -1,17 +1,17 @@
 /*!
- * JCU Cookbook v3.0.0 (https://cookbook.jcu.io)
+ * JCU CookBook v3.0.0 (https://cookbook.jcu.io)
  * Copyright 2017-2021 James Cook University
  */
 
 // Required
 @import "~bootstrap/scss/functions";
-// JCU Cookbook variable setup
+// JCU CookBook variable setup
 @import "variables";
 
 
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/utilities";
-// Custom Boostrap Utilities
+// Custom addtional Boostrap Utilities
 @import "utilities/utilities";
 
 //
@@ -20,10 +20,9 @@
 @import "~bootstrap/scss/bootstrap";
 
 //
-// Web Framework additions
+// JCU CookBook additions
 //
 @import "root";
-@import "type";
 @import "custom";
 @import "iconography";
 @import "utilities/text";
