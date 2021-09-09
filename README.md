@@ -217,11 +217,12 @@ published accordingly online (coming shortly).
    * `CHANGELOG.md`: current release version, date and tag URL
    * `README.md`: CDN URLs
    * `src/scss/cookbook.scss`: version message
+   * `site/docs/index.js`: version variable
 
 1. Commit and create a release tag (e.g. `v99.0.1`)
 
    ```sh
-      git commit CHANGELOG.md README.md -m "Release v99.0.1"
+      git commit -m "Release v99.0.1"
       git tag v99.0.1
    ```
 
