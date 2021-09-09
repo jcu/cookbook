@@ -1,0 +1,297 @@
+<!-- Archive this to /docs/3.0 when a new version is released -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JCU CookBook is a HTML, CSS, and JS framework based on Bootstrap for building responsive, mobile-first web projects with University styling">
+  <meta name="author" content="James Cook University">
+
+  <title>CookBook - James Cook University</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="dist/css/cookbook.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="dist/css/fonts.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <link href="dist/css/docs.min.css" rel="stylesheet">
+  <link href="dist/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="icon" href="dist/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="dist/img/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="dist/img/favicon.ico">
+  <meta name="theme-color" content="#06c">
+
+</head>
+
+<body>
+  <div class="skippy visually-hidden-focusable overflow-hidden">
+    <div class="container-xl">
+      <a class="d-inline-flex p-2 m-1" href="#content">Skip to main content</a>
+    </div>
+  </div>
+  <div id="out-of-date-banner"></div>
+  <header>
+    <nav class="header p-0 flex-column navbar navbar-expand-lg navbar-light">
+      <div class="p-1 pb-sm-2 container">
+        <span class="brand-logo navbar-brand">
+          <a href="https://www.jcu.edu.au"><img src="dist/img/logos/jcu-logo-horizontal.svg"
+              alt="James Cook University (JCU) Australia logo" class="brand-logo-img" /></a>
+          <a class="brand-logo-sitename py-xl-2 text-reset" href="/">JCU CookBook</a>
+        </span>
+        <form class="d-lg-flex">
+          <button aria-controls="navbar" aria-label="Toggle navigation" type="button"
+            class="menu-toggle navbar-toggler collapsed btn btn-link" data-bs-toggle="collapse" data-bs-target="#navbar"
+            aria-expanded="false">
+            <svg viewBox="0 0 24 24" role="presentation" style="width: 2.25rem; height: 2.25rem;">
+              <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" style="fill: currentColor;"></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="navbar-menu w-100 bg-light navbar-collapse collapse" id="navbar">
+        <div class="px-lg-0 d-lg-flex container-lg">
+          <div class="me-lg-auto navbar-nav">
+            <a href="index.html" data-rb-event-key="#" class="nav-link active" role="button">
+              Home
+            </a>
+            <!--
+              Uncomment in Bootstrap 5.1.1
+
+            <a href="cheatsheet.html" data-rb-event-key="#" class="nav-link" role="button">
+              Cheatsheet
+            </a>
+            -->
+            <a href="https://github.com/jcu/cookbook/" data-rb-event-key="#" class="nav-link" role="button">
+              <span class="mdi mdi-github" style="width: 1.6em; height: 1.6em;"></span> Source Code
+            </a>
+          </div>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Version 3.1
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item active" href="/docs/3.1">3.1</a></li>
+                <li><a class="dropdown-item" href="/docs/2.0">2.0</a></li>
+                <li><a class="dropdown-item" href="/docs/1.0">1.0</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="bd-masthead mb-3" id="content">
+      <div class="container px-4 px-md-3">
+        <div class="row">
+          <div class="col-8 mx-auto col-md-4 order-md-2 col-lg-3 text-center d-none d-md-block" style="">
+            <img xlink:href="dist/img/logos/jcu-logo-vertical.svg" src="dist/img/logos/jcu-logo-vertical.svg"
+              alt="James Cook University (JCU) Australia logo" class="img-fluid">
+          </div>
+          <div class="col-md-8 order-md-1 col-lg-7 text-center text-md-start">
+            <h1 class="mb-3">JCU CookBook</h1>
+            <p class="lead mb-4">
+              JCU CookBook (formerly <em>JCU Web Framework</em>) is the HTML, CSS, and JS framework for building
+              responsive, mobile-first web projects with University styling.
+            </p>
+            <!--
+              Re-enable in Bootstrap 5.1.1 when https://github.com/twbs/bootstrap/pull/34699
+              is resolved.
+
+            <div class="d-flex flex-column flex-md-row">
+              <a href="cheatsheet.html"
+                class="btn btn-lg btn-primary mb-3 me-md-3"
+                onclick="ga('send', 'event', 'Jumbotron actions', 'Get started', 'Get started');">Get started</a>
+            </div>
+            -->
+            <p class="text-muted mb-0">
+              Currently <strong id="version">v3.0</strong>
+              <span class="px-1">&middot;</span>
+              <a href="https://github.com/jcu/cookbook/releases" target="_blank" class="link-primary">All releases</a>
+              <span class="px-1">&middot;</span>
+              <a href="https://getbootstrap.com/docs/5.1/getting-started/introduction/" class="link-primary">Based on
+                Bootstrap</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container masthead-followup px-4 px-md-3">
+      <section class="row mb-5 pb-md-4 align-items-center">
+        <div class="col-md-5">
+          <div class="masthead-followup-icon d-inline-block mb-2 text-white bg-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" focusable="false"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M3.5 13a3.5 3.5 0 11.59-6.95 5.002 5.002 0 119.804 1.98A2.5 2.5 0 0113.5 13h-10z"
+                clip-rule="evenodd" />
+            </svg>
+
+          </div>
+          <h2 class="display-5 fw-normal">Install from CDN</h2>
+          <p class="lead fw-normal">
+            Want to use the styles in a static website? All compiled and minified styles and JavaScript are available
+            from the JCU CDN.
+          </p>
+          <p>
+            See it in action on projects like the <a href="https://research.jcu.edu.au/orcid-link/">ORCID iD
+              Linker</a>, the <a href="https://www.hpc.jcu.edu.au/">HPC File Explorer</a> or <a href="https://research.jcu.io/">JCU Research Portfolio v2 (PoC)</a>.
+          </p>
+          <a class="btn btn-lg btn-outline-primary mb-3"
+            href="https://getbootstrap.com/docs/5.1/getting-started/introduction/">View Bootstrap's docs</a>
+        </div>
+        <div class="col-md-7 ps-md-5">
+          <div class="highlight">
+            <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- CSS --&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;<span id="css-url">https://cdn.jcu.edu.au/cookbook/3.0/css/cookbook.min.css</span>&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span id="css-integrity-hash"></span><span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Fonts --&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;<span id="font-url">https://cdn.jcu.edu.au/cookbook/3.0/css/fonts.min.css</span>&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span id="font-integrity-hash"></span><span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</code></pre>
+          </div>
+          <div class="highlight">
+            <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Bootstrap JavaScript --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;<span id="bootstrap-js-url">https://cdn.jcu.edu.au/cookbook/3.0/js/bootstrap.min.js</span>&#34;</span> <span id="bootstrap-js-integrity-hash"></span><span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Popper JavaScript --&gt;</span>
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;<span id="popper-js-url">https://cdn.jcu.edu.au/cookbook/3.0/js/popper.min.js</span>&#34;</span> <span id="popper-js-integrity-hash"></span><span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="row mb-5 pb-md-4 align-items-center">
+        <div class="col-md-5">
+          <div class="masthead-followup-icon d-inline-block mb-2 text-white bg-success">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" focusable="false"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M5.854 4.146a.5.5 0 010 .708L2.707 8l3.147 3.146a.5.5 0 01-.708.708l-3.5-3.5a.5.5 0 010-.708l3.5-3.5a.5.5 0 01.708 0zm4.292 0a.5.5 0 000 .708L13.293 8l-3.147 3.146a.5.5 0 00.708.708l3.5-3.5a.5.5 0 000-.708l-3.5-3.5a.5.5 0 00-.708 0z"
+                clip-rule="evenodd" />
+            </svg>
+
+          </div>
+          <h2 class="display-5 fw-normal">Install from npm</h2>
+          <p class="lead fw-normal">
+            Install the source Sass styles and compiled CSS from npm with your favourite package manager.
+          </p>
+          <p>Package managed installs don’t include documentation or our full build scripts. You can also <a
+              href="https://github.com/jcu/cookbook/">download the source code</a> if you need to customise JCU CookBook.
+          </p>
+        </div>
+        <div class="col-md-7 ps-md-5">
+          <div class="highlight">
+            <pre tabindex="0"
+              class="chroma"><code class="language-sh" data-lang="sh">npm install <span id="npm-pkg-name">@jcu/cookbook</span></code></pre>
+          </div>
+          <div class="highlight">
+            <pre tabindex="0"
+              class="chroma"><code class="language-sh" data-lang="sh">yarn add <span id="yarn-pkg-name">@jcu/cookbook</span></code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="row mb-5 pb-md-4 align-items-center">
+        <div class="col-md-5">
+          <div class="masthead-followup-icon d-inline-block mb-2 text-white bg-dark">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" focusable="false"
+              viewBox="0 0 16 16">
+              <path d="M0 6a6 6 0 1112 0A6 6 0 010 6z" />
+              <path
+                d="M12.93 5h1.57a.5.5 0 01.5.5v9a.5.5 0 01-.5.5h-9a.5.5 0 01-.5-.5v-1.57a6.953 6.953 0 01-1-.22v1.79A1.5 1.5 0 005.5 16h9a1.5 1.5 0 001.5-1.5v-9A1.5 1.5 0 0014.5 4h-1.79c.097.324.17.658.22 1z" />
+            </svg>
+
+          </div>
+          <h2 class="display-5 fw-normal">Material Design Icons</h2>
+          <p class="lead fw-normal">
+            Looking for icons to go along with your website? Material Design Icons has a large library of icons that
+            will satisfy your needs.
+          </p>
+          <p>
+            Material Design Icons are easy to use and install. They are also tested and actively used on sites
+            that use <em>JCU CookBook</em> as its base framework.
+          </p>
+          <a href="https://materialdesignicons.com/" class="btn btn-lg btn-outline-primary mb-3">Explore icons</a>
+        </div>
+        <div class="col-md-7 ps-md-5">
+          <div class="highlight">
+            <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Material Design Icons --&gt;</span>
+<span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;<span id="mdi-css-url">https://cdn.jcu.edu.au/cookbook/3.0/css/materialdesignicons.min.css</span>&#34;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span id="mdi-css-integrity-hash"></span><span class="na">crossorigin</span><span class="o">=</span><span class="s">&#34;anonymous&#34;</span><span class="p">&gt;</span>
+</code></pre>
+          </div>
+          <div class="highlight">
+            <pre tabindex="0"
+              class="chroma"><code class="language-sh" data-lang="sh">npm install <span id="mdi-pkg-name">@mdi/font</span></code></pre>
+          </div>
+          <div class="highlight">
+            <pre tabindex="0"
+              class="chroma"><code class="language-sh" data-lang="sh">yarn add <span id="mdi-pkg-name">@mdi/font</span></code></pre>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="py-3 bg-light">
+    <div class="container">
+      <div class="justify-content-center text-center small row">
+        <div class="me-lg-auto col-lg-auto col-12">
+          <ul class="list-unstyled list-business-info">
+            <li>
+              <abbr title="Copyright">©</abbr>
+              1995 to 2021 James Cook University
+            </li>
+            <li>
+              <a class="text-decoration-none" href="https://www.jcu.edu.au/cricos">
+                <abbr title="Commonwealth Register of Institutions and Courses for Overseas Students">
+                  CRICOS
+                </abbr>
+                Provider Code 00117J
+              </a>
+            </li>
+            <li>
+              <abbr title="Australian Business Number">ABN</abbr>
+              46253211955
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-auto col-12">
+          <ul class="list-inline list-inline-bordered">
+            <li class="list-inline-item">
+              <a class="text-decoration-none" href="https://www.jcu.edu.au/terms-of-use">Terms of use</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="text-decoration-none" href="https://www.jcu.edu.au/privacy">Privacy</a>
+            </li>
+            <li class="list-inline-item">
+              <a class="text-decoration-none" href="https://www.jcu.edu.au/disclaimer">Disclaimer</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="small mt-2 mb-0">Currently v3.0. Based upon Bootstrap v5.1</p>
+      <p class="small my-0">Original code licensed <a rel="license"
+          href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license"
+          href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>. Documentation &copy; <a
+          href="https://github.com/orgs/twbs/people">Bootstrap core team</a> and <a
+          href="https://github.com/twbs/bootstrap/graphs/contributors">contributors</a>.</p>
+      <p class="small mt-2 mb-0">&copy; James Cook University and respective owners, where appropriate. Trademarks and
+        branding used with permission.</p>
+      <p class="small pb-2 mt-0">Content, including text, imagery and styles, are drawn from publicly available sources
+        and used to illustrate functionality present. Confirm licensing requirements are met before re-use.</p>
+    </div>
+  </footer>
+
+  <script src="dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
