@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.0] - 2021-09-09
+
 ### Added
 
 * Enable underlining on links to match default Bootstrap 5
@@ -233,6 +235,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   lists
 * Use theme colours from microsite layout (fixes #10).
 
+[3.1.0]: https://github.com/jcu/cookbook/releases/tag/v3.1.0
 [3.0.0]: https://github.com/jcu/cookbook/releases/tag/v3.0.0
 [2.0.0]: https://github.com/jcu/cookbook/releases/tag/v2.0.0
 [2.0.0-alpha.13]: https://github.com/jcu/cookbook/releases/tag/v2.0.0-alpha.13

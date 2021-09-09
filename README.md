@@ -58,14 +58,14 @@ into your project:
 
 ```html
 <!-- In the <head> of your project -->
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/3.0/css/cookbook.min.css">
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/3.0/css/fonts.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/3.1/css/cookbook.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/3.1/css/fonts.min.css">
 ```
 
 ```html
 <!-- Before the closing </body> tag in your project -->
-<script src="https://cdn.jcu.edu.au/cookbook/3.0/js/popper.min.js"></script>
-<script src="https://cdn.jcu.edu.au/cookbook/3.0/js/bootstrap.min.js"></script>
+<script src="https://cdn.jcu.edu.au/cookbook/3.1/js/popper.min.js"></script>
+<script src="https://cdn.jcu.edu.au/cookbook/3.1/js/bootstrap.min.js"></script>
 ```
 
 Refer to the official [User documentation](#user-content-user-documentation)
@@ -76,8 +76,8 @@ links above for how to build pages using Bootstap.
 Images can be used from the CDN like so:
 
 ```html
-<link rel="icon" href="https://cdn.jcu.edu.au/cookbook/3.0/img/favicon.ico" />
-<img src="https://cdn.jcu.edu.au/cookbook/3.0/img/logos/jcu-logo-horizontal.svg" alt="James Cook University (JCU) Australia logo">
+<link rel="icon" href="https://cdn.jcu.edu.au/cookbook/3.1/img/favicon.ico" />
+<img src="https://cdn.jcu.edu.au/cookbook/3.1/img/logos/jcu-logo-horizontal.svg" alt="James Cook University (JCU) Australia logo">
 ```
 
 Available resources and their corresponding paths can be found by referrring
@@ -92,7 +92,7 @@ following into your page or app as well:
 
 ```html
 <!-- In the <head> of your project -->
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/3.0/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/3.1/css/materialdesignicons.min.css">
 ```
 
 You can now use icons by following the instructions at
@@ -107,8 +107,8 @@ Different versions of CookBook are available on the CDN depending on your
 desired stability and level of control over the resources:
 
 * `3` – always use the latest release under this major version; or
-* `3.0` – always use the latest release under this minor version; or
-* `3.0.0` – A specific version number; or
+* `3.1` – always use the latest release under this minor version; or
+* `3.1.0` – A specific version number; or
 * `latest` *(Not Recommended)* – always use the latest release, including
   major versions that may have backwards incompatible changes; or
 * `master` *(Not Recommended)* - the most recent commit's build on the master
@@ -209,19 +209,26 @@ published accordingly online (coming shortly).
      * `AWS_ACCESS_KEY_ID`: AWS Access Key
      * `AWS_SECRET_ACCESS_KEY`: AWS Secret Access Key
 
-1. Update `CHANGELOG.md` and CDN URLs inside `README.md` with the current date and released version
+1. Given the types of changes that have occurred since the last release,
+   decide on the new version based upon [SemVer rules](https://semver.org).
 
-1. Commit and create a release tag (e.g. v3.0.1)
+1. With the new version number known, update the following:
+
+   * `CHANGELOG.md`: current release version, date and tag URL
+   * `README.md`: CDN URLs
+   * `src/scss/cookbook.scss`: version message
+
+1. Commit and create a release tag (e.g. `v99.0.1`)
 
    ```sh
-      git commit CHANGELOG.md README.md -m "Release v3.0.1"
-      git tag v3.0.1
+      git commit CHANGELOG.md README.md -m "Release v99.0.1"
+      git tag v99.0.1
    ```
 
 1. Update the working version number in the source code:
 
    ```sh
-   yarn release-version [current-version eg 3.0.1] [development-version eg 3.0.2]
+   yarn release-version [current-version eg 99.0.1] [development-version eg 99.0.2]
    ```
 
    When using `yarn release-version`, ensure you omit any `v` prefix for
