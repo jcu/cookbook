@@ -22,7 +22,7 @@
           ) {
             document.getElementById(
               'out-of-date-banner'
-            ).innerHTML = `<a href="/docs/${currentVersionMajor}.${currentVersionMinor}/"><div class="alert alert-warning text-center" role="alert">Version ${latestVersion} of JCU CookBook has been released!</div></a>`
+            ).innerHTML = `<a href="/docs/${latestVersionMajor}.${latestVersionMinor}/"><div class="alert alert-warning text-center" role="alert">Version ${latestVersion} of JCU CookBook has been released!</div></a>`
             ;[
               document.getElementById('npm-pkg-name'),
               document.getElementById('yarn-pkg-name'),
