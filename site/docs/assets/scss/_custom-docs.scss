@@ -1,0 +1,123 @@
+.navbar.navbar-secondary .nav-link.active::after {
+  background-color: #53565a;
+}
+
+.navbar .nav-link {
+  font-weight: 400;
+}
+
+@media (min-width: 576px) {
+  .navbar .nav-link {
+    padding-top: 0.95rem;
+    padding-bottom: 0.7rem;
+  }
+}
+
+.navbar .nav-link.active {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  margin: 0.15rem auto 0;
+  background: transparent;
+  transition: width 0.15s ease, background-color 0.15s ease;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+  background-color: #53565a;
+}
+
+.navbar .nav-link.active::after,
+.navbar .nav-link.active:hover::after {
+  width: 100%;
+  background-color: #edb800;
+}
+
+.header {
+  border-bottom: 1px solid #e9ecef;
+}
+
+.header .navbar-nav a {
+  text-decoration: none;
+}
+
+@media (min-width: 992px) {
+  .header {
+    border-bottom: 0 none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .navbar-menu .container-lg {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.brand-logo {
+  white-space: nowrap;
+}
+
+.brand-logo-img {
+  height: 3rem;
+}
+
+.brand-logo-sitename {
+  display: inline-block;
+  max-width: 25vw;
+  white-space: normal;
+  vertical-align: text-top;
+  margin-left: 0.75rem;
+  padding-left: 0.5625rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-left: 1px solid #adb5bd;
+  font-size: 80%;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.brand-logo-sitename:hover {
+  text-decoration: underline;
+}
+
+.brand-logo-sitename:hover.text-light {
+  color: #a4a4a4 !important;
+}
+
+@media (min-width: 768px) {
+  .brand-logo-img {
+    height: 4rem;
+  }
+
+  .brand-logo-sitename {
+    margin-left: 1.5rem;
+    padding-left: 1.125rem;
+    font-size: 100%;
+  }
+}
+
+.list-inline-bordered .list-inline-item:not(:last-child) {
+  border-right: 1px solid #adb5bd;
+  margin-right: 1em;
+  padding-right: 1em;
+}
+
+@media (min-width: 992px) {
+  .list-business-info > li {
+    display: inline-block;
+  }
+
+  .list-business-info > li:not(:last-child) {
+    border-right: 1px solid #adb5bd;
+    margin-right: 1em;
+    padding-right: 1em;
+  }
+}
+
