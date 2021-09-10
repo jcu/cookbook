@@ -39,6 +39,7 @@
     css: `https://cdn.jcu.edu.au/cookbook/${VERSION}/css/cookbook.min.css`,
     font: `https://cdn.jcu.edu.au/cookbook/${VERSION}/css/fonts.min.css`,
     'mdi-css': `https://cdn.jcu.edu.au/cookbook/${VERSION}/css/materialdesignicons.min.css`,
+    'bootstrap-bundle-js': `https://cdn.jcu.edu.au/cookbook/${VERSION}/js/bootstrap.bundle.min.js`,
     'bootstrap-js': `https://cdn.jcu.edu.au/cookbook/${VERSION}/js/bootstrap.min.js`,
     'popper-js': `https://cdn.jcu.edu.au/cookbook/${VERSION}/js/popper.min.js`,
   }
