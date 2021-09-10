@@ -117,8 +117,7 @@ body {
 
   .bd-aside,
   .bd-cheatsheet {
-    padding-top: 2rem;
-    z-index: 0;
+    padding-top: 0;
   }
 
   /**
@@ -135,14 +134,14 @@ body {
   }
 
   .bd-aside {
-    grid-area: 2 / 3;
+    grid-area: 1 / 3;
     scroll-margin-top: 4rem;
   }
 
   .bd-cheatsheet section,
   .bd-cheatsheet section > h2 {
-    top: 2rem;
-    scroll-margin-top: 2rem;
+    top: 0;
+    scroll-margin-top: 0;
   }
 
   .bd-cheatsheet section > h2::before {
@@ -160,8 +159,8 @@ body {
 
   .bd-cheatsheet article,
   .bd-cheatsheet .bd-heading {
-    top: 8rem;
-    scroll-margin-top: 8rem;
+    top: 6rem;
+    scroll-margin-top: 6rem;
   }
 
   .bd-cheatsheet .bd-heading {

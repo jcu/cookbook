@@ -335,6 +335,32 @@ Once you've upgraded, inspect the documentation site to ensure styles and
 functionality is working as expected.  We'll have more automated processes for
 this in the near future.
 
+### Documentation
+
+Documentation provided in this project primarily comes from the upstream
+Bootstrap project.  In terms of updating the docs, it is a case of pulling
+down a new or updated version and manually editing the HTML.  The following
+commands can assist with automating some of this progress:
+
+```sh
+# Homepage
+mv site/docs/index.html site/docs/index.prev.html
+wget https://getbootstrap.com/ -O site/docs/index.html
+
+# Cheatsheet
+mv site/docs/cheatsheet.html site/docs/cheatsheet.prev.html
+wget https://getbootstrap.com/docs/5.1/examples/cheatsheet/ -O site/docs/cheatsheet.html
+wget https://getbootstrap.com/docs/5.1/examples/cheatsheet/cheatsheet.css -O site/docs/cheatsheet.css
+wget https://getbootstrap.com/docs/5.1/examples/cheatsheet/cheatsheet.js -O site/docs/cheatsheet.js
+# Improve layout of Cheatsheet headers
+sed -i 's/pt-3 pt-xl-5 pb-2 pb-xl-3/pt-1 pt-xl-2 pb-1 pb-xl-2/g' site/docs/cheatsheet.html
+```
+
+From here, it's a case of manually ascertaining what to remove (certain meta
+tags, GTM JavaScript, ads, specific images and so on), what to reword or
+restyle (much of it on the homepage, the CSS on the cheatsheet) and what to
+add in (JCU header and footer).
+
 ## Accessibility
 
 JCU CookBook aims to allow websites and applications that that use it
@@ -387,7 +413,7 @@ for details.  Reproduction of the following resources is underst
 
 ## Acknowledgements
 
-* Based upon the Bootswatch build system https://github.com/thomaspark/bootswatch
+* Based upon the Bootstrap documentation at https://getbootstrap.com
 * Material Design Icons and integration based upon https://materialdesignicons.com/bootstrap
 
 ## Licensing
