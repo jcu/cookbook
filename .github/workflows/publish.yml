@@ -261,7 +261,7 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./deploy_site
-        commit_message: "Update docs to version: ${{ env.RELEASE_VERSION }}"
+        commit_message: "docs: update to v${{ env.RELEASE_VERSION }}"
         keep_files: true
 
     - name: Verify publish
