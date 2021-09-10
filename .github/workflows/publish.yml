@@ -268,11 +268,12 @@ jobs:
       if: ${{ steps.compared_semvers.outputs.version-is-latest == 'true' && steps.compared_semvers.outputs.version-prerelease == null && steps.compared_semvers.outputs.version-build == null }}
       env:
         URL: ${{ env.CDN_URL }}/${{ env.RELEASE_VERSION }}
+        version: ${{ steps.compared_semvers_minor.outputs.version-major }}.${{ steps.compared_semvers_minor.outputs.version-minor }}
       run: |
         # Wait until CDN, npm and GitHub Pages have updated
         sleep 120
-        curl -sf "$URL/css/cookbook.min.css"
-        curl -sf "$URL/js/bootstrap.min.js"
-        curl -sf "$URL/img/favicon.ico"
+        curl -sf -o /dev/null "$URL/css/cookbook.min.css"
+        curl -sf -o /dev/null "$URL/js/bootstrap.min.js"
+        curl -sf -o /dev/null "$URL/img/favicon.ico"
         $(yarn npm info ${{ env.NPM_PACKAGE_NAME }}@${{ env.RELEASE_VERSION }} | grep -q 'Unmet range' && exit 1 || exit 0)
-        curl -sf "${{ env.DOCS_URL }}/${{ env.RELEASE_VERSION }}"
+        curl -sf -o /dev/null "${{ env.DOCS_URL }}/${{ env.version }}"
