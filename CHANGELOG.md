@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.0] - 2021-09-10
+
 ### Added
 
 * Update Material Design Icons. Note the new icons and changes at
@@ -246,6 +248,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   lists
 * Use theme colours from microsite layout (fixes #10).
 
+[3.2.0]: https://github.com/jcu/cookbook/releases/tag/v3.2.0
 [3.1.0]: https://github.com/jcu/cookbook/releases/tag/v3.1.0
 [3.0.0]: https://github.com/jcu/cookbook/releases/tag/v3.0.0
 [2.0.0]: https://github.com/jcu/cookbook/releases/tag/v2.0.0

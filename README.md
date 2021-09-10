@@ -58,14 +58,14 @@ into your project:
 
 ```html
 <!-- In the <head> of your project -->
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/3.1/css/cookbook.min.css">
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/3.1/css/fonts.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/3.2/css/cookbook.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/3.2/css/fonts.min.css">
 ```
 
 ```html
 <!-- Before the closing </body> tag in your project -->
-<script src="https://cdn.jcu.edu.au/cookbook/3.1/js/popper.min.js"></script>
-<script src="https://cdn.jcu.edu.au/cookbook/3.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.jcu.edu.au/cookbook/3.2/js/popper.min.js"></script>
+<script src="https://cdn.jcu.edu.au/cookbook/3.2/js/bootstrap.min.js"></script>
 ```
 
 Refer to the official [User documentation](#user-content-user-documentation)
@@ -76,8 +76,8 @@ links above for how to build pages using Bootstap.
 Images can be used from the CDN like so:
 
 ```html
-<link rel="icon" href="https://cdn.jcu.edu.au/cookbook/3.1/img/favicon.ico" />
-<img src="https://cdn.jcu.edu.au/cookbook/3.1/img/logos/jcu-logo-horizontal.svg" alt="James Cook University (JCU) Australia logo">
+<link rel="icon" href="https://cdn.jcu.edu.au/cookbook/3.2/img/favicon.ico" />
+<img src="https://cdn.jcu.edu.au/cookbook/3.2/img/logos/jcu-logo-horizontal.svg" alt="James Cook University (JCU) Australia logo">
 ```
 
 Available resources and their corresponding paths can be found by referrring
@@ -92,7 +92,7 @@ following into your page or app as well:
 
 ```html
 <!-- In the <head> of your project -->
-<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/3.1/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="https://cdn.jcu.edu.au/cookbook/3.2/css/materialdesignicons.min.css">
 ```
 
 You can now use icons by following the instructions at
@@ -107,8 +107,8 @@ Different versions of CookBook are available on the CDN depending on your
 desired stability and level of control over the resources:
 
 * `3` – always use the latest release under this major version; or
-* `3.1` – always use the latest release under this minor version; or
-* `3.1.0` – A specific version number; or
+* `3.2` – always use the latest release under this minor version; or
+* `3.2.0` – A specific version number; or
 * `latest` *(Not Recommended)* – always use the latest release, including
   major versions that may have backwards incompatible changes; or
 * `master` *(Not Recommended)* - the most recent commit's build on the master
@@ -221,6 +221,7 @@ published accordingly online (coming shortly).
 
    For major or minor version releases, also change the following:
 
+   * `package.json`: version numbers
    * `site/docs/index.html`: version navbar entries, header, URLs & footer
 
 1. Commit and create a release tag (e.g. `v99.0.1`)
