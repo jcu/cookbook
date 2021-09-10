@@ -275,9 +275,9 @@ __metadata:
     "@fontsource/open-sans": ~4.5.0
     "@fontsource/playfair-display": ~4.5.0
     "@khanacademy/tota11y": ^0.2.0
-    "@mdi/font": ^5.9.55
+    "@mdi/font": ^6.1.95
     "@popperjs/core": ^2.10.1
-    bootstrap: ^5.1.0
+    bootstrap: ^5.1.1
     clean-css-cli: ^5.3.3
     cross-env: ^7.0.3
     find-unused-sass-variables: ^3.1.0
@@ -288,8 +288,8 @@ __metadata:
     npm-run-all: ^4.1.5
     postcss: ^8.3.6
     postcss-cli: ^8.3.1
-    prettier: ^2.3.2
-    sass: ^1.39.0
+    prettier: ^2.4.0
+    sass: ^1.39.2
     shx: ^0.3.3
     stylelint: ^13.13.1
     stylelint-a11y: ^1.2.3
@@ -306,10 +306,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mdi/font@npm:^5.9.55":
-  version: 5.9.55
-  resolution: "@mdi/font@npm:5.9.55"
-  checksum: 05d8e30d5c5bd0992bde4827ddcde0e4e00882ae70d4355c69d4db93d9b69c75d3bde6b414bea90f5f8ad46336837b082d64a26761a12b1548e28cfe765b0e4f
+"@mdi/font@npm:^6.1.95":
+  version: 6.1.95
+  resolution: "@mdi/font@npm:6.1.95"
+  checksum: be1792ecd8c423e4188b0a176c3beabff5370fa5d6dbbe49facae57119d90397363e6779575e5f87e5781c0538f1a57cad0c97702c74807750f6317d531b5567
   languageName: node
   linkType: hard
 
@@ -970,12 +970,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap@npm:^5.1.0":
-  version: 5.1.0
-  resolution: "bootstrap@npm:5.1.0"
+"bootstrap@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "bootstrap@npm:5.1.1"
   peerDependencies:
-    "@popperjs/core": ^2.9.3
-  checksum: 1e556b71c47b55f6411f789e6d43986f6a3646875f1bef47ee8b1bc16e5d395e75b275d207d6bda7d9752d0573eb4ee5faecb03ebea17dca6259ac8dd68a6aea
+    "@popperjs/core": ^2.10.1
+  checksum: 6429293514bcaaf0072568ec7851a58179c582a966109a55176afd29c03fc502eade0fdc2c46ea49efb24bf111a161c8735e80f3162f6455b81225720c6b556f
   languageName: node
   linkType: hard
 
@@ -6191,12 +6191,12 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.3.2":
-  version: 2.3.2
-  resolution: "prettier@npm:2.3.2"
+"prettier@npm:^2.4.0":
+  version: 2.4.0
+  resolution: "prettier@npm:2.4.0"
   bin:
     prettier: bin-prettier.js
-  checksum: 17ce5784ac67621c292df58e2da60b2ee150c2d6aebea22a6ad9e52fcd6a5e66c349d0a8436ea3bd8ff9d778920a5f68000d7625b74f43558718a49755aa5259
+  checksum: ac1bf07566dad5f58469e6d8a954bd5c0f833935597deb00330e9f673e14e4cf81e07dee7eff5776c0edebe11358d199f332d9940be40c8b455516034e553ce0
   languageName: node
   linkType: hard
 
@@ -6769,14 +6769,14 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"sass@npm:^1.39.0":
-  version: 1.39.0
-  resolution: "sass@npm:1.39.0"
+"sass@npm:^1.39.2":
+  version: 1.39.2
+  resolution: "sass@npm:1.39.2"
   dependencies:
     chokidar: ">=3.0.0 <4.0.0"
   bin:
     sass: sass.js
-  checksum: 390751da385af1a46775876a44748e1401e9b1664ddeda6841ffe76dc1c14d1949a40b2c5b31beca7a494da11e8283ffcef55c0e581d1979c72177b8721684c2
+  checksum: 7b3d96e5db3c579f4d48064bf3ec6582999255aab7fa3226d5db4711434b7aa54cc8f656ca4763c4e65c92520d6820651aecd38148b560997b445ba86b3e3c77
   languageName: node
   linkType: hard
 

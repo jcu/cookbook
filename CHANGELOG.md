@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+* Update Material Design Icons. Note the new icons and changes at
+  https://dev.materialdesignicons.com/changelog
+
+### Changed
+
+* Upgrade Bootstrap to
+  [v5.1.1](https://github.com/twbs/bootstrap/releases/tag/v5.1.1)
+* Upgrade depdendencies
+
 ## [3.1.0] - 2021-09-09
 
 ### Added
