@@ -235,7 +235,7 @@ jobs:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: npm publish .
 
-    - name: Build Docs
+    - name: Build docs
       run: |
         yarn
         yarn run docs
@@ -252,8 +252,8 @@ jobs:
         mv ./site/docs/* ./deploy_site/docs/${{ env.version }}
         mv ./site/index.html ./deploy_site
 
-    # Publish to the gh-pages with the Major.Minor (x.x) Version like Bootstrap
-    - name: Publish Docs
+    # Publish to the gh-pages with the MAJOR.MINOR (x.x) version like Bootstrap
+    - name: Publish docs
       if: ${{ steps.compared_semvers.outputs.version-is-latest == 'true' }}
       uses: peaceiris/actions-gh-pages@v3
       env:
@@ -264,11 +264,12 @@ jobs:
         commit_message: "Update docs to version: ${{ env.RELEASE_VERSION }}"
         keep_files: true
 
-    - name: Verify Publish
+    - name: Verify publish
       if: ${{ steps.compared_semvers.outputs.version-is-latest == 'true' && steps.compared_semvers.outputs.version-prerelease == null && steps.compared_semvers.outputs.version-build == null }}
       env:
         URL: ${{ env.CDN_URL }}/${{ env.RELEASE_VERSION }}
       run: |
+        # Wait until CDN, npm and GitHub Pages have updated
         sleep 120
         curl -sf "$URL/css/cookbook.min.css"
         curl -sf "$URL/js/bootstrap.min.js"
