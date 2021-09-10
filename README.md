@@ -353,6 +353,8 @@ mv site/docs/cheatsheet.html site/docs/cheatsheet.prev.html
 wget https://getbootstrap.com/docs/5.1/examples/cheatsheet/ -O site/docs/cheatsheet.html
 wget https://getbootstrap.com/docs/5.1/examples/cheatsheet/cheatsheet.css -O site/docs/cheatsheet.css
 wget https://getbootstrap.com/docs/5.1/examples/cheatsheet/cheatsheet.js -O site/docs/cheatsheet.js
+# Point Cheatsheet links at official docs
+sed -i 's#\(/docs/5.1/\)#https://getbootstrap.com\1#g' site/docs/cheatsheet.html
 # Improve layout of Cheatsheet headers
 sed -i 's/pt-3 pt-xl-5 pb-2 pb-xl-3/pt-1 pt-xl-2 pb-1 pb-xl-2/g' site/docs/cheatsheet.html
 ```
