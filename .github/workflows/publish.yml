@@ -4,18 +4,24 @@ env:
   CDN_URL: https://cdn.jcu.edu.au/cookbook
   CDN_AWS_REGION: ap-southeast-2
   NPM_PACKAGE_NAME: "@jcu/cookbook"
+  DOCS_URL: https://cookbook.jcu.io/docs
+  NODE_VERSION: 14.x
 
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 15.x, 16.x]
+
     steps:
     - uses: actions/checkout@v2
 
-    - name: Use Node.js LTS
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
-        node-version: '14' # Use latest LTS
+        node-version: ${{ matrix.node-version }}
         cache: 'yarn'
 
     - name: Install packages
@@ -28,6 +34,7 @@ jobs:
       run: yarn dist
 
     - name: Upload build artifacts
+      if: ${{ matrix.node-version == env.NODE_VERSION && github.event_name == 'push' && ( contains(github.event.head_commit.message, '[npm publish]') || startsWith(github.ref, 'refs/tags/v') ) }}
       uses: actions/upload-artifact@v2
       with:
         name: dist
@@ -39,7 +46,7 @@ jobs:
     name: Publish in-development version
 
     # Only run on push on the `master` branch in the main repository
-    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' && github.repository_owner == 'jcu' }}
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' && github.repository_owner == 'jcu' && contains(github.event.head_commit.message, '[npm publish]') }}
 
     runs-on: ubuntu-latest
     steps:
@@ -48,7 +55,7 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v2
       with:
-        node-version: '14' # Use Latest LTS
+        node-version: ${{ env.NODE_VERSION }}
         cache: 'yarn'
         registry-url: 'https://registry.npmjs.org'
 
@@ -103,7 +110,7 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v2
       with:
-        node-version: '14' # Use latest LTS
+        node-version: ${{ env.NODE_VERSION }}
         cache: 'yarn'
         registry-url: 'https://registry.npmjs.org'
 
@@ -228,21 +235,7 @@ jobs:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       run: npm publish .
 
-    - name: Verify publish
-      if: ${{ steps.compared_semvers.outputs.version-is-latest == 'true' && steps.compared_semvers.outputs.version-prerelease == null && steps.compared_semvers.outputs.version-build == null }}
-      env:
-        URL: ${{ env.CDN_URL }}/${{ env.RELEASE_VERSION }}
-      run: |
-        curl -sf "$URL/css/cookbook.min.css"
-        curl -sf "$URL/js/bootstrap.min.js"
-        curl -sf "$URL/img/favicon.ico"
-        mkdir -p verification
-        cd verification
-        yarn init -y
-        yarn
-        yarn add ${{ env.NPM_PACKAGE_NAME }}@${{ env.RELEASE_VERSION }}
-
-    - name: Build docs
+    - name: Build Docs
       run: |
         yarn
         yarn run docs
@@ -254,12 +247,12 @@ jobs:
       env:
         version: ${{ steps.compared_semvers_minor.outputs.version-major }}.${{ steps.compared_semvers_minor.outputs.version-minor }}
       run: |
-        sed -i 's/URL=\/.*"/URL=\/docs\/${{ env.version }}"/' ./site/index.html
+        sed -i 's/URL=.*"/URL=docs\/${{ env.version }}"/' ./site/index.html
         mkdir -p ./deploy_site/docs/${{ env.version }}
         mv ./site/docs/* ./deploy_site/docs/${{ env.version }}
         mv ./site/index.html ./deploy_site
 
-    # Publish to gh-pages branch, keeping existing files
+    # Publish to the gh-pages with the Major.Minor (x.x) Version like Bootstrap
     - name: Publish Docs
       if: ${{ steps.compared_semvers.outputs.version-is-latest == 'true' }}
       uses: peaceiris/actions-gh-pages@v3
@@ -270,3 +263,15 @@ jobs:
         publish_dir: ./deploy_site
         commit_message: "Update docs to version: ${{ env.RELEASE_VERSION }}"
         keep_files: true
+
+    - name: Verify Publish
+      if: ${{ steps.compared_semvers.outputs.version-is-latest == 'true' && steps.compared_semvers.outputs.version-prerelease == null && steps.compared_semvers.outputs.version-build == null }}
+      env:
+        URL: ${{ env.CDN_URL }}/${{ env.RELEASE_VERSION }}
+      run: |
+        sleep 120
+        curl -sf "$URL/css/cookbook.min.css"
+        curl -sf "$URL/js/bootstrap.min.js"
+        curl -sf "$URL/img/favicon.ico"
+        $(yarn npm info ${{ env.NPM_PACKAGE_NAME }}@${{ env.RELEASE_VERSION }} | grep -q 'Unmet range' && exit 1 || exit 0)
+        curl -sf "${{ env.DOCS_URL }}/${{ env.RELEASE_VERSION }}"
