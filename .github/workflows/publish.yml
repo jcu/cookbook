@@ -8,6 +8,21 @@ env:
   NODE_VERSION: 14.x
 
 jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'yarn'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install & Cache Packages
+        run: yarn --immutable
+
   build:
     name: Build
     runs-on: ubuntu-latest
@@ -268,7 +283,7 @@ jobs:
       if: ${{ steps.compared_semvers.outputs.version-is-latest == 'true' && steps.compared_semvers.outputs.version-prerelease == null && steps.compared_semvers.outputs.version-build == null }}
       env:
         URL: ${{ env.CDN_URL }}/${{ env.RELEASE_VERSION }}
-        version: ${{ steps.compared_semvers_minor.outputs.version-major }}.${{ steps.compared_semvers_minor.outputs.version-minor }}
+        version: ${{ steps.compared_semvers.outputs.version-major }}.${{ steps.compared_semvers.outputs.version-minor }}
       run: |
         # Wait until CDN, npm and GitHub Pages have updated
         sleep 120
@@ -277,3 +292,5 @@ jobs:
         curl -sf -o /dev/null "$URL/img/favicon.ico"
         $(yarn npm info ${{ env.NPM_PACKAGE_NAME }}@${{ env.RELEASE_VERSION }} | grep -q 'Unmet range' && exit 1 || exit 0)
         curl -sf -o /dev/null "${{ env.DOCS_URL }}/${{ env.version }}"
+
+
