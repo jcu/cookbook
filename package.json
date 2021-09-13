@@ -57,21 +57,22 @@
     "watch": "npm-run-all --parallel 'watch-*'",
     "watch-css-main": "nodemon --watch src/scss/ --ext scss --exec \"npm run css-main\"",
     "watch-img": "nodemon --watch src/img/ --ext svg --exec \"npm run img\"",
-    "watch-js": "nodemon --watch node_modules/jquery/dist --watch node_modules/popper.js/dist/umd --watch node_modules/bootstrap/dist/js --ext js --exec \"npm run js\"",
+    "watch-js": "nodemon --watch node_modules/popper.js/dist/umd --watch node_modules/bootstrap/dist/js --ext js --exec \"npm run js\"",
     "build": "npm-run-all 'css-lint*' css img js docs"
   },
-  "devDependencies": {
+  "dependencies": {
     "@fontsource/open-sans": "~4.5.0",
     "@fontsource/playfair-display": "~4.5.0",
-    "@khanacademy/tota11y": "^0.2.0",
     "@mdi/font": "^6.1.95",
+    "bootstrap": "^5.1.1"
+  },
+  "devDependencies": {
+    "@khanacademy/tota11y": "^0.2.0",
     "@popperjs/core": "^2.10.1",
-    "bootstrap": "^5.1.1",
     "clean-css-cli": "^5.3.3",
     "cross-env": "^7.0.3",
     "find-unused-sass-variables": "^3.1.0",
     "imagemin-cli": "^7.0.0",
-    "jquery": "^3.6.0",
     "live-server": "^1.2.1",
     "nodemon": "^2.0.12",
     "npm-run-all": "^4.1.5",

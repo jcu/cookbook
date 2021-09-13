@@ -282,7 +282,6 @@ __metadata:
     cross-env: ^7.0.3
     find-unused-sass-variables: ^3.1.0
     imagemin-cli: ^7.0.0
-    jquery: ^3.6.0
     live-server: ^1.2.1
     nodemon: ^2.0.12
     npm-run-all: ^4.1.5
@@ -4300,13 +4299,6 @@ fsevents@~2.3.2:
   bin:
     jpegtran: cli.js
   checksum: a770f7cf076c52c06fd8d499d957b68cb2ac036c014de331d328f19976ac5c302455ff0eb5e9be709fe40fbff71d28ece7229620e66a7002e30ae9ab380c549e
-  languageName: node
-  linkType: hard
-
-"jquery@npm:^3.6.0":
-  version: 3.6.0
-  resolution: "jquery@npm:3.6.0"
-  checksum: 8fd5fef4aa48fd374ec716dd1c1df1af407814a228e15c1260ca140de3a697c2a77c30c54ff1d238b6a3ab4ddc445ddeef9adce6c6d28e4869d85eb9d3951c0e
   languageName: node
   linkType: hard
 
