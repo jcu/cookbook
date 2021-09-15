@@ -1,5 +1,5 @@
 ;(function () {
-  const VERSION = '3.2.2' // Release version of the docs
+  const VERSION = '3.2.3' // Release version of the docs
   const [currentVersionMajor, currentVersionMinor] = VERSION.trim()
     .split('.')
     .map(v => parseInt(v))

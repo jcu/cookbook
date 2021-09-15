@@ -246,7 +246,7 @@ published accordingly online (coming shortly).
 
    ```sh
    git add -p .
-   git commit -m "Back to development"
+   git commit -m "chore: back to development"
    ```
 
    Additionally, if releasing a new major or minor version, `package.json`

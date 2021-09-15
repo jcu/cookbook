@@ -1,6 +1,6 @@
 {
   "name": "@jcu/cookbook",
-  "version": "3.2.2",
+  "version": "3.2.3",
   "version_short": "3.2",
   "version_major": "3",
   "description": "The web UI framework for building responsive, mobile-first web projects with University styling",
