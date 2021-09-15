@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.2] - 2021-09-15
+
 ### Fixed
 
 * Downgrade `imagemin-cli` to v6 (and thus `imagemin` to v7) to prevent
@@ -260,6 +262,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   lists
 * Use theme colours from microsite layout (fixes #10).
 
+[3.2.2]: https://github.com/jcu/cookbook/releases/tag/v3.2.2
 [3.2.1]: https://github.com/jcu/cookbook/releases/tag/v3.2.1
 [3.2.0]: https://github.com/jcu/cookbook/releases/tag/v3.2.0
 [3.1.0]: https://github.com/jcu/cookbook/releases/tag/v3.1.0

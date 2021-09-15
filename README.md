@@ -108,7 +108,7 @@ desired stability and level of control over the resources:
 
 * `3` – always use the latest release under this major version; or
 * `3.2` – always use the latest release under this minor version; or
-* `3.2.1` – A specific version number; or
+* `3.2.2` – A specific version number; or
 * `latest` *(Not Recommended)* – always use the latest release, including
   major versions that may have backwards incompatible changes; or
 * `master` *(Not Recommended)* - the most recent commit's build on the master
@@ -227,7 +227,7 @@ published accordingly online (coming shortly).
 1. Commit and create a release tag (e.g. `v99.0.1`)
 
    ```sh
-      git commit -m "Release v99.0.1"
+      git commit -m "chore: release v99.0.1"
       git tag v99.0.1
    ```
 
