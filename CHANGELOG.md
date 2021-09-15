@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+* Downgrade `imagemin-cli` to v6 (and thus `imagemin` to v7) to prevent
+  mangling of State of the Tropics SVG image.
+
 ## [3.2.1] - 2021-09-13
 
 ### Changed
